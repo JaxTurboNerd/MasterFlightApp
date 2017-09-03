@@ -60,7 +60,7 @@ class SecondViewController: UIViewController, UIPickerViewDelegate, UIPickerView
         self.TIT_Picker.dataSource = self
         
         //TIT picker data
-        TIT_PickerData = ["1077", "1010"]
+        TIT_PickerData = ["1077", "1010", "3500 SHP", "3000 SHP"]
         
         //Add Done Button to top of keypad
         let toolBar = UIToolbar()
