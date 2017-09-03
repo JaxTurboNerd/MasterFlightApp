@@ -17,7 +17,8 @@ class SecondViewController: UIViewController, UIPickerViewDelegate, UIPickerView
     var TIT_PickerData: [String] = [String]()
     
     //Set Engine Anti Ice condition
-    @IBOutlet weak var AntiIceLabel: UILabel!    
+    
+    @IBOutlet weak var AntiIceLabel: UILabel!
     var isAntiIceOn: Bool?
     
     @IBAction func engineAntiIce(_ sender: UISegmentedControl) {
