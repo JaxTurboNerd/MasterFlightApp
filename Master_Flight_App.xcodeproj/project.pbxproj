@@ -13,6 +13,7 @@
 		93183A691F3E818200E7350D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 93183A671F3E818200E7350D /* Main.storyboard */; };
 		93183A6B1F3E818200E7350D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 93183A6A1F3E818200E7350D /* Assets.xcassets */; };
 		93183A6E1F3E818200E7350D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 93183A6C1F3E818200E7350D /* LaunchScreen.storyboard */; };
+		93E2F0491F5DB76A00E2BB7F /* MissionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93E2F0481F5DB76A00E2BB7F /* MissionViewController.swift */; };
 		93F154841F478315003F4A6E /* FltCalcController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93F154831F478315003F4A6E /* FltCalcController.swift */; };
 		93F154861F47834B003F4A6E /* FlightCalcModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93F154851F47834B003F4A6E /* FlightCalcModel.swift */; };
 		93F154881F479572003F4A6E /* TakeoffPowerModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93F154871F479572003F4A6E /* TakeoffPowerModel.swift */; };
@@ -27,6 +28,7 @@
 		93183A6A1F3E818200E7350D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		93183A6D1F3E818200E7350D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		93183A6F1F3E818200E7350D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		93E2F0481F5DB76A00E2BB7F /* MissionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MissionViewController.swift; path = ../MissionViewController.swift; sourceTree = "<group>"; };
 		93F154831F478315003F4A6E /* FltCalcController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = FltCalcController.swift; path = "../../New FlightTime/FlightTimeNew/FlightTimeNew/FltCalcController.swift"; sourceTree = "<group>"; };
 		93F154851F47834B003F4A6E /* FlightCalcModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = FlightCalcModel.swift; path = "../../New FlightTime/FlightTimeNew/FlightTimeNew/FlightCalcModel.swift"; sourceTree = "<group>"; };
 		93F154871F479572003F4A6E /* TakeoffPowerModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TakeoffPowerModel.swift; sourceTree = "<group>"; };
@@ -68,6 +70,7 @@
 				93F154871F479572003F4A6E /* TakeoffPowerModel.swift */,
 				93F154831F478315003F4A6E /* FltCalcController.swift */,
 				93F154851F47834B003F4A6E /* FlightCalcModel.swift */,
+				93E2F0481F5DB76A00E2BB7F /* MissionViewController.swift */,
 				93183A671F3E818200E7350D /* Main.storyboard */,
 				93183A6A1F3E818200E7350D /* Assets.xcassets */,
 				93183A6C1F3E818200E7350D /* LaunchScreen.storyboard */,
@@ -153,6 +156,7 @@
 				93183A621F3E818200E7350D /* AppDelegate.swift in Sources */,
 				93F154881F479572003F4A6E /* TakeoffPowerModel.swift in Sources */,
 				93183A641F3E818200E7350D /* HomeViewController.swift in Sources */,
+				93E2F0491F5DB76A00E2BB7F /* MissionViewController.swift in Sources */,
 				93F154841F478315003F4A6E /* FltCalcController.swift in Sources */,
 				93F154861F47834B003F4A6E /* FlightCalcModel.swift in Sources */,
 			);
