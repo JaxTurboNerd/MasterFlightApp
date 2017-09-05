@@ -1,0 +1,76 @@
+//
+//  FlightCalculatorViewController.swift
+//  FlightTimeNew
+//
+//  Created by Gregory Boyd on 7/19/17.
+//  Copyright © 2017 Gregory Boyd. All rights reserved.
+//
+
+import UIKit
+
+class ViewController: UIViewController {
+    
+        //Mark: Properties
+    
+    @IBOutlet weak var inputTime: UITextField!
+
+    @IBOutlet weak var pic1Label: UILabel!
+    @IBOutlet weak var pic2Label: UILabel!
+    @IBOutlet weak var pic3Label: UILabel!
+    @IBOutlet weak var sic1Label: UILabel!
+    @IBOutlet weak var sic2Label: UILabel!
+    @IBOutlet weak var sic3Label: UILabel!
+    @IBOutlet weak var crew1Label: UILabel!
+    @IBOutlet weak var crew2Label: UILabel!
+    @IBOutlet weak var crew3Label: UILabel!
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        
+        //Add Done Button to top of keypad
+        let toolBar = UIToolbar()
+        toolBar.sizeToFit()
+        
+        //pushes the done button to the right side of the toolbar
+        let flexibleSpace = UIBarButtonItem(barButtonSystemItem: UIBarButtonSystemItem.flexibleSpace, target: nil, action: nil)
+        
+        //adds done button to a toolbar above the keypad
+        let doneButton = UIBarButtonItem(barButtonSystemItem: UIBarButtonSystemItem.done, target: self, action: #selector(self.doneClicked))
+        
+        toolBar.setItems([flexibleSpace, doneButton], animated: false)
+        
+        inputTime.inputAccessoryView = toolBar
+        
+        //dismiss keyboard by tapping anywhere
+        self.view.addGestureRecognizer(UITapGestureRecognizer(target:
+            self.view, action: #selector(UIView.endEditing(_:))))
+        }
+    
+    func doneClicked() {
+    view.endEditing(true)
+    }
+
+    //MARK: Actions
+    
+    @IBAction func calculateTime(_ sender: UIButton) {
+        
+        //Code using MVC file
+        let flightCalculation = FlightTime()
+        
+        //Assign values to outlet labels
+        pic1Label.text = flightCalculation.calculateFlightTime(flightTime: Double(inputTime.text!)!).stringTime1
+        pic2Label.text = flightCalculation.calculateFlightTime(flightTime: Double(inputTime.text!)!).stringTime2
+        pic3Label.text = flightCalculation.calculateFlightTime(flightTime: Double(inputTime.text!)!).stringTime3
+        sic1Label.text = flightCalculation.calculateFlightTime(flightTime: Double(inputTime.text!)!).stringTime2
+        sic2Label.text = flightCalculation.calculateFlightTime(flightTime: Double(inputTime.text!)!).stringTime3
+        sic3Label.text = flightCalculation.calculateFlightTime(flightTime: Double(inputTime.text!)!).stringTime1
+        crew1Label.text = flightCalculation.calculateFlightTime(flightTime: Double(inputTime.text!)!).stringTime3
+        crew2Label.text = flightCalculation.calculateFlightTime(flightTime: Double(inputTime.text!)!).stringTime1
+        crew3Label.text = flightCalculation.calculateFlightTime(flightTime: Double(inputTime.text!)!).stringTime2
+        
+        //Dismisses keyboard after click on Calculate button
+        self.doneClicked()
+    }
+    
+    
+}
