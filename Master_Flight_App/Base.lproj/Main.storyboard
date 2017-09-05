@@ -176,6 +176,12 @@
                                     <action selector="calcMission:" destination="Pqn-0L-TfT" eventType="touchUpInside" id="yGY-4I-cE6"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3Qg-Rq-FQM">
+                                <rect key="frame" x="113" y="418" width="150" height="35"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="19"/>
+                                <state key="normal" title="Onstation Criteria"/>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="0.80000001190000003" green="0.80000001190000003" blue="0.80000001190000003" alpha="0.70103809931506844" colorSpace="calibratedRGB"/>
                         <constraints>
@@ -199,7 +205,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="WnR-bx-7QO" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="0.0" y="798"/>
+            <point key="canvasLocation" x="-0.80000000000000004" y="797.45127436281871"/>
         </scene>
         <!--TakeoffPowerViewController-->
         <scene sceneID="wg7-f3-ORb">
