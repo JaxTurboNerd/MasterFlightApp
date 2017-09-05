@@ -9,11 +9,40 @@
 import UIKit
 
 class MissionViewController: UIViewController {
+    @IBOutlet weak var ZeroFuelWeight: UITextField!
+    @IBOutlet weak var TotalFuel: UITextField!
+    @IBOutlet weak var Altitude: UITextField!
 
+    @IBOutlet weak var MaxRange: UILabel!
+    @IBOutlet weak var LoiterSpeed: UILabel!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+        //Add Done Button to top of keypad
+        let toolBar = UIToolbar()
+        toolBar.sizeToFit()
+        
+        //pushes the done button to the right side of the toolbar
+        let flexibleSpace = UIBarButtonItem(barButtonSystemItem: UIBarButtonSystemItem.flexibleSpace, target: nil, action: nil)
+        
+        //adds done button to a toolbar above the keypad
+        let doneButton = UIBarButtonItem(barButtonSystemItem: UIBarButtonSystemItem.done, target: self, action: #selector(self.doneClicked))
+        
+        toolBar.setItems([flexibleSpace, doneButton], animated: false)
+        
+        ZeroFuelWeight.inputAccessoryView = toolBar
+        TotalFuel.inputAccessoryView = toolBar
+        Altitude.inputAccessoryView = toolBar
+        
+        //dismiss keyboard by tapping anywhere
+        self.view.addGestureRecognizer(UITapGestureRecognizer(target:
+            self.view, action: #selector(UIView.endEditing(_:))))
+    }
+    
+    func doneClicked() {
+        view.endEditing(true)
+
     }
 
     override func didReceiveMemoryWarning() {
@@ -22,14 +51,16 @@ class MissionViewController: UIViewController {
     }
     
 
-    /*
     // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+    
+    @IBAction func calcMission(_ sender: UIButton) {
+        var missionCalculation = MissionData()
+        
+        MaxRange.text = missionCalculation.calcMissionData(zfw: Double(ZeroFuelWeight.text!)!, totalFuel: Double(TotalFuel.text!)!, altitude: Double(Altitude.text!)!).stringMaxRange
+        LoiterSpeed.text = missionCalculation.calcMissionData(zfw: Double(ZeroFuelWeight.text!)!, totalFuel: Double(TotalFuel.text!)!, altitude: Double(Altitude.text!)!).stringLoiterSpeed
+        
+        //Dismisses keyboard after click on Calculate button
+        self.doneClicked()
     }
-    */
 
 }

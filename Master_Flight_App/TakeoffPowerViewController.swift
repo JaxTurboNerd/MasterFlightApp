@@ -77,6 +77,7 @@ class SecondViewController: UIViewController, UIPickerViewDelegate, UIPickerView
         toolBar.setItems([minusButton, flexibleSpace, doneButton], animated: false)
         
         OAT.inputAccessoryView = toolBar
+        PA.inputAccessoryView = toolBar
         
         //dismiss keyboard by tapping anywhere
         self.view.addGestureRecognizer(UITapGestureRecognizer(target:

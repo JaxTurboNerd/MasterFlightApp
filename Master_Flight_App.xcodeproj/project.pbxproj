@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		9308E1591F5E22C300CBFDC0 /* MissionModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9308E1581F5E22C300CBFDC0 /* MissionModel.swift */; };
 		93183A621F3E818200E7350D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93183A611F3E818200E7350D /* AppDelegate.swift */; };
 		93183A641F3E818200E7350D /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93183A631F3E818200E7350D /* HomeViewController.swift */; };
 		93183A661F3E818200E7350D /* TakeoffPowerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93183A651F3E818200E7350D /* TakeoffPowerViewController.swift */; };
@@ -20,6 +21,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		9308E1581F5E22C300CBFDC0 /* MissionModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MissionModel.swift; sourceTree = "<group>"; };
 		93183A5E1F3E818200E7350D /* Master_Flight_App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Master_Flight_App.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		93183A611F3E818200E7350D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		93183A631F3E818200E7350D /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
@@ -71,6 +73,7 @@
 				93F154831F478315003F4A6E /* FltCalcController.swift */,
 				93F154851F47834B003F4A6E /* FlightCalcModel.swift */,
 				93E2F0481F5DB76A00E2BB7F /* MissionViewController.swift */,
+				9308E1581F5E22C300CBFDC0 /* MissionModel.swift */,
 				93183A671F3E818200E7350D /* Main.storyboard */,
 				93183A6A1F3E818200E7350D /* Assets.xcassets */,
 				93183A6C1F3E818200E7350D /* LaunchScreen.storyboard */,
@@ -152,6 +155,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9308E1591F5E22C300CBFDC0 /* MissionModel.swift in Sources */,
 				93183A661F3E818200E7350D /* TakeoffPowerViewController.swift in Sources */,
 				93183A621F3E818200E7350D /* AppDelegate.swift in Sources */,
 				93F154881F479572003F4A6E /* TakeoffPowerModel.swift in Sources */,
