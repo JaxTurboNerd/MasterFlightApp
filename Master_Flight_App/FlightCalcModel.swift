@@ -13,10 +13,10 @@ struct FlightTime {
     func calculateFlightTime(flightTime: Double) -> (stringTime1: String, stringTime2: String, stringTime3: String) {
         
         //multiply flightTime by 10
-        let newFlightTime = flightTime * 10
+        //let newFlightTime = flightTime * 10
         
         //convert flightTime to type Int
-        let intFlightTime = Int(newFlightTime)
+        let intFlightTime = Int(flightTime * 10)
         
         let divideResult = intFlightTime/3
         

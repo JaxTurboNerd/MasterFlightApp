@@ -9,22 +9,26 @@
 
 import Foundation
 
-struct OnStationMode {
+struct OnStation {
     
-    func calculateOnSta(totalFuel: Double, onStationFuelFlow: Int, returnFuelFlow: Int, destDistance: Int, groundSpeed: Int, onTopFuel: Double ) -> (stringOnStationTime: String, stringFlyHomeFuel: String) {
+    func calculateOnSta(totalFuel: Double, onStationFuelFlow: Int, returnFuelFlow: Int, destDistance: Int, groundSpeed: Int, onTopFuel: Double ) -> (stringOnStationTime: String, stringDepartFuel: String) {
         
-        /*
-         Need to convert all input number to thousands befor the math calculations
-         */
+        //Need to convert all input number to thousands before the math calculations
+ 
+        //Convert Doubles to type Int
+        let IntTotalFuel = Int(totalFuel)
+        let IntOnTopFuel = Int(onTopFuel)
+        
         //code for calculations
-        let flyHomeFuel = Double((destDistance/groundSpeed) * returnFuelFlow)
-        let onStationFuel = totalFuel - onTopFuel - Double(flyHomeFuel)
-        let onStationTime = onStationFuel/Double(onStationFuelFlow)
+        let flyHomeFuel = (destDistance/groundSpeed) * returnFuelFlow
+        let onStationFuel = (IntTotalFuel * 1000) - (IntOnTopFuel * 1000) - flyHomeFuel
+        let onStationTime = Double(onStationFuel/onStationFuelFlow)
+        let departFuel = flyHomeFuel + (IntOnTopFuel * 1000)
         
         //convert to type String for labels
         let stringOnStationTime = String(onStationTime)
-        let stringFlyHomeFuel = String(flyHomeFuel)
+        let stringDepartFuel = String(departFuel)
         
-        return(stringOnStationTime, stringFlyHomeFuel)
+        return(stringOnStationTime, stringDepartFuel)
     }
 }

@@ -22,11 +22,11 @@ class OnstationViewController: UIViewController {
     
     
     @IBAction func calcOnStation(_ sender: UIButton) {
-        let OnStationCalculation = OnStationMode()
+        let OnStationCalculation = OnStation()
         
         OnStationTime.text = OnStationCalculation.calculateOnSta(totalFuel: Double(TotalFuel.text!)!, onStationFuelFlow: Int(onstaFuelFLow.text!)!, returnFuelFlow: Int(returnFuelFlow.text!)!, destDistance: Int(DestDistance.text!)!, groundSpeed: Int(GroundSpeed.text!)!, onTopFuel: Double(OnTop.text!)!).stringOnStationTime
         
-        goHomeFuel.text = OnStationCalculation.calculateOnSta(totalFuel: Double(TotalFuel.text!)!, onStationFuelFlow: Int(onstaFuelFLow.text!)!, returnFuelFlow: Int(returnFuelFlow.text!)!, destDistance: Int(DestDistance.text!)!, groundSpeed: Int(GroundSpeed.text!)!, onTopFuel: Double(OnTop.text!)!).stringFlyHomeFuel
+        goHomeFuel.text = OnStationCalculation.calculateOnSta(totalFuel: Double(TotalFuel.text!)!, onStationFuelFlow: Int(onstaFuelFLow.text!)!, returnFuelFlow: Int(returnFuelFlow.text!)!, destDistance: Int(DestDistance.text!)!, groundSpeed: Int(GroundSpeed.text!)!, onTopFuel: Double(OnTop.text!)!).stringDepartFuel
     }
     
     override func viewDidLoad() {
