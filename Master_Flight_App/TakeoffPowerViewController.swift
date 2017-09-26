@@ -45,9 +45,10 @@ class SecondViewController: UIViewController, UIPickerViewDelegate, UIPickerView
         else {
             isAntiIceOn = false
         }
-        //assign values to label
-        SHP100.text = powerCalculation.calculatePower(airTemp: Int(OAT.text!)!, antiIce: isAntiIceOn!, pressureAltitude: Int(PA.text!)!).stringSHP100
-        SHP95.text = powerCalculation.calculatePower(airTemp: Int(OAT.text!)!, antiIce: isAntiIceOn!, pressureAltitude: Int(PA.text!)!).stringSHP95
+        //assign values to label from calculations
+        SHP100.text = powerCalculation.calculatePower(picker: TITlabel.text!, airTemp: Int(OAT.text!)!, antiIce: isAntiIceOn!, pressureAltitude: Int(PA.text!)!).stringSHP100
+        SHP95.text = powerCalculation.calculatePower(picker: TITlabel.text!, airTemp: Int(OAT.text!)!, antiIce: isAntiIceOn!, pressureAltitude: Int(PA.text!)!).stringSHP95
+
         //dismiss keyboard after click calculate button
         self.doneClicked()
     }
@@ -60,7 +61,7 @@ class SecondViewController: UIViewController, UIPickerViewDelegate, UIPickerView
         self.TIT_Picker.dataSource = self
         
         //TIT picker data
-        TIT_PickerData = ["1077", "1010", "3500 SHP", "3000 SHP"]
+        TIT_PickerData = ["1077", "1010"]
         
         //Add Done Button to top of keypad
         let toolBar = UIToolbar()

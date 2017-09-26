@@ -42,11 +42,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Master_Flight_App/TakeoffPowerViewController.swift"
-            timestampString = "526168194.161676"
+            timestampString = "527626073.784329"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "55"
-            endingLineNumber = "55"
+            startingLineNumber = "56"
+            endingLineNumber = "56"
             landmarkName = "viewDidLoad()"
             landmarkType = "7">
          </BreakpointContent>
@@ -58,11 +58,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Master_Flight_App/TakeoffPowerModel.swift"
-            timestampString = "525375887.342033"
+            timestampString = "527647386.382566"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "59"
-            endingLineNumber = "59"
+            startingLineNumber = "77"
+            endingLineNumber = "77"
             landmarkName = "TakeoffPower"
             landmarkType = "14">
          </BreakpointContent>
@@ -74,28 +74,12 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Master_Flight_App/TakeoffPowerModel.swift"
-            timestampString = "525375887.342033"
+            timestampString = "527647386.382566"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "53"
-            endingLineNumber = "53"
-            landmarkName = "calculatePower(airTemp:antiIce:pressureAltitude:)"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "Master_Flight_App/TakeoffPowerModel.swift"
-            timestampString = "525375887.342033"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "52"
-            endingLineNumber = "52"
-            landmarkName = "calculatePower(airTemp:antiIce:pressureAltitude:)"
+            startingLineNumber = "71"
+            endingLineNumber = "71"
+            landmarkName = "calculatePower(picker:airTemp:antiIce:pressureAltitude:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
