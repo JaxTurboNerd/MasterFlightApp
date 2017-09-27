@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		9308E1591F5E22C300CBFDC0 /* MissionModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9308E1581F5E22C300CBFDC0 /* MissionModel.swift */; };
+		93099C5F1F7B2E7000503A11 /* DistanceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93099C5E1F7B2E7000503A11 /* DistanceViewController.swift */; };
 		93183A621F3E818200E7350D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93183A611F3E818200E7350D /* AppDelegate.swift */; };
 		93183A641F3E818200E7350D /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93183A631F3E818200E7350D /* HomeViewController.swift */; };
 		93183A661F3E818200E7350D /* TakeoffPowerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93183A651F3E818200E7350D /* TakeoffPowerViewController.swift */; };
@@ -25,6 +26,7 @@
 
 /* Begin PBXFileReference section */
 		9308E1581F5E22C300CBFDC0 /* MissionModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MissionModel.swift; sourceTree = "<group>"; };
+		93099C5E1F7B2E7000503A11 /* DistanceViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DistanceViewController.swift; sourceTree = "<group>"; };
 		93183A5E1F3E818200E7350D /* Master_Flight_App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Master_Flight_App.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		93183A611F3E818200E7350D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		93183A631F3E818200E7350D /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
@@ -83,6 +85,7 @@
 				936C87481F5F2C7000ACD0E7 /* OnstationViewController.swift */,
 				9322D4E11F6B088C006C9425 /* OnStationModel.swift */,
 				93183A671F3E818200E7350D /* Main.storyboard */,
+				93099C5E1F7B2E7000503A11 /* DistanceViewController.swift */,
 				9322D4DF1F678827006C9425 /* CustomButtons.swift */,
 				93183A6A1F3E818200E7350D /* Assets.xcassets */,
 				93183A6C1F3E818200E7350D /* LaunchScreen.storyboard */,
@@ -169,6 +172,7 @@
 				936C87491F5F2C7000ACD0E7 /* OnstationViewController.swift in Sources */,
 				93183A621F3E818200E7350D /* AppDelegate.swift in Sources */,
 				93F154881F479572003F4A6E /* TakeoffPowerModel.swift in Sources */,
+				93099C5F1F7B2E7000503A11 /* DistanceViewController.swift in Sources */,
 				FA7060501F5E3A14006FD6A0 /* FlightCalcModel.swift in Sources */,
 				9322D4E01F678827006C9425 /* CustomButtons.swift in Sources */,
 				93183A641F3E818200E7350D /* HomeViewController.swift in Sources */,
