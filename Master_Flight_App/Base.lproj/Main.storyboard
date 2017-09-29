@@ -217,7 +217,7 @@
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                             </imageView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="50" translatesAutoresizingMaskIntoConstraints="NO" id="hFi-cg-GwK">
-                                <rect key="frame" x="40" y="114" width="295" height="332"/>
+                                <rect key="frame" x="40" y="84" width="295" height="332"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="bl1-Uf-LLO">
                                         <rect key="frame" x="0.0" y="0.0" width="295" height="200"/>
@@ -345,10 +345,10 @@
                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="iwJ-yQ-lq5">
                                         <rect key="frame" x="43" y="220" width="209.5" height="58"/>
                                         <subviews>
-                                            <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" axis="vertical" distribution="equalSpacing" alignment="bottom" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="KMp-9L-EGd">
+                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" alignment="bottom" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="KMp-9L-EGd">
                                                 <rect key="frame" x="0.0" y="0.0" width="149.5" height="58"/>
                                                 <subviews>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="On-Station Time:" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="APa-P6-Eg3">
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="On-Station Time:" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="APa-P6-Eg3">
                                                         <rect key="frame" x="0.0" y="0.0" width="149.5" height="24"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="40"/>
                                                         <nil key="textColor"/>
@@ -357,7 +357,7 @@
                                                             <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                                         </variation>
                                                     </label>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Go Home Fuel:" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="F9M-Dd-q6m">
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Go Home Fuel:" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="F9M-Dd-q6m">
                                                         <rect key="frame" x="20" y="34" width="129.5" height="24"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="40"/>
                                                         <nil key="textColor"/>
@@ -368,10 +368,10 @@
                                                     </label>
                                                 </subviews>
                                             </stackView>
-                                            <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" axis="vertical" distribution="equalSpacing" alignment="top" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="V79-Dk-qdb">
+                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" alignment="top" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="V79-Dk-qdb">
                                                 <rect key="frame" x="159.5" y="0.0" width="50" height="58"/>
                                                 <subviews>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="0.0" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5Jr-zQ-YhX">
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0.0" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5Jr-zQ-YhX">
                                                         <rect key="frame" x="0.0" y="0.0" width="30.5" height="24"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="40"/>
                                                         <nil key="textColor"/>
@@ -380,7 +380,7 @@
                                                             <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                                         </variation>
                                                     </label>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="0000" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AgG-1S-tTU">
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0000" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AgG-1S-tTU">
                                                         <rect key="frame" x="0.0" y="34" width="50" height="24"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="40"/>
                                                         <nil key="textColor"/>
@@ -416,7 +416,8 @@
                             <constraint firstItem="y2J-X3-3iA" firstAttribute="top" secondItem="YLM-nn-HtS" secondAttribute="top" id="0qX-ch-g23"/>
                             <constraint firstItem="hFi-cg-GwK" firstAttribute="centerX" secondItem="YLM-nn-HtS" secondAttribute="centerX" id="LOu-GU-R0T"/>
                             <constraint firstItem="hFi-cg-GwK" firstAttribute="top" secondItem="UyD-PQ-oGm" secondAttribute="bottom" constant="50" id="Q1J-8I-x7Z">
-                                <variation key="widthClass=regular" constant="100"/>
+                                <variation key="widthClass=compact" constant="20"/>
+                                <variation key="widthClass=regular" constant="50"/>
                             </constraint>
                             <constraint firstAttribute="trailing" secondItem="y2J-X3-3iA" secondAttribute="trailing" id="Q8R-5h-VHg"/>
                             <constraint firstAttribute="bottom" secondItem="y2J-X3-3iA" secondAttribute="bottom" id="VbR-WR-6Le"/>
@@ -451,7 +452,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" alpha="0.5" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" preservesSuperviewLayoutMargins="YES" image="runwayview" adjustsImageSizeForAccessibilityContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="wSY-Va-fZR">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" alpha="0.5" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" preservesSuperviewLayoutMargins="YES" image="runwayview" adjustsImageSizeForAccessibilityContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="wSY-Va-fZR">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                             </imageView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="odW-SE-Gui">
@@ -658,8 +659,9 @@
                                     </stackView>
                                 </subviews>
                             </stackView>
-                            <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EFl-iI-FxN">
-                                <rect key="frame" x="187.5" y="266" width="0.0" height="0.0"/>
+                            <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EFl-iI-FxN">
+                                <rect key="frame" x="100" y="300" width="0.0" height="0.0"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -667,12 +669,10 @@
                         </subviews>
                         <color key="backgroundColor" red="0.90196079019999997" green="0.90196079019999997" blue="0.90196079019999997" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
-                            <constraint firstItem="EFl-iI-FxN" firstAttribute="centerX" secondItem="odW-SE-Gui" secondAttribute="centerX" id="7Jh-B4-SLP"/>
                             <constraint firstItem="wSY-Va-fZR" firstAttribute="top" secondItem="QS5-Rx-YEW" secondAttribute="top" id="D0N-hM-QEb"/>
-                            <constraint firstItem="odW-SE-Gui" firstAttribute="top" secondItem="L7p-HK-0SC" secondAttribute="bottom" constant="100" id="G0M-mq-jJJ">
+                            <constraint firstItem="odW-SE-Gui" firstAttribute="top" secondItem="L7p-HK-0SC" secondAttribute="bottom" constant="50" id="G0M-mq-jJJ">
                                 <variation key="widthClass=compact" constant="20"/>
                             </constraint>
-                            <constraint firstItem="Djb-ko-YwX" firstAttribute="top" secondItem="EFl-iI-FxN" secondAttribute="bottom" constant="352" id="UoI-O2-hoF"/>
                             <constraint firstAttribute="trailing" secondItem="wSY-Va-fZR" secondAttribute="trailing" id="Zj5-qg-r9i"/>
                             <constraint firstItem="odW-SE-Gui" firstAttribute="leading" secondItem="QS5-Rx-YEW" secondAttribute="leadingMargin" id="doY-uK-U1o"/>
                             <constraint firstItem="wSY-Va-fZR" firstAttribute="leading" secondItem="QS5-Rx-YEW" secondAttribute="leading" id="iZA-QI-pvd"/>
@@ -684,7 +684,7 @@
                     <navigationItem key="navigationItem" title="Take Off Power" id="caT-81-Oc0">
                         <barButtonItem key="rightBarButtonItem" title="T/O Performance" id="r0G-I9-FX1">
                             <connections>
-                                <segue destination="EOw-Ow-66j" kind="show" id="bvh-dV-qRi"/>
+                                <segue destination="EOw-Ow-66j" kind="show" id="hVz-Bg-i6Q"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -702,10 +702,10 @@
             </objects>
             <point key="canvasLocation" x="1682.4000000000001" y="-1.3493253373313345"/>
         </scene>
-        <!--Takeoff Distances-->
+        <!--Takeoff Performance-->
         <scene sceneID="yNI-QI-97f">
             <objects>
-                <viewController storyboardIdentifier="Distance View Controller" title="Takeoff Distances" id="EOw-Ow-66j" customClass="DistanceViewController" customModule="Master_Flight_App" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="Takeoff Performance Controller" title="Takeoff Performance" id="EOw-Ow-66j" customClass="TakeoffPerformanceViewController" customModule="Master_Flight_App" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="rH7-nM-sxM"/>
                         <viewControllerLayoutGuide type="bottom" id="Mqp-tn-m12"/>
@@ -718,17 +718,27 @@
                                 <rect key="frame" x="0.0" y="64" width="375" height="554"/>
                                 <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="cell" id="mtG-kd-ldb">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="cell" textLabel="qDw-2w-rdZ" style="IBUITableViewCellStyleDefault" id="mtG-kd-ldb">
                                         <rect key="frame" x="0.0" y="55.5" width="375" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="mtG-kd-ldb" id="idW-zP-oMj">
                                             <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="qDw-2w-rdZ">
+                                                    <rect key="frame" x="15" y="0.0" width="345" height="43.5"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
                                         </tableViewCellContentView>
                                     </tableViewCell>
                                 </prototypes>
                                 <connections>
                                     <outlet property="dataSource" destination="EOw-Ow-66j" id="fFI-Vq-E2G"/>
+                                    <outlet property="delegate" destination="EOw-Ow-66j" id="E30-YE-xPi"/>
                                 </connections>
                             </tableView>
                         </subviews>
@@ -743,7 +753,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fqa-OE-HT4" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2484" y="-0.44977511244377816"/>
+            <point key="canvasLocation" x="2585" y="-2"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="yl2-sM-qoP">
@@ -1030,7 +1040,7 @@
                             <constraint firstAttribute="bottom" secondItem="Ssk-Oh-cKy" secondAttribute="bottom" id="yYj-7K-sCD"/>
                         </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Flight Time" image="clock25" selectedImage="clock25" id="d5I-0K-gqg"/>
+                    <tabBarItem key="tabBarItem" title="Flight Time" image="clock" selectedImage="clock" id="d5I-0K-gqg"/>
                     <connections>
                         <outlet property="crew1Label" destination="a3s-bC-P12" id="Vno-Tc-Rgo"/>
                         <outlet property="crew2Label" destination="lFg-s4-mCv" id="rIw-v2-fKm"/>
@@ -1052,7 +1062,7 @@
         <scene sceneID="mD9-FQ-z4f">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="chc-1f-SwQ" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Mission" image="airplane1x25" id="A6I-GO-Ubs"/>
+                    <tabBarItem key="tabBarItem" title="Mission" image="airplanetop" selectedImage="airplanetop" id="A6I-GO-Ubs"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="EH5-aI-zbQ">
                         <autoresizingMask key="autoresizingMask"/>
@@ -1087,8 +1097,8 @@
     </scenes>
     <resources>
         <image name="NASOC JAX Logo" width="627" height="627"/>
-        <image name="airplane1x25" width="25" height="25"/>
-        <image name="clock25" width="25" height="25"/>
+        <image name="airplanetop" width="38" height="38"/>
+        <image name="clock" width="38" height="38"/>
         <image name="runwayview" width="4256" height="2832"/>
         <image name="sky" width="1920" height="1079"/>
         <image name="takeoffx25" width="25" height="25"/>
