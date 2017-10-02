@@ -47,10 +47,11 @@ class SecondViewController: UIViewController, UIPickerViewDelegate, UIPickerView
         }
         
         if PA.text?.isEmpty == true {
+            PA.text = "000"
             let paAlert = UIAlertController(title: "PA Not Entered!", message: "Enter PA", preferredStyle: .alert)
             paAlert.addAction(UIAlertAction(title: "Ok", style: .cancel, handler: nil))
             self.present(paAlert, animated: true,completion: nil)
-            V
+            PA.text = "000"
         }
         
         //Setting Anit-Ice value
