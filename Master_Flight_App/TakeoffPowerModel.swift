@@ -23,7 +23,6 @@ struct TakeoffPower {
         var SHP100:Int = 0
         var SHP95: Double = 0.0
         
-        
         //Adjusts for use of Engine Anti-ice
         var workingOAT = airTemp
         if antiIce == true {
