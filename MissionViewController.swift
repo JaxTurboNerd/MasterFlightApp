@@ -55,6 +55,20 @@ class MissionViewController: UIViewController {
     @IBAction func calcMission(_ sender: UIButton) {
         var missionCalculation = MissionData()
         
+        //Catch empty input fields
+        if ZeroFuelWeight.text?.isEmpty == true {
+            emptyAlert(alertTitle: "ZFW not entered", alertMessage: "Enter ZFW")
+            ZeroFuelWeight.text = "00.0"
+        }
+        else if TotalFuel.text?.isEmpty == true {
+            emptyAlert(alertTitle: "Fuel total not entered", alertMessage: "Enter fuel")
+            TotalFuel.text = "00.0"
+        }
+        else if Altitude.text?.isEmpty == true {
+            emptyAlert(alertTitle: "Altitude not entered", alertMessage: "Enter altitude")
+            Altitude.text = "00.0"
+        }
+        
         MaxRange.text = missionCalculation.calcMissionData(zfw: Double(ZeroFuelWeight.text!)!, totalFuel: Double(TotalFuel.text!)!, altitude: Double(Altitude.text!)!).stringMaxRange
         LoiterSpeed.text = missionCalculation.calcMissionData(zfw: Double(ZeroFuelWeight.text!)!, totalFuel: Double(TotalFuel.text!)!, altitude: Double(Altitude.text!)!).stringLoiterSpeed
         

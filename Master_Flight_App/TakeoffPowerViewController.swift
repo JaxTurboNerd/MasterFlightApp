@@ -5,7 +5,7 @@
 //  Created by Gregory Boyd on 8/11/17.
 //  Copyright © 2017 Gregory Boyd. All rights reserved.
 //
-
+import Foundation
 import UIKit
 
 class SecondViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSource {
@@ -40,17 +40,12 @@ class SecondViewController: UIViewController, UIPickerViewDelegate, UIPickerView
         
         //catch empty text fields
         if OAT.text?.isEmpty == true {
-            let oatAlert = UIAlertController(title: "OAT Not Entered!", message: "Enter OAT", preferredStyle: .alert)
-            oatAlert.addAction(UIAlertAction(title: "Ok", style: .cancel, handler: nil))
-            self.present(oatAlert, animated: true,completion: nil)
+            emptyAlert(alertTitle: "OAT Not Entered", alertMessage: "Enter OAT")
             OAT.text = "0"
         }
         
-        if PA.text?.isEmpty == true {
-            PA.text = "000"
-            let paAlert = UIAlertController(title: "PA Not Entered!", message: "Enter PA", preferredStyle: .alert)
-            paAlert.addAction(UIAlertAction(title: "Ok", style: .cancel, handler: nil))
-            self.present(paAlert, animated: true,completion: nil)
+        else if PA.text?.isEmpty == true {
+            emptyAlert(alertTitle: "PA Not Entered", alertMessage: "Enter OAT")
             PA.text = "000"
         }
         
@@ -63,8 +58,8 @@ class SecondViewController: UIViewController, UIPickerViewDelegate, UIPickerView
         }
         
         //assign values to label from calculations
-        SHP100.text = powerCalculation.calculatePower(picker: TITlabel.text!, airTemp: Int(OAT.text!)!, antiIce: isAntiIceOn, pressureAltitude: Int(PA.text!)!).stringSHP100
-        SHP95.text = powerCalculation.calculatePower(picker: TITlabel.text!, airTemp: Int(OAT.text!)!, antiIce: isAntiIceOn, pressureAltitude: Int(PA.text!)!).stringSHP95
+        SHP100.text = powerCalculation.calculatePower(picker: TITlabel.text!, airTemp: Int(OAT.text!)!, antiIce: isAntiIceOn!, pressureAltitude: Int(PA.text!)!).stringSHP100
+        SHP95.text = powerCalculation.calculatePower(picker: TITlabel.text!, airTemp: Int(OAT.text!)!, antiIce: isAntiIceOn!, pressureAltitude: Int(PA.text!)!).stringSHP95
 
         //dismiss keyboard after click calculate button
         self.doneClicked()

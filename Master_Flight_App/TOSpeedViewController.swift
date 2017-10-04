@@ -5,18 +5,36 @@
 //  Created by Gregory Boyd on 9/29/17.
 //  Copyright © 2017 Gregory Boyd. All rights reserved.
 //
-
+import Foundation
 import UIKit
 
 class TOSpeedViewController: UIViewController {
-
+    var aircraftType: String = "LRT"
+    
     @IBOutlet weak var grossWeight: UITextField!
     @IBOutlet weak var Vro: UILabel!
     @IBOutlet weak var Vlof: UILabel!
     @IBOutlet weak var V50: UILabel!
     
-    @IBAction func CalculateSpeeds(_ sender: RoundedButton) {
+    @IBAction func AircraftType(_ sender: UISegmentedControl) {
+        if sender.selectedSegmentIndex == 0 {
+            aircraftType = "LRT"
+            sender.setTitleTextAttributes([NSForegroundColorAttributeName : UIColor.red], for: .selected)
+        }
+        else {
+            aircraftType = "AEW"
+            sender.setTitleTextAttributes([NSForegroundColorAttributeName : UIColor.red], for: .selected)
+        }
     }
+    @IBAction func CalculateSpeeds(_ sender: RoundedButton) {
+        var rotateSpeed = CalculateRotateSpeed()
+        
+        Vro.text = String(Int(rotateSpeed.RotateSpeed(grossWeight: Double(grossWeight.text!)!, aircraftType: aircraftType)))
+        /*
+         Vlof.text =
+         V50.text = 
+        */
+        }
     
     override func viewDidLoad() {
         super.viewDidLoad()
