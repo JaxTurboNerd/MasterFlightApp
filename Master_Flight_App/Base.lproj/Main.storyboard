@@ -443,7 +443,7 @@
         <!--Home View-->
         <scene sceneID="zoR-vY-jjJ">
             <objects>
-                <tableViewController title="Home View" id="e0O-3f-ifd" sceneMemberID="viewController">
+                <tableViewController storyboardIdentifier="Home View Controller" title="Home View" id="e0O-3f-ifd" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="grouped" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="18" sectionFooterHeight="18" id="H2U-Qs-VPe">
                         <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -580,12 +580,32 @@
                                             <segue destination="uZ3-kz-iiW" kind="show" id="QyB-sv-0U4"/>
                                         </connections>
                                     </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" textLabel="hYX-L0-CLJ" style="IBUITableViewCellStyleDefault" id="HsT-31-Ts3">
+                                        <rect key="frame" x="0.0" y="331.5" width="768" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="HsT-31-Ts3" id="D3c-qt-1ES">
+                                            <rect key="frame" x="0.0" y="0.0" width="768" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Flight Segments" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="hYX-L0-CLJ">
+                                                    <rect key="frame" x="20" y="0.0" width="733" height="43.5"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <segue destination="DXW-ZP-Mor" kind="show" id="Kf0-Sw-2Yy"/>
+                                        </connections>
+                                    </tableViewCell>
                                 </cells>
                             </tableViewSection>
                             <tableViewSection headerTitle="Post Flight" id="SfN-Zn-wuc">
                                 <cells>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" textLabel="bSe-94-IKX" imageView="KTK-N0-WM3" style="IBUITableViewCellStyleDefault" id="RpE-aD-gca">
-                                        <rect key="frame" x="0.0" y="387.5" width="768" height="44"/>
+                                        <rect key="frame" x="0.0" y="431.5" width="768" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="RpE-aD-gca" id="jSk-1Z-Ziq">
                                             <rect key="frame" x="0.0" y="0.0" width="768" height="43.5"/>
@@ -607,6 +627,23 @@
                                         <connections>
                                             <segue destination="MOw-pr-uYP" kind="show" id="Qcv-uM-ccr"/>
                                         </connections>
+                                    </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" textLabel="Ngd-yl-F5h" style="IBUITableViewCellStyleDefault" id="dfB-GU-xG3">
+                                        <rect key="frame" x="0.0" y="475.5" width="768" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="dfB-GU-xG3" id="6uX-Sg-9c0">
+                                            <rect key="frame" x="0.0" y="0.0" width="768" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Glo Report" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="Ngd-yl-F5h">
+                                                    <rect key="frame" x="20" y="0.0" width="733" height="43.5"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </tableViewCellContentView>
                                     </tableViewCell>
                                 </cells>
                             </tableViewSection>
@@ -1083,7 +1120,14 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Take Off Distances" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KfC-Oq-97U">
-                                <rect key="frame" x="115" y="70" width="190" height="66"/>
+                                <rect key="frame" x="289" y="95" width="190" height="66"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Under Construction" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xsz-lx-e4b">
+                                <rect key="frame" x="309" y="280" width="151" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
@@ -1382,6 +1426,59 @@
             </objects>
             <point key="canvasLocation" x="3041" y="804"/>
         </scene>
+        <!--Flight Segment View Controller-->
+        <scene sceneID="ep3-Xd-A1B">
+            <objects>
+                <viewController id="DXW-ZP-Mor" customClass="FlightSegmentViewController" customModule="Master_Flight_App" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="3Kd-OL-afq"/>
+                        <viewControllerLayoutGuide type="bottom" id="JGp-b2-Wpa"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8pD-BB-ZrT">
+                        <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Flight segments" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="g19-mR-BBu">
+                                <rect key="frame" x="323" y="201" width="123" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="123" id="008-GX-ipa"/>
+                                    <constraint firstAttribute="height" constant="21" id="wDd-1r-Bma"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2Jd-ZN-HW6">
+                                <rect key="frame" x="338" y="392" width="93" height="30"/>
+                                <state key="normal" title="Add Segment"/>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Under Construction" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kmM-4d-rAn">
+                                <rect key="frame" x="309" y="271" width="151" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="g19-mR-BBu" firstAttribute="top" secondItem="3Kd-OL-afq" secondAttribute="bottom" constant="137" id="B2K-da-AC5"/>
+                            <constraint firstItem="g19-mR-BBu" firstAttribute="centerX" secondItem="kmM-4d-rAn" secondAttribute="centerX" id="BPo-Em-Abk"/>
+                            <constraint firstItem="kmM-4d-rAn" firstAttribute="centerX" secondItem="8pD-BB-ZrT" secondAttribute="centerX" id="BrJ-qV-PvN"/>
+                            <constraint firstItem="g19-mR-BBu" firstAttribute="centerX" secondItem="8pD-BB-ZrT" secondAttribute="centerX" id="EVQ-LL-0jE"/>
+                            <constraint firstItem="kmM-4d-rAn" firstAttribute="top" secondItem="g19-mR-BBu" secondAttribute="bottom" constant="49" id="EXq-J7-9pe"/>
+                            <constraint firstItem="g19-mR-BBu" firstAttribute="centerX" secondItem="2Jd-ZN-HW6" secondAttribute="centerX" id="Emp-1C-QAX"/>
+                            <constraint firstItem="g19-mR-BBu" firstAttribute="leading" secondItem="8pD-BB-ZrT" secondAttribute="leading" constant="323" id="Enr-wo-9C4"/>
+                            <constraint firstItem="g19-mR-BBu" firstAttribute="top" secondItem="8pD-BB-ZrT" secondAttribute="top" constant="201" id="FGg-mS-8Xy"/>
+                            <constraint firstItem="g19-mR-BBu" firstAttribute="leading" secondItem="8pD-BB-ZrT" secondAttribute="leading" constant="323" id="G8L-Sf-kRs"/>
+                            <constraint firstItem="2Jd-ZN-HW6" firstAttribute="centerX" secondItem="8pD-BB-ZrT" secondAttribute="centerX" id="cB6-iJ-9lC"/>
+                            <constraint firstItem="g19-mR-BBu" firstAttribute="top" secondItem="8pD-BB-ZrT" secondAttribute="top" constant="201" id="eFD-CS-mLo"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="i7p-p0-no3" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3771" y="804"/>
+        </scene>
         <!--Navigation Controller-->
         <scene sceneID="gH2-2w-KSX">
             <objects>
@@ -1413,7 +1510,7 @@
         <image name="waves" width="38" height="38"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="zub-GR-wgE"/>
-        <segue reference="QKw-eb-NtO"/>
+        <segue reference="6sD-Ze-dC8"/>
+        <segue reference="QyB-sv-0U4"/>
     </inferredMetricsTieBreakers>
 </document>
