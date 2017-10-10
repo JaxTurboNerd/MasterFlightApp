@@ -48,14 +48,14 @@
                         <constraints>
                             <constraint firstItem="Ypa-QQ-es5" firstAttribute="top" secondItem="bha-Le-D7e" secondAttribute="bottom" id="B8u-hA-1RL"/>
                             <constraint firstItem="bha-Le-D7e" firstAttribute="top" secondItem="Llm-lL-Icb" secondAttribute="bottom" constant="125" id="Egi-oe-O7M"/>
-                            <constraint firstItem="Ypa-QQ-es5" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="Yq1-EH-Oh1"/>
+                            <constraint firstItem="Ypa-QQ-es5" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="J74-Ip-Rch"/>
                             <constraint firstItem="bha-Le-D7e" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="xRp-J2-qa2"/>
                         </constraints>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="iYj-Kq-Ea1" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="52" y="374.66266866566718"/>
+            <point key="canvasLocation" x="51.5625" y="374.4140625"/>
         </scene>
     </scenes>
     <resources>

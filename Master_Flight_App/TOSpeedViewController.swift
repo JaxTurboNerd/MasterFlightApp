@@ -8,6 +8,7 @@
 import Foundation
 import UIKit
 
+//This adds a max length for all storyboard text fields.
 private var __maxLengths = [UITextField: Int]()
 extension UITextField {
     @IBInspectable var maxLength: Int {
@@ -69,7 +70,8 @@ class TOSpeedViewController: UIViewController {
         Vlof.text = String(Int(liftOffSpeed.LiftOffSpeed(grossWeight: Double(grossWeight.text!)!, aircraftType: aircraftType)))
         
         /*
-         V50.text = 
+         V50(3).text =
+         V50(4).text =
         */
         }
     
