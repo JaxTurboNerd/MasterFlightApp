@@ -57,7 +57,7 @@ class OnstationViewController: UIViewController {
 
     }
 
-    func doneClicked() {
+    @objc func doneClicked() {
         view.endEditing(true)
     }
     override func didReceiveMemoryWarning() {

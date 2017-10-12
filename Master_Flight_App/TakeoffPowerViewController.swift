@@ -98,11 +98,11 @@ class SecondViewController: UIViewController, UIPickerViewDelegate, UIPickerView
 
     }
     
-    func doneClicked() {
+    @objc func doneClicked() {
         view.endEditing(true)
     }
     
-    func toggleMinus(){
+    @objc func toggleMinus(){
         if var text = OAT.text, text.isEmpty == false {
             if text.hasPrefix("-") {
                 //text.replacingOccurrences(of: "-", with: "")

@@ -40,7 +40,7 @@ class MissionViewController: UIViewController {
             self.view, action: #selector(UIView.endEditing(_:))))
     }
     
-    func doneClicked() {
+    @objc func doneClicked() {
         view.endEditing(true)
     }
 

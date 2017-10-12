@@ -23,7 +23,7 @@ extension UITextField {
             addTarget(self, action: #selector(fix), for: .editingChanged)
         }
     }
-    func fix(textField: UITextField) {
+    @objc func fix(textField: UITextField) {
         let t = textField.text
         textField.text = t?.safelyLimitedTo(length: maxLength)
     }
@@ -50,11 +50,11 @@ class TOSpeedViewController: UIViewController {
     @IBAction func AircraftType(_ sender: UISegmentedControl) {
         if sender.selectedSegmentIndex == 0 {
             aircraftType = "LRT"
-            sender.setTitleTextAttributes([NSForegroundColorAttributeName : UIColor.red], for: .selected)
+            sender.setTitleTextAttributes([NSAttributedStringKey.foregroundColor : UIColor.red], for: .selected)
         }
         else {
             aircraftType = "AEW"
-            sender.setTitleTextAttributes([NSForegroundColorAttributeName : UIColor.red], for: .selected)
+            sender.setTitleTextAttributes([NSAttributedStringKey.foregroundColor : UIColor.red], for: .selected)
         }
     }
     @IBAction func CalculateSpeeds(_ sender: RoundedButton) {
@@ -96,7 +96,7 @@ class TOSpeedViewController: UIViewController {
             self.view, action: #selector(UIView.endEditing(_:))))
     }
 
-    func doneClicked() {
+    @objc func doneClicked() {
         view.endEditing(true)
     }
     
