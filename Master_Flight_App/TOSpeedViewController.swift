@@ -44,7 +44,8 @@ class TOSpeedViewController: UIViewController {
     @IBOutlet weak var grossWeight: UITextField!
     @IBOutlet weak var Vro: UILabel!
     @IBOutlet weak var Vlof: UILabel!
-    @IBOutlet weak var V50: UILabel!
+    @IBOutlet weak var V50four: UILabel!
+    @IBOutlet weak var V50three: UILabel!
     
     @IBAction func AircraftType(_ sender: UISegmentedControl) {
         if sender.selectedSegmentIndex == 0 {
@@ -59,7 +60,8 @@ class TOSpeedViewController: UIViewController {
     @IBAction func CalculateSpeeds(_ sender: RoundedButton) {
         var rotateSpeed = CalculateRotateSpeed()
         var liftOffSpeed = CalculateLiftOffSpeed()
-        
+        var V50fourSpeed = CalculateV50four()
+        var V50threeSpeed = CalculateV50three()
         //Catch empty gross weight field
         if grossWeight.text?.isEmpty == true {
             emptyAlert(alertTitle: "Gross Weight not entered", alertMessage: "Enter Gross Weight")
@@ -68,11 +70,8 @@ class TOSpeedViewController: UIViewController {
         
         Vro.text = String(Int(rotateSpeed.RotateSpeed(grossWeight: Double(grossWeight.text!)!, aircraftType: aircraftType)))
         Vlof.text = String(Int(liftOffSpeed.LiftOffSpeed(grossWeight: Double(grossWeight.text!)!, aircraftType: aircraftType)))
-        
-        /*
-         V50(3).text =
-         V50(4).text =
-        */
+        V50four.text = String(Int(V50fourSpeed.V50four(grossWeight: Double(grossWeight.text!)!, aircraftType: aircraftType)))
+        V50three.text = String(Int(V50threeSpeed.V50three(grossWeight: Double(grossWeight.text!)!, aircraftType: aircraftType)))
         }
     
     override func viewDidLoad() {
