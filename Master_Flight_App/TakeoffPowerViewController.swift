@@ -8,6 +8,10 @@
 import Foundation
 import UIKit
 
+var globalSHP: Double?
+var globalPA: Int?
+var globalOAT: Int?
+
 class SecondViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSource {
     
     @IBOutlet weak var TITlabel: UILabel!
@@ -33,7 +37,7 @@ class SecondViewController: UIViewController, UIPickerViewDelegate, UIPickerView
     @IBOutlet weak var SHP100: UILabel!
     @IBOutlet weak var OAT: UITextField!
     @IBOutlet weak var PA: UITextField!
-
+    
     @IBAction func calculatePower(_ sender: UIButton) {
         //MVC code
         var powerCalculation = TakeoffPower()
@@ -60,6 +64,9 @@ class SecondViewController: UIViewController, UIPickerViewDelegate, UIPickerView
         //assign values to label from calculations
         SHP100.text = powerCalculation.calculatePower(picker: TITlabel.text!, airTemp: Int(OAT.text!)!, antiIce: isAntiIceOn!, pressureAltitude: Int(PA.text!)!).stringSHP100
         SHP95.text = powerCalculation.calculatePower(picker: TITlabel.text!, airTemp: Int(OAT.text!)!, antiIce: isAntiIceOn!, pressureAltitude: Int(PA.text!)!).stringSHP95
+        globalSHP = Double(SHP100.text!)!
+        globalPA = Int(PA.text!)!
+        globalOAT = Int(OAT.text!)!
 
         //dismiss keyboard after click calculate button
         self.doneClicked()

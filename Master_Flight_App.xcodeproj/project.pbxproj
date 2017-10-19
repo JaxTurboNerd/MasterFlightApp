@@ -19,7 +19,7 @@
 		9322D4E21F6B088C006C9425 /* OnStationModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9322D4E11F6B088C006C9425 /* OnStationModel.swift */; };
 		9331D32D1F868F9D005984D0 /* FlightSegmentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9331D32C1F868F9D005984D0 /* FlightSegmentViewController.swift */; };
 		934195E21F8296FB00C1B046 /* AlertFunction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 934195E11F8296FB00C1B046 /* AlertFunction.swift */; };
-		934195E41F83EBFD00C1B046 /* TOSpeedModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 934195E31F83EBFD00C1B046 /* TOSpeedModel.swift */; };
+		934195E41F83EBFD00C1B046 /* TakeOffModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 934195E31F83EBFD00C1B046 /* TakeOffModel.swift */; };
 		936C87491F5F2C7000ACD0E7 /* OnstationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 936C87481F5F2C7000ACD0E7 /* OnstationViewController.swift */; };
 		93E2F0491F5DB76A00E2BB7F /* MissionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93E2F0481F5DB76A00E2BB7F /* MissionViewController.swift */; };
 		93F154881F479572003F4A6E /* TakeoffPowerModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93F154871F479572003F4A6E /* TakeoffPowerModel.swift */; };
@@ -42,7 +42,7 @@
 		9322D4E11F6B088C006C9425 /* OnStationModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OnStationModel.swift; sourceTree = "<group>"; };
 		9331D32C1F868F9D005984D0 /* FlightSegmentViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlightSegmentViewController.swift; sourceTree = "<group>"; };
 		934195E11F8296FB00C1B046 /* AlertFunction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertFunction.swift; sourceTree = "<group>"; };
-		934195E31F83EBFD00C1B046 /* TOSpeedModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TOSpeedModel.swift; sourceTree = "<group>"; };
+		934195E31F83EBFD00C1B046 /* TakeOffModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TakeOffModel.swift; sourceTree = "<group>"; };
 		936C87481F5F2C7000ACD0E7 /* OnstationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OnstationViewController.swift; sourceTree = "<group>"; };
 		93E2F0481F5DB76A00E2BB7F /* MissionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MissionViewController.swift; path = ../MissionViewController.swift; sourceTree = "<group>"; };
 		93F154871F479572003F4A6E /* TakeoffPowerModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TakeoffPowerModel.swift; sourceTree = "<group>"; };
@@ -91,7 +91,7 @@
 				936C87481F5F2C7000ACD0E7 /* OnstationViewController.swift */,
 				9322D4E11F6B088C006C9425 /* OnStationModel.swift */,
 				931BB5691F7F3661006DCD5C /* TOSpeedViewController.swift */,
-				934195E31F83EBFD00C1B046 /* TOSpeedModel.swift */,
+				934195E31F83EBFD00C1B046 /* TakeOffModel.swift */,
 				93183A671F3E818200E7350D /* Main.storyboard */,
 				9331D32C1F868F9D005984D0 /* FlightSegmentViewController.swift */,
 				934195E11F8296FB00C1B046 /* AlertFunction.swift */,
@@ -187,7 +187,7 @@
 				93183A641F3E818200E7350D /* HomeViewController.swift in Sources */,
 				9322D4E21F6B088C006C9425 /* OnStationModel.swift in Sources */,
 				931BB56A1F7F3661006DCD5C /* TOSpeedViewController.swift in Sources */,
-				934195E41F83EBFD00C1B046 /* TOSpeedModel.swift in Sources */,
+				934195E41F83EBFD00C1B046 /* TakeOffModel.swift in Sources */,
 				934195E21F8296FB00C1B046 /* AlertFunction.swift in Sources */,
 				93E2F0491F5DB76A00E2BB7F /* MissionViewController.swift in Sources */,
 				FA7060521F5E3A20006FD6A0 /* FltCalcController.swift in Sources */,
@@ -335,7 +335,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_SWIFT3_OBJC_INFERENCE = Default;
 				SWIFT_VERSION = 4.0;
-				TARGETED_DEVICE_FAMILY = 1;
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
 		};
@@ -350,7 +350,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_SWIFT3_OBJC_INFERENCE = Default;
 				SWIFT_VERSION = 4.0;
-				TARGETED_DEVICE_FAMILY = 1;
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
 		};

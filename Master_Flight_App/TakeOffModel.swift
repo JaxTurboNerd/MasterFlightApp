@@ -69,3 +69,13 @@ struct CalculateV50three {
         return V50three
     }
 }
+
+struct CalculateFourEngineAccelDistance {
+    mutating func AccelDistance(grossWeight: Double, SHP: Double, pressAltitude: Double, airTemp: Double, speed: Double)-> Double {
+        let pressureRatio = pow(1 - ((68758 * pow(10, -10)) * pressAltitude), 5.2557)
+        let rho = pressureRatio * (288.15 / (airTemp + 273.15))
+        let distance = (0.0422 - ((3 * pow(10, -8)) * (grossWeight * 1000))) * ((grossWeight * 1000) * (pow(speed, 2)/rho)) / ((4 * SHP) - (0.025 * (grossWeight * 1000)) - (0.171 - (0.000164 * (speed/pow(rho, 0.5))) * pow(speed, 2)))
+        
+        return distance
+    }
+}

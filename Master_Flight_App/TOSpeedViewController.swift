@@ -46,6 +46,9 @@ class TOSpeedViewController: UIViewController {
     @IBOutlet weak var Vlof: UILabel!
     @IBOutlet weak var V50four: UILabel!
     @IBOutlet weak var V50three: UILabel!
+    @IBOutlet weak var rotateDistance: UILabel!
+    @IBOutlet weak var LOFDistance: UILabel!
+    
     
     @IBAction func AircraftType(_ sender: UISegmentedControl) {
         if sender.selectedSegmentIndex == 0 {
@@ -62,6 +65,8 @@ class TOSpeedViewController: UIViewController {
         var liftOffSpeed = CalculateLiftOffSpeed()
         var V50fourSpeed = CalculateV50four()
         var V50threeSpeed = CalculateV50three()
+        var takeoffDistance = CalculateFourEngineAccelDistance()
+        
         //Catch empty gross weight field
         if grossWeight.text?.isEmpty == true {
             emptyAlert(alertTitle: "Gross Weight not entered", alertMessage: "Enter Gross Weight")
@@ -70,10 +75,19 @@ class TOSpeedViewController: UIViewController {
         
         Vro.text = String(Int(rotateSpeed.RotateSpeed(grossWeight: Double(grossWeight.text!)!, aircraftType: aircraftType)))
         Vlof.text = String(Int(liftOffSpeed.LiftOffSpeed(grossWeight: Double(grossWeight.text!)!, aircraftType: aircraftType)))
-        V50four.text = String(Int(V50fourSpeed.V50four(grossWeight: Double(grossWeight.text!)!, aircraftType: aircraftType)))
         V50three.text = String(Int(V50threeSpeed.V50three(grossWeight: Double(grossWeight.text!)!, aircraftType: aircraftType)))
-        }
+        
+        if aircraftType == "AEW" {
+            V50four.text = "N/A"
+            }
+        else {
+            V50four.text = String(Int(V50fourSpeed.V50four(grossWeight: Double(grossWeight.text!)!, aircraftType: aircraftType)))
+            }
     
+        //Distances:
+        rotateDistance.text = "\(String(Int(takeoffDistance.AccelDistance(grossWeight: Double(grossWeight.text!)!, SHP: globalSHP!, pressAltitude: Double(globalPA!), airTemp: Double(globalOAT!), speed: Double(Vro.text!)!)))) ft"
+        LOFDistance.text = "\(String(Int(takeoffDistance.AccelDistance(grossWeight: Double(grossWeight.text!)!, SHP: globalSHP!, pressAltitude: Double(globalPA!), airTemp: Double(globalOAT!), speed: Double(Vlof.text!)!)))) ft"
+    }
     override func viewDidLoad() {
         super.viewDidLoad()
         
