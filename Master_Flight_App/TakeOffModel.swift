@@ -32,7 +32,7 @@ struct CalculateLiftOffSpeed {
     var Vlof = 0.0
     mutating func LiftOffSpeed(grossWeight: Double, aircraftType: String) -> Double {
         if aircraftType == "LRT" {
-            if grossWeight <= 108.0 {Vlof = 108.0}
+            if grossWeight <= 108.0 {Vlof = 121.0}
             else {Vlof = round(0.542 * grossWeight + 62.8)}
          }
         else if aircraftType == "AEW" {
