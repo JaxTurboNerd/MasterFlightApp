@@ -30,7 +30,6 @@ struct TakeoffPower {
         }
         
         // Pressure Altitude correction
-        
         if pressureAltitude >= 100 {
             pressureCorrection = 12*(pressureAltitude/100)
         }

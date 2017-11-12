@@ -53,11 +53,11 @@ class TOSpeedViewController: UIViewController {
     @IBAction func AircraftType(_ sender: UISegmentedControl) {
         if sender.selectedSegmentIndex == 0 {
             aircraftType = "LRT"
-            sender.setTitleTextAttributes([NSAttributedStringKey.foregroundColor : UIColor.red], for: .selected)
+            //sender.setTitleTextAttributes([NSAttributedStringKey.foregroundColor : UIColor.red], for: .selected)
         }
         else {
             aircraftType = "AEW"
-            sender.setTitleTextAttributes([NSAttributedStringKey.foregroundColor : UIColor.red], for: .selected)
+            //sender.setTitleTextAttributes([NSAttributedStringKey.foregroundColor : UIColor.red], for: .selected)
         }
     }
     @IBAction func CalculateSpeeds(_ sender: RoundedButton) {
