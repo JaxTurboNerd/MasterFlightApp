@@ -8,36 +8,6 @@
 import Foundation
 import UIKit
 
-/*This adds a max length for all storyboard text fields.
-private var __maxLengths = [UITextField: Int]()
-extension UITextField {
-    @IBInspectable var maxLength: Int {
-        get {
-            guard let l = __maxLengths[self] else {
-                return 150 // (global default-limit. or just, Int.max)
-            }
-            return l
-        }
-        set {
-            __maxLengths[self] = newValue
-            addTarget(self, action: #selector(fix), for: .editingChanged)
-        }
-    }
-    @objc func fix(textField: UITextField) {
-        let t = textField.text
-        textField.text = t?.safelyLimitedTo(length: maxLength)
-    }
-}
-
-extension String
-{
-    func safelyLimitedTo(length n: Int)->String {
-        let c = self.characters
-        if (c.count <= n) { return self }
-        return String( Array(c).prefix(upTo: n) )
-    }
-}
-*/
 class TOSpeedViewController: UIViewController {
     var aircraftType: String = "LRT"
     
@@ -53,11 +23,9 @@ class TOSpeedViewController: UIViewController {
     @IBAction func AircraftType(_ sender: UISegmentedControl) {
         if sender.selectedSegmentIndex == 0 {
             aircraftType = "LRT"
-            //sender.setTitleTextAttributes([NSAttributedStringKey.foregroundColor : UIColor.red], for: .selected)
         }
         else {
             aircraftType = "AEW"
-            //sender.setTitleTextAttributes([NSAttributedStringKey.foregroundColor : UIColor.red], for: .selected)
         }
     }
     @IBAction func CalculateSpeeds(_ sender: RoundedButton) {
@@ -85,8 +53,8 @@ class TOSpeedViewController: UIViewController {
             }
     
         //Distances:
-        rotateDistance.text = "\(String(Int(takeoffDistance.AccelDistance(grossWeight: Double(grossWeight.text!)!, SHP: globalSHP!, pressAltitude: Double(globalPA!), airTemp: Double(globalOAT!), speed: Double(Vro.text!)!)))) ft"
-        LOFDistance.text = "\(String(Int(takeoffDistance.AccelDistance(grossWeight: Double(grossWeight.text!)!, SHP: globalSHP!, pressAltitude: Double(globalPA!), airTemp: Double(globalOAT!), speed: Double(Vlof.text!)!)))) ft"
+        //rotateDistance.text = "\(String(Int(takeoffDistance.AccelDistance(grossWeight: Double(grossWeight.text!)!, SHP: globalSHP!, pressAltitude: Double(globalPA!), airTemp: Double(globalOAT!), speed: Double(Vro.text!)!)))) ft"
+        //LOFDistance.text = "\(String(Int(takeoffDistance.AccelDistance(grossWeight: Double(grossWeight.text!)!, SHP: globalSHP!, pressAltitude: Double(globalPA!), airTemp: Double(globalOAT!), speed: Double(Vlof.text!)!)))) ft"
     }
     override func viewDidLoad() {
         super.viewDidLoad()

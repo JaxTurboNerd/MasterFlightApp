@@ -9,7 +9,8 @@
 import UIKit
 
 class MissionViewController: UIViewController {
-    @IBOutlet weak var ZeroFuelWeight: UITextField!
+    
+    @IBOutlet weak var zeroFuelWeight: UITextField!
     @IBOutlet weak var TotalFuel: UITextField!
     @IBOutlet weak var Altitude: UITextField!
 
@@ -18,7 +19,9 @@ class MissionViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
+        zeroFuelWeight.placeholder = globalZFW
+        
         //Add Done Button to top of keypad
         let toolBar = UIToolbar()
         toolBar.sizeToFit()
@@ -31,7 +34,7 @@ class MissionViewController: UIViewController {
         
         toolBar.setItems([flexibleSpace, doneButton], animated: false)
         
-        ZeroFuelWeight.inputAccessoryView = toolBar
+        zeroFuelWeight.inputAccessoryView = toolBar
         TotalFuel.inputAccessoryView = toolBar
         Altitude.inputAccessoryView = toolBar
         
@@ -54,11 +57,15 @@ class MissionViewController: UIViewController {
     
     @IBAction func calcMission(_ sender: UIButton) {
         var missionCalculation = MissionData()
-        
+
         //Catch empty input fields
-        if ZeroFuelWeight.text?.isEmpty == true {
+        if zeroFuelWeight.placeholder?.isEmpty == false {
+            zeroFuelWeight.text = zeroFuelWeight.placeholder
+            zeroFuelWeight.placeholder = nil
+        }
+        if zeroFuelWeight.text?.isEmpty == true {
             emptyAlert(alertTitle: "ZFW not entered", alertMessage: "Enter ZFW")
-            ZeroFuelWeight.text = "00.0"
+            zeroFuelWeight.text = "00.0"
         }
         else if TotalFuel.text?.isEmpty == true {
             emptyAlert(alertTitle: "Fuel total not entered", alertMessage: "Enter fuel")
@@ -69,9 +76,9 @@ class MissionViewController: UIViewController {
             Altitude.text = "00.0"
         }
         
-        MaxRange.text = "\(missionCalculation.calcMissionData(zfw: Double(ZeroFuelWeight.text!)!, totalFuel: Double(TotalFuel.text!)!, altitude: Double(Altitude.text!)!).stringMaxRange) kts"
-        LoiterSpeed.text = "\(missionCalculation.calcMissionData(zfw: Double(ZeroFuelWeight.text!)!, totalFuel: Double(TotalFuel.text!)!, altitude: Double(Altitude.text!)!).stringLoiterSpeed) kts"
-        
+        MaxRange.text = "\(missionCalculation.calcMissionData(zfw: Double(zeroFuelWeight.text!)!, totalFuel: Double(TotalFuel.text!)!, altitude: Double(Altitude.text!)!).stringMaxRange) kts"
+        LoiterSpeed.text = "\(missionCalculation.calcMissionData(zfw: Double(zeroFuelWeight.text!)!, totalFuel: Double(TotalFuel.text!)!, altitude: Double(Altitude.text!)!).stringLoiterSpeed) kts"
+
         //Dismisses keyboard after click on Calculate button
         self.doneClicked()
     }

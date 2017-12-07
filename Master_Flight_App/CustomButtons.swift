@@ -12,14 +12,16 @@ class CustomButton: UIButton {
     override func awakeFromNib() {
         super.awakeFromNib()
         
-        layer.borderWidth = 1/UIScreen.main.nativeScale
+        //let layer = CALayer
+        layer.borderWidth = 3/UIScreen.main.nativeScale
+        layer.shadowColor = UIColor.black.cgColor
         contentEdgeInsets = UIEdgeInsetsMake(2, 5, 2, 5)
         titleLabel?.adjustsFontForContentSizeCategory = true
     }
     
     override func layoutSubviews() {
         super.layoutSubviews()
-        layer.borderColor = isEnabled ? tintColor.cgColor : UIColor.lightGray.cgColor
+        layer.borderColor = isEnabled ? tintColor.cgColor : UIColor.black.cgColor
     }
 }
 
@@ -27,14 +29,15 @@ class RoundedButton: UIButton {
     override func awakeFromNib() {
         super.awakeFromNib()
         
-        layer.borderWidth = 1/UIScreen.main.nativeScale
+        layer.borderWidth = 3/UIScreen.main.nativeScale
+        layer.shadowColor = UIColor.lightGray.cgColor
         contentEdgeInsets = UIEdgeInsetsMake(0, 16, 0, 16)
         titleLabel?.adjustsFontForContentSizeCategory = true
     }
     
     override func layoutSubviews() {
         super.layoutSubviews()
-        layer.cornerRadius = frame.height/2
-        layer.borderColor = isEnabled ? tintColor.cgColor : UIColor.lightGray.cgColor
+        layer.cornerRadius = frame.height/4
+        //layer.borderColor = isEnabled ? tintColor.cgColor : UIColor.lightGray.cgColor
     }
 }
