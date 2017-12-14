@@ -14,4 +14,10 @@ extension UIViewController {
         alert.addAction(UIAlertAction(title: "Ok", style: .cancel, handler: nil))
         present(alert, animated: true, completion: nil)
     }
+    
+    func outOfRangeAlert(alertTitle: String, alertMessage:String)-> Void {
+        let alert = UIAlertController(title: alertTitle, message: alertMessage, preferredStyle: .alert)
+        alert.addAction(UIAlertAction(title: "Warning", style: .cancel, handler: nil))
+        present(alert, animated: true, completion: nil)
+    }
 }

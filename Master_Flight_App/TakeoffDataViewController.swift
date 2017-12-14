@@ -107,11 +107,62 @@ class TakeoffDataViewController: UIViewController, UIPickerViewDelegate, UIPicke
             emptyAlert(alertTitle: "PA Not Entered", alertMessage: "Enter OAT")
             PA.text = "000"
         }
-        if grossWeight.text?.isEmpty == true {
-            emptyAlert(alertTitle: "Gross Weight not entered", alertMessage: "Enter Gross Weight")
-            grossWeight.text = "000"
+        
+        if windSpeed.text?.isEmpty == true {
+            emptyAlert(alertTitle: "Wind Speed not Entered", alertMessage: "Enter Wind Speed")
+            windSpeed.text = "00"
         }
         
+        //Range value functions:
+        func checkCG(textField: UITextField) -> Void {
+            
+        }
+        func checkZFW(textField: UITextField) -> Void {
+            if aircraftType == "LRT" && Double(textField.text!)! > 71.6 {
+                outOfRangeAlert(alertTitle: "ZFW entered NOT valid", alertMessage: "Enter ZFW")
+            }
+            if aircraftType == "AEW" && Double(textField.text!)! > 77.2 {
+                outOfRangeAlert(alertTitle: "ZFW entered NOT valid", alertMessage: "Enter ZFW")
+            }
+        }
+        
+        func checkGrossWeight(textField: UITextField) -> Void {
+            if textField.text?.isEmpty == true {
+                emptyAlert(alertTitle: "Gross Weight not entered", alertMessage: "Enter Gross Weight")
+                grossWeight.text = "000"
+            }
+            if aircraftType == "LRT" && (Double(textField.text!)! < 0.0 || Double(textField.text!)! > 127.5) {
+                outOfRangeAlert(alertTitle: "Gross Weight Outside Normal Range", alertMessage: "Enter Gross Weight")
+            }
+            if aircraftType == "AEW" && (Double(textField.text!)!) < 0.0 || Double(textField.text!)! > 139.8 {
+                outOfRangeAlert(alertTitle: "Gross Weight Outside Normal Range", alertMessage: "Enter Gross Weight")
+            }
+        }
+        
+        func checkRunway(textField: UITextField)-> Void {
+            if textField.text?.isEmpty == true {
+                emptyAlert(alertTitle: "Runway Not Entered", alertMessage: "Enter Runway in Use")
+                runway.text = "36"
+            }
+            if Int(textField.text!)! < 1 || Int(textField.text!)! > 36 {
+                outOfRangeAlert(alertTitle: "Runway entered NOT Valid", alertMessage: "Enter Runway")
+            }
+        }
+        
+        func checkWindDirection(textField: UITextField) -> Void {
+            if Int(textField.text!)! < 010 || Int(textField.text!)! > 360 {
+                outOfRangeAlert(alertTitle: "Wind Direction Invalid", alertMessage: "Enter Wind direction")
+                
+            }
+        }
+    
+        //Run value check functions:
+        checkZFW(textField: zeroFuelWeight)
+        checkGrossWeight(textField: grossWeight)
+        checkRunway(textField: runway)
+        checkWindDirection(textField: windDirection)
+        
+        //Assign global ZFW value:
         globalZFW = zeroFuelWeight.text!
         
         //Assign values to labels from calculations
@@ -186,7 +237,7 @@ class TakeoffDataViewController: UIViewController, UIPickerViewDelegate, UIPicke
     
     override func viewDidLoad() {
         super.viewDidLoad()
-    
+        
         //TIT Pickerview Data:
         TIT_PickerData = ["1077", "1010", "950", "925"]
         
