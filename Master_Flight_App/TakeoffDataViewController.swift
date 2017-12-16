@@ -14,7 +14,7 @@ extension UITextField {
     @IBInspectable var maxLength: Int {
         get {
             guard let l = __maxLengths[self] else {
-                return 150 // (global default-limit. or just, Int.max)
+                return Int.max // (global default-limit. or just, Int.max)
             }
             return l
         }
@@ -29,9 +29,8 @@ extension UITextField {
     }
 }
 
-extension String
-{
-    func safelyLimitedTo(length n: Int)->String {
+extension String {
+     func safelyLimitedTo(length n: Int)->String {
         let c = self
         if (c.count <= n) { return self }
         return String( Array(c).prefix(upTo: n) )
@@ -60,12 +59,12 @@ var globalRotateDistance: String = ""
 var globalLOFDistance: String = ""
 
 //Wind Component global variables:
-//var globalHeadWindLabel: String = ""
 var globalCrossWindComponent: Double = 0.0
 var globalHeadWindComponent: Double = 0.0
 
 //View Controller Class:
-class TakeoffDataViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSource {
+class TakeoffDataViewController: UIViewController, UITextFieldDelegate, UIPickerViewDelegate, UIPickerViewDataSource {
+
     var aircraftType = "LRT"
 
     @IBOutlet weak var centerOfGravity: UITextField!
@@ -102,7 +101,6 @@ class TakeoffDataViewController: UIViewController, UIPickerViewDelegate, UIPicke
             emptyAlert(alertTitle: "OAT Not Entered", alertMessage: "Enter OAT")
             OAT.text = "0"
         }
-        //if PA.placeholder?.isEmpty == false {PA.text = PA.placeholder}
         if PA.text?.isEmpty == true {
             emptyAlert(alertTitle: "PA Not Entered", alertMessage: "Enter OAT")
             PA.text = "000"
@@ -113,11 +111,11 @@ class TakeoffDataViewController: UIViewController, UIPickerViewDelegate, UIPicke
             windSpeed.text = "00"
         }
         
-        //Range value functions:
-        func checkCG(textField: UITextField) -> Void {
-            
-        }
+        //Range value functions:        
+        //func checkCG(textField: UITextField) -> Void {}
+        
         func checkZFW(textField: UITextField) -> Void {
+            
             if aircraftType == "LRT" && Double(textField.text!)! > 71.6 {
                 outOfRangeAlert(alertTitle: "ZFW entered NOT valid", alertMessage: "Enter ZFW")
             }
@@ -156,7 +154,8 @@ class TakeoffDataViewController: UIViewController, UIPickerViewDelegate, UIPicke
             }
         }
     
-        //Run value check functions:
+        //Call textfield input value check functions:
+        //checkCG(textField: centerOfGravity)
         checkZFW(textField: zeroFuelWeight)
         checkGrossWeight(textField: grossWeight)
         checkRunway(textField: runway)
@@ -209,9 +208,6 @@ class TakeoffDataViewController: UIViewController, UIPickerViewDelegate, UIPicke
         globalRotateDistance = rotateDistance.text!
         globalLOFDistance = LOFDistance.text!
         
-        //Winds
-        
-        
         //dismiss keyboard after clicking the calculate button
         self.doneClicked()
     }
@@ -231,12 +227,25 @@ class TakeoffDataViewController: UIViewController, UIPickerViewDelegate, UIPicke
     @IBOutlet weak var TIT_Picker: UIPickerView!
     var TIT_PickerData: [String] = [String]()
     
-    
-    @IBAction func CalculateTakeoffData(_ sender: Any) {
+    //Limit text field input values to numbers only
+    func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
+        let allowedCharacters = CharacterSet(charactersIn: ".0123456789")
+        let characterSet = CharacterSet(charactersIn: string)
+        return allowedCharacters.isSuperset(of: characterSet)
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        //sets delegate for limiting input to textfields to numbers only
+        self.centerOfGravity.delegate = self
+        self.zeroFuelWeight.delegate = self
+        self.grossWeight.delegate = self
+        self.runway.delegate = self
+        self.windDirection.delegate = self
+        self.windSpeed.delegate = self
+        self.OAT.delegate = self
+        self.PA.delegate = self
+        
         
         //TIT Pickerview Data:
         TIT_PickerData = ["1077", "1010", "950", "925"]
@@ -266,6 +275,7 @@ class TakeoffDataViewController: UIViewController, UIPickerViewDelegate, UIPicke
         //dismiss keyboard by tapping anywhere
         self.view.addGestureRecognizer(UITapGestureRecognizer(target:
             self.view, action: #selector(UIView.endEditing(_:))))
+        
     }
     
     @objc func doneClicked() {
