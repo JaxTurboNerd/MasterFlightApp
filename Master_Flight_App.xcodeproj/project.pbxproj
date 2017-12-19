@@ -21,9 +21,11 @@
 		93678B551F983F42005DCF5C /* TakeoffDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93678B541F983F42005DCF5C /* TakeoffDataModel.swift */; };
 		936C87491F5F2C7000ACD0E7 /* OnstationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 936C87481F5F2C7000ACD0E7 /* OnstationViewController.swift */; };
 		93E2F0491F5DB76A00E2BB7F /* MissionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93E2F0481F5DB76A00E2BB7F /* MissionViewController.swift */; };
+		FA6594311FE89EE400F4A300 /* CustomTextFields.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA6594301FE89EE400F4A300 /* CustomTextFields.swift */; };
 		FA7060501F5E3A14006FD6A0 /* FlightCalcModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA70604F1F5E3A14006FD6A0 /* FlightCalcModel.swift */; };
 		FA7060521F5E3A20006FD6A0 /* FltCalcController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA7060511F5E3A20006FD6A0 /* FltCalcController.swift */; };
 		FA810BEB1FD0B185002BB188 /* TakeOffBriefViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA810BEA1FD0B185002BB188 /* TakeOffBriefViewController.swift */; };
+		FAF2C2A71FE8AEAA0084ADF5 /* CheckFields.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAF2C2A61FE8AEAA0084ADF5 /* CheckFields.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -43,9 +45,11 @@
 		93678B541F983F42005DCF5C /* TakeoffDataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TakeoffDataModel.swift; sourceTree = "<group>"; };
 		936C87481F5F2C7000ACD0E7 /* OnstationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OnstationViewController.swift; sourceTree = "<group>"; };
 		93E2F0481F5DB76A00E2BB7F /* MissionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MissionViewController.swift; path = ../MissionViewController.swift; sourceTree = "<group>"; };
+		FA6594301FE89EE400F4A300 /* CustomTextFields.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomTextFields.swift; sourceTree = "<group>"; };
 		FA70604F1F5E3A14006FD6A0 /* FlightCalcModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FlightCalcModel.swift; sourceTree = "<group>"; };
 		FA7060511F5E3A20006FD6A0 /* FltCalcController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FltCalcController.swift; sourceTree = "<group>"; };
 		FA810BEA1FD0B185002BB188 /* TakeOffBriefViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TakeOffBriefViewController.swift; sourceTree = "<group>"; };
+		FAF2C2A61FE8AEAA0084ADF5 /* CheckFields.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckFields.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -91,6 +95,8 @@
 				93678B321F9830BE005DCF5C /* TakeoffDataViewController.swift */,
 				93678B541F983F42005DCF5C /* TakeoffDataModel.swift */,
 				9331D32C1F868F9D005984D0 /* FlightSegmentViewController.swift */,
+				FAF2C2A61FE8AEAA0084ADF5 /* CheckFields.swift */,
+				FA6594301FE89EE400F4A300 /* CustomTextFields.swift */,
 				934195E11F8296FB00C1B046 /* AlertFunction.swift */,
 				9322D4DF1F678827006C9425 /* CustomButtons.swift */,
 				93183A6A1F3E818200E7350D /* Assets.xcassets */,
@@ -175,11 +181,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				9308E1591F5E22C300CBFDC0 /* MissionModel.swift in Sources */,
+				FAF2C2A71FE8AEAA0084ADF5 /* CheckFields.swift in Sources */,
 				936C87491F5F2C7000ACD0E7 /* OnstationViewController.swift in Sources */,
 				93678B331F9830BE005DCF5C /* TakeoffDataViewController.swift in Sources */,
 				93183A621F3E818200E7350D /* AppDelegate.swift in Sources */,
 				FA7060501F5E3A14006FD6A0 /* FlightCalcModel.swift in Sources */,
 				9322D4E01F678827006C9425 /* CustomButtons.swift in Sources */,
+				FA6594311FE89EE400F4A300 /* CustomTextFields.swift in Sources */,
 				93183A641F3E818200E7350D /* HomeViewController.swift in Sources */,
 				9322D4E21F6B088C006C9425 /* OnStationModel.swift in Sources */,
 				FA810BEB1FD0B185002BB188 /* TakeOffBriefViewController.swift in Sources */,

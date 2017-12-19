@@ -8,35 +8,6 @@
 import Foundation
 import UIKit
 
-//This adds a max length for all storyboard text fields.
-private var __maxLengths = [UITextField: Int]()
-extension UITextField {
-    @IBInspectable var maxLength: Int {
-        get {
-            guard let l = __maxLengths[self] else {
-                return Int.max // (global default-limit. or just, Int.max)
-            }
-            return l
-        }
-        set {
-            __maxLengths[self] = newValue
-            addTarget(self, action: #selector(fix), for: .editingChanged)
-        }
-    }
-    @objc func fix(textField: UITextField) {
-        let t = textField.text
-        textField.text = t?.safelyLimitedTo(length: maxLength)
-    }
-}
-
-extension String {
-     func safelyLimitedTo(length n: Int)->String {
-        let c = self
-        if (c.count <= n) { return self }
-        return String( Array(c).prefix(upTo: n) )
-    }
-}
-
 // Define Global variables
 var isAntiIceOn: Bool = false
 var globalZFW: String = ""
@@ -57,13 +28,14 @@ var globalV50three: String = ""
 var globalV50four: String = ""
 var globalRotateDistance: String = ""
 var globalLOFDistance: String = ""
+var globalAircraftType: String = "LRT"
 
 //Wind Component global variables:
 var globalCrossWindComponent: Double = 0.0
 var globalHeadWindComponent: Double = 0.0
 
 //View Controller Class:
-class TakeoffDataViewController: UIViewController, UITextFieldDelegate, UIPickerViewDelegate, UIPickerViewDataSource {
+class TakeoffDataViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSource {
 
     var aircraftType = "LRT"
 
@@ -96,72 +68,30 @@ class TakeoffDataViewController: UIViewController, UITextFieldDelegate, UIPicker
         var takeoffDistance = CalculateFourEngineAccelDistance()
         var windComponents = WindComponent()
         
-        //catch empty text fields
-        if OAT.text?.isEmpty == true {
-            emptyAlert(alertTitle: "OAT Not Entered", alertMessage: "Enter OAT")
-            OAT.text = "0"
-        }
-        if PA.text?.isEmpty == true {
-            emptyAlert(alertTitle: "PA Not Entered", alertMessage: "Enter OAT")
-            PA.text = "000"
-        }
-        
-        if windSpeed.text?.isEmpty == true {
-            emptyAlert(alertTitle: "Wind Speed not Entered", alertMessage: "Enter Wind Speed")
-            windSpeed.text = "00"
-        }
-        
-        //Range value functions:        
-        //func checkCG(textField: UITextField) -> Void {}
-        
-        func checkZFW(textField: UITextField) -> Void {
-            
-            if aircraftType == "LRT" && Double(textField.text!)! > 71.6 {
-                outOfRangeAlert(alertTitle: "ZFW entered NOT valid", alertMessage: "Enter ZFW")
-            }
-            if aircraftType == "AEW" && Double(textField.text!)! > 77.2 {
-                outOfRangeAlert(alertTitle: "ZFW entered NOT valid", alertMessage: "Enter ZFW")
-            }
-        }
-        
-        func checkGrossWeight(textField: UITextField) -> Void {
-            if textField.text?.isEmpty == true {
-                emptyAlert(alertTitle: "Gross Weight not entered", alertMessage: "Enter Gross Weight")
-                grossWeight.text = "000"
-            }
-            if aircraftType == "LRT" && (Double(textField.text!)! < 0.0 || Double(textField.text!)! > 127.5) {
-                outOfRangeAlert(alertTitle: "Gross Weight Outside Normal Range", alertMessage: "Enter Gross Weight")
-            }
-            if aircraftType == "AEW" && (Double(textField.text!)!) < 0.0 || Double(textField.text!)! > 139.8 {
-                outOfRangeAlert(alertTitle: "Gross Weight Outside Normal Range", alertMessage: "Enter Gross Weight")
-            }
-        }
-        
-        func checkRunway(textField: UITextField)-> Void {
-            if textField.text?.isEmpty == true {
-                emptyAlert(alertTitle: "Runway Not Entered", alertMessage: "Enter Runway in Use")
-                runway.text = "36"
-            }
-            if Int(textField.text!)! < 1 || Int(textField.text!)! > 36 {
-                outOfRangeAlert(alertTitle: "Runway entered NOT Valid", alertMessage: "Enter Runway")
-            }
-        }
-        
-        func checkWindDirection(textField: UITextField) -> Void {
-            if Int(textField.text!)! < 010 || Int(textField.text!)! > 360 {
-                outOfRangeAlert(alertTitle: "Wind Direction Invalid", alertMessage: "Enter Wind direction")
-                
-            }
-        }
-    
-        //Call textfield input value check functions:
-        //checkCG(textField: centerOfGravity)
+        //Call textfield input check functions:
+        checkCG(textField: centerOfGravity)
         checkZFW(textField: zeroFuelWeight)
         checkGrossWeight(textField: grossWeight)
         checkRunway(textField: runway)
         checkWindDirection(textField: windDirection)
+        checkWindSpeed(textField: windSpeed)
+        checkOAT(textField: OAT)
+        checkPA(textField: PA)
         
-        //Assign global ZFW value:
+        
+        //Assign global values:
+        globalCG = centerOfGravity.text!
+        globalZFW = zeroFuelWeight.text!
+        globalGW = grossWeight.text!
+        globalRunway = runway.text!
+        globalWindDirection = windDirection.text!
+        globalWindSpeed = windSpeed.text!
+        globalTemp = OAT.text!
+        globalPressureAlt = PA.text!
+        globalVr = Vro.text!
+        globalVro = Vro.text!
+        globalVlof = Vlof.text!
+        globalV50three = V50three.text!
         globalZFW = zeroFuelWeight.text!
         
         //Assign values to labels from calculations
@@ -175,18 +105,6 @@ class TakeoffDataViewController: UIViewController, UITextFieldDelegate, UIPicker
         V50three.text = String(Int(V50threeSpeed.V50three(grossWeight: Double(grossWeight.text!)!, aircraftType: aircraftType)))
         Vr.text = Vro.text
         
-        globalVr = Vro.text!
-        globalVro = Vro.text!
-        globalVlof = Vlof.text!
-        globalV50three = V50three.text!
-        globalCG = centerOfGravity.text!
-        globalZFW = zeroFuelWeight.text!
-        globalGW = grossWeight.text!
-        globalTemp = OAT.text!
-        globalPressureAlt = PA.text!
-        globalRunway = runway.text!
-        globalWindDirection = windDirection.text!
-        globalWindSpeed = windSpeed.text!
         
         //Wind Components:
         globalHeadWindComponent = windComponents.CalculateWinds(runway: Int(runway.text!)!, windDirection: Int(windDirection.text!)!, windVelocity: Int(windSpeed.text!)!).headWind
@@ -219,33 +137,22 @@ class TakeoffDataViewController: UIViewController, UITextFieldDelegate, UIPicker
     }
     
     @IBAction func AircraftType(_ sender: UISegmentedControl) {
-        if sender.selectedSegmentIndex == 0 {aircraftType = "LRT"}
-        else {aircraftType = "AEW"}
+        if sender.selectedSegmentIndex == 0 {
+            globalAircraftType = "LRT"
+            aircraftType = "LRT"
+        }
+        else {
+            globalAircraftType = "AEW"
+            aircraftType = "AEW"
+        }
     }
     
     //Picker View:
     @IBOutlet weak var TIT_Picker: UIPickerView!
     var TIT_PickerData: [String] = [String]()
     
-    //Limit text field input values to numbers only
-    func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
-        let allowedCharacters = CharacterSet(charactersIn: ".0123456789")
-        let characterSet = CharacterSet(charactersIn: string)
-        return allowedCharacters.isSuperset(of: characterSet)
-    }
-    
     override func viewDidLoad() {
         super.viewDidLoad()
-        //sets delegate for limiting input to textfields to numbers only
-        self.centerOfGravity.delegate = self
-        self.zeroFuelWeight.delegate = self
-        self.grossWeight.delegate = self
-        self.runway.delegate = self
-        self.windDirection.delegate = self
-        self.windSpeed.delegate = self
-        self.OAT.delegate = self
-        self.PA.delegate = self
-        
         
         //TIT Pickerview Data:
         TIT_PickerData = ["1077", "1010", "950", "925"]
@@ -264,6 +171,7 @@ class TakeoffDataViewController: UIViewController, UITextFieldDelegate, UIPicker
         
         toolBar.setItems([minusButton, flexibleSpace, doneButton], animated: false)
         
+        centerOfGravity.inputAccessoryView = toolBar
         OAT.inputAccessoryView = toolBar
         grossWeight.inputAccessoryView = toolBar
         PA.inputAccessoryView = toolBar
@@ -315,6 +223,5 @@ class TakeoffDataViewController: UIViewController, UITextFieldDelegate, UIPicker
         return TIT_PickerData[row]
         
     }
-    
 }
 

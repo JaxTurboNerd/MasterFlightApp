@@ -67,7 +67,7 @@
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" alignment="bottom" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="VIi-TS-GQF">
                                                 <rect key="frame" x="263" y="0.0" width="105" height="180"/>
                                                 <subviews>
-                                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="00.0" textAlignment="center" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="3rL-3P-BY4">
+                                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="00.0" textAlignment="center" adjustsFontSizeToFit="NO" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="3rL-3P-BY4" customClass="AllowedCharsTextField" customModule="Master_Flight_App" customModuleProvider="target">
                                                         <rect key="frame" x="0.0" y="0.0" width="105" height="52"/>
                                                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                                         <nil key="textColor"/>
@@ -77,12 +77,13 @@
                                                             <userDefinedRuntimeAttribute type="number" keyPath="maxLength">
                                                                 <integer key="value" value="4"/>
                                                             </userDefinedRuntimeAttribute>
+                                                            <userDefinedRuntimeAttribute type="string" keyPath="allowedChars" value=".0123456789"/>
                                                         </userDefinedRuntimeAttributes>
                                                         <variation key="widthClass=compact">
                                                             <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                                         </variation>
                                                     </textField>
-                                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="00.0" textAlignment="center" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="ZDU-33-XXo">
+                                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="00.0" textAlignment="center" adjustsFontSizeToFit="NO" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="ZDU-33-XXo" customClass="AllowedCharsTextField" customModule="Master_Flight_App" customModuleProvider="target">
                                                         <rect key="frame" x="0.0" y="64" width="105" height="52"/>
                                                         <nil key="textColor"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="40"/>
@@ -91,12 +92,13 @@
                                                             <userDefinedRuntimeAttribute type="number" keyPath="maxLength">
                                                                 <integer key="value" value="4"/>
                                                             </userDefinedRuntimeAttribute>
+                                                            <userDefinedRuntimeAttribute type="string" keyPath="allowedChars" value=".0123456789"/>
                                                         </userDefinedRuntimeAttributes>
                                                         <variation key="widthClass=compact">
                                                             <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                                         </variation>
                                                     </textField>
-                                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="00.0" textAlignment="center" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="Za0-EM-MSW">
+                                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="00.0" textAlignment="center" adjustsFontSizeToFit="NO" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="Za0-EM-MSW" customClass="AllowedCharsTextField" customModule="Master_Flight_App" customModuleProvider="target">
                                                         <rect key="frame" x="0.0" y="128" width="105" height="52"/>
                                                         <nil key="textColor"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="40"/>
@@ -105,6 +107,7 @@
                                                             <userDefinedRuntimeAttribute type="number" keyPath="maxLength">
                                                                 <integer key="value" value="4"/>
                                                             </userDefinedRuntimeAttribute>
+                                                            <userDefinedRuntimeAttribute type="string" keyPath="allowedChars" value=".0123456789"/>
                                                         </userDefinedRuntimeAttributes>
                                                         <variation key="widthClass=compact">
                                                             <fontDescription key="fontDescription" type="system" pointSize="20"/>
@@ -299,7 +302,7 @@
                                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" alignment="top" translatesAutoresizingMaskIntoConstraints="NO" id="06N-KK-RST">
                                                         <rect key="frame" x="394" y="0.0" width="110" height="343"/>
                                                         <subviews>
-                                                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="00.0" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="Z6o-i9-WgK">
+                                                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="00.0" adjustsFontSizeToFit="NO" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="Z6o-i9-WgK" customClass="AllowedCharsTextField" customModule="Master_Flight_App" customModuleProvider="target">
                                                                 <rect key="frame" x="0.0" y="0.0" width="96.5" height="47"/>
                                                                 <nil key="textColor"/>
                                                                 <fontDescription key="fontDescription" type="system" pointSize="36"/>
@@ -308,12 +311,13 @@
                                                                     <userDefinedRuntimeAttribute type="number" keyPath="maxLength">
                                                                         <integer key="value" value="4"/>
                                                                     </userDefinedRuntimeAttribute>
+                                                                    <userDefinedRuntimeAttribute type="string" keyPath="allowedChars" value=".0123456789"/>
                                                                 </userDefinedRuntimeAttributes>
                                                                 <variation key="widthClass=compact">
                                                                     <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                                                 </variation>
                                                             </textField>
-                                                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" verticalHuggingPriority="251" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="0000" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="43P-KF-hdI">
+                                                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" verticalHuggingPriority="251" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="0000" adjustsFontSizeToFit="NO" minimumFontSize="20" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="43P-KF-hdI" customClass="AllowedCharsTextField" customModule="Master_Flight_App" customModuleProvider="target">
                                                                 <rect key="frame" x="0.0" y="59" width="110" height="47"/>
                                                                 <nil key="textColor"/>
                                                                 <fontDescription key="fontDescription" type="system" pointSize="36"/>
@@ -322,12 +326,13 @@
                                                                     <userDefinedRuntimeAttribute type="number" keyPath="maxLength">
                                                                         <integer key="value" value="4"/>
                                                                     </userDefinedRuntimeAttribute>
+                                                                    <userDefinedRuntimeAttribute type="string" keyPath="allowedChars" value="0123456789"/>
                                                                 </userDefinedRuntimeAttributes>
                                                                 <variation key="widthClass=compact">
                                                                     <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                                                 </variation>
                                                             </textField>
-                                                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" verticalHuggingPriority="249" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="0000" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="MDR-M0-Xo5">
+                                                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" verticalHuggingPriority="249" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="0000" adjustsFontSizeToFit="NO" minimumFontSize="20" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="MDR-M0-Xo5" customClass="AllowedCharsTextField" customModule="Master_Flight_App" customModuleProvider="target">
                                                                 <rect key="frame" x="0.0" y="118.5" width="110" height="47"/>
                                                                 <nil key="textColor"/>
                                                                 <fontDescription key="fontDescription" type="system" pointSize="36"/>
@@ -336,12 +341,13 @@
                                                                     <userDefinedRuntimeAttribute type="number" keyPath="maxLength">
                                                                         <integer key="value" value="4"/>
                                                                     </userDefinedRuntimeAttribute>
+                                                                    <userDefinedRuntimeAttribute type="string" keyPath="allowedChars" value="0123456789"/>
                                                                 </userDefinedRuntimeAttributes>
                                                                 <variation key="widthClass=compact">
                                                                     <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                                                 </variation>
                                                             </textField>
-                                                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="0000" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="PlS-mU-Ptr">
+                                                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="0000" adjustsFontSizeToFit="NO" minimumFontSize="20" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="PlS-mU-Ptr" customClass="AllowedCharsTextField" customModule="Master_Flight_App" customModuleProvider="target">
                                                                 <rect key="frame" x="0.0" y="177.5" width="110" height="47"/>
                                                                 <nil key="textColor"/>
                                                                 <fontDescription key="fontDescription" type="system" pointSize="36"/>
@@ -350,12 +356,13 @@
                                                                     <userDefinedRuntimeAttribute type="number" keyPath="maxLength">
                                                                         <integer key="value" value="4"/>
                                                                     </userDefinedRuntimeAttribute>
+                                                                    <userDefinedRuntimeAttribute type="string" keyPath="allowedChars" value="0123456789"/>
                                                                 </userDefinedRuntimeAttributes>
                                                                 <variation key="widthClass=compact">
                                                                     <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                                                 </variation>
                                                             </textField>
-                                                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="000" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="efz-dr-V2f">
+                                                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="000" adjustsFontSizeToFit="NO" minimumFontSize="20" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="efz-dr-V2f" customClass="AllowedCharsTextField" customModule="Master_Flight_App" customModuleProvider="target">
                                                                 <rect key="frame" x="0.0" y="237" width="88" height="47"/>
                                                                 <nil key="textColor"/>
                                                                 <fontDescription key="fontDescription" type="system" pointSize="36"/>
@@ -364,12 +371,13 @@
                                                                     <userDefinedRuntimeAttribute type="number" keyPath="maxLength">
                                                                         <integer key="value" value="3"/>
                                                                     </userDefinedRuntimeAttribute>
+                                                                    <userDefinedRuntimeAttribute type="string" keyPath="allowedChars" value="0123456789"/>
                                                                 </userDefinedRuntimeAttributes>
                                                                 <variation key="widthClass=compact">
                                                                     <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                                                 </variation>
                                                             </textField>
-                                                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="00.0" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="qH7-ws-Twg">
+                                                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="00.0" adjustsFontSizeToFit="NO" minimumFontSize="20" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="qH7-ws-Twg" customClass="AllowedCharsTextField" customModule="Master_Flight_App" customModuleProvider="target">
                                                                 <rect key="frame" x="0.0" y="296" width="96.5" height="47"/>
                                                                 <nil key="textColor"/>
                                                                 <fontDescription key="fontDescription" type="system" pointSize="36"/>
@@ -378,6 +386,7 @@
                                                                     <userDefinedRuntimeAttribute type="number" keyPath="maxLength">
                                                                         <integer key="value" value="4"/>
                                                                     </userDefinedRuntimeAttribute>
+                                                                    <userDefinedRuntimeAttribute type="string" keyPath="allowedChars" value=".0123456789"/>
                                                                 </userDefinedRuntimeAttributes>
                                                                 <variation key="widthClass=compact">
                                                                     <fontDescription key="fontDescription" type="system" pointSize="18"/>
@@ -755,7 +764,7 @@
                                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" alignment="top" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="9vM-Or-TCU">
                                                         <rect key="frame" x="109.5" y="0.0" width="129.5" height="186"/>
                                                         <subviews>
-                                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="00.0" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="CZW-0r-b5D">
+                                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="00.0" adjustsFontSizeToFit="NO" minimumFontSize="20" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="CZW-0r-b5D" customClass="AllowedCharsTextField" customModule="Master_Flight_App" customModuleProvider="target">
                                                                 <rect key="frame" x="0.0" y="0.0" width="105" height="52"/>
                                                                 <nil key="textColor"/>
                                                                 <fontDescription key="fontDescription" type="system" pointSize="40"/>
@@ -764,12 +773,13 @@
                                                                     <userDefinedRuntimeAttribute type="number" keyPath="maxLength">
                                                                         <integer key="value" value="4"/>
                                                                     </userDefinedRuntimeAttribute>
+                                                                    <userDefinedRuntimeAttribute type="string" keyPath="allowedChars" value=".0123456789"/>
                                                                 </userDefinedRuntimeAttributes>
                                                                 <variation key="widthClass=compact">
                                                                     <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                                                 </variation>
                                                             </textField>
-                                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="00.0" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="9JG-Uo-7se">
+                                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="00.0" adjustsFontSizeToFit="NO" minimumFontSize="20" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="9JG-Uo-7se" customClass="AllowedCharsTextField" customModule="Master_Flight_App" customModuleProvider="target">
                                                                 <rect key="frame" x="0.0" y="67" width="105" height="52"/>
                                                                 <nil key="textColor"/>
                                                                 <fontDescription key="fontDescription" type="system" pointSize="40"/>
@@ -778,12 +788,13 @@
                                                                     <userDefinedRuntimeAttribute type="number" keyPath="maxLength">
                                                                         <integer key="value" value="4"/>
                                                                     </userDefinedRuntimeAttribute>
+                                                                    <userDefinedRuntimeAttribute type="string" keyPath="allowedChars" value=".0123456789"/>
                                                                 </userDefinedRuntimeAttributes>
                                                                 <variation key="widthClass=compact">
                                                                     <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                                                 </variation>
                                                             </textField>
-                                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="000.0" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="jod-uu-wdd">
+                                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="000.0" adjustsFontSizeToFit="NO" minimumFontSize="20" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="jod-uu-wdd" customClass="AllowedCharsTextField" customModule="Master_Flight_App" customModuleProvider="target">
                                                                 <rect key="frame" x="0.0" y="134" width="129.5" height="52"/>
                                                                 <nil key="textColor"/>
                                                                 <fontDescription key="fontDescription" type="system" pointSize="40"/>
@@ -792,6 +803,7 @@
                                                                     <userDefinedRuntimeAttribute type="number" keyPath="maxLength">
                                                                         <integer key="value" value="5"/>
                                                                     </userDefinedRuntimeAttribute>
+                                                                    <userDefinedRuntimeAttribute type="string" keyPath="allowedChars" value=".0123456789"/>
                                                                 </userDefinedRuntimeAttributes>
                                                                 <variation key="widthClass=compact">
                                                                     <fontDescription key="fontDescription" type="system" pointSize="20"/>
@@ -851,7 +863,7 @@
                                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" alignment="top" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="Age-fa-Dcw">
                                                         <rect key="frame" x="162" y="0.0" width="185.5" height="247"/>
                                                         <subviews>
-                                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="00" textAlignment="natural" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="aMf-wC-DXc">
+                                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="00" textAlignment="natural" adjustsFontSizeToFit="NO" minimumFontSize="20" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="aMf-wC-DXc" customClass="AllowedCharsTextField" customModule="Master_Flight_App" customModuleProvider="target">
                                                                 <rect key="frame" x="0.0" y="0.0" width="70.5" height="52"/>
                                                                 <nil key="textColor"/>
                                                                 <fontDescription key="fontDescription" type="system" pointSize="40"/>
@@ -860,6 +872,7 @@
                                                                     <userDefinedRuntimeAttribute type="number" keyPath="maxLength">
                                                                         <integer key="value" value="2"/>
                                                                     </userDefinedRuntimeAttribute>
+                                                                    <userDefinedRuntimeAttribute type="string" keyPath="allowedChars" value="0123456789"/>
                                                                 </userDefinedRuntimeAttributes>
                                                                 <variation key="widthClass=compact">
                                                                     <fontDescription key="fontDescription" type="system" pointSize="20"/>
@@ -868,7 +881,7 @@
                                                             <stackView opaque="NO" contentMode="scaleToFill" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="Yli-Rq-FGD">
                                                                 <rect key="frame" x="0.0" y="67" width="185.5" height="46"/>
                                                                 <subviews>
-                                                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="000" textAlignment="natural" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="wKZ-Xl-3TU">
+                                                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="000" textAlignment="natural" adjustsFontSizeToFit="NO" minimumFontSize="20" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="wKZ-Xl-3TU" customClass="AllowedCharsTextField" customModule="Master_Flight_App" customModuleProvider="target">
                                                                         <rect key="frame" x="0.0" y="0.0" width="86" height="46"/>
                                                                         <nil key="textColor"/>
                                                                         <fontDescription key="fontDescription" type="system" pointSize="35"/>
@@ -877,6 +890,7 @@
                                                                             <userDefinedRuntimeAttribute type="number" keyPath="maxLength">
                                                                                 <integer key="value" value="3"/>
                                                                             </userDefinedRuntimeAttribute>
+                                                                            <userDefinedRuntimeAttribute type="string" keyPath="allowedChars" value="0123456789"/>
                                                                         </userDefinedRuntimeAttributes>
                                                                         <variation key="widthClass=compact">
                                                                             <fontDescription key="fontDescription" type="system" pointSize="15"/>
@@ -891,7 +905,7 @@
                                                                             <fontDescription key="fontDescription" type="system" pointSize="30"/>
                                                                         </variation>
                                                                     </label>
-                                                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="00" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="dis-fs-JTQ">
+                                                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="00" adjustsFontSizeToFit="NO" minimumFontSize="19" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="dis-fs-JTQ" customClass="AllowedCharsTextField" customModule="Master_Flight_App" customModuleProvider="target">
                                                                         <rect key="frame" x="121" y="0.0" width="64.5" height="46"/>
                                                                         <nil key="textColor"/>
                                                                         <fontDescription key="fontDescription" type="system" pointSize="35"/>
@@ -900,6 +914,7 @@
                                                                             <userDefinedRuntimeAttribute type="number" keyPath="maxLength">
                                                                                 <integer key="value" value="2"/>
                                                                             </userDefinedRuntimeAttribute>
+                                                                            <userDefinedRuntimeAttribute type="string" keyPath="allowedChars" value="0123456789"/>
                                                                         </userDefinedRuntimeAttributes>
                                                                         <variation key="widthClass=compact">
                                                                             <fontDescription key="fontDescription" type="system" pointSize="15"/>
@@ -907,7 +922,7 @@
                                                                     </textField>
                                                                 </subviews>
                                                             </stackView>
-                                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="00" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="3zm-RV-McK">
+                                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="00" adjustsFontSizeToFit="NO" minimumFontSize="20" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="3zm-RV-McK" customClass="AllowedCharsTextField" customModule="Master_Flight_App" customModuleProvider="target">
                                                                 <rect key="frame" x="0.0" y="128" width="70.5" height="52"/>
                                                                 <nil key="textColor"/>
                                                                 <fontDescription key="fontDescription" type="system" pointSize="40"/>
@@ -916,12 +931,13 @@
                                                                     <userDefinedRuntimeAttribute type="number" keyPath="maxLength">
                                                                         <integer key="value" value="2"/>
                                                                     </userDefinedRuntimeAttribute>
+                                                                    <userDefinedRuntimeAttribute type="string" keyPath="allowedChars" value="0123456789"/>
                                                                 </userDefinedRuntimeAttributes>
                                                                 <variation key="widthClass=compact">
                                                                     <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                                                 </variation>
                                                             </textField>
-                                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="000" textAlignment="natural" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="7My-wg-6yH">
+                                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="000" textAlignment="natural" adjustsFontSizeToFit="NO" minimumFontSize="20" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="7My-wg-6yH" customClass="AllowedCharsTextField" customModule="Master_Flight_App" customModuleProvider="target">
                                                                 <rect key="frame" x="0.0" y="195" width="95" height="52"/>
                                                                 <nil key="textColor"/>
                                                                 <fontDescription key="fontDescription" type="system" pointSize="40"/>
@@ -930,6 +946,7 @@
                                                                     <userDefinedRuntimeAttribute type="number" keyPath="maxLength">
                                                                         <integer key="value" value="4"/>
                                                                     </userDefinedRuntimeAttribute>
+                                                                    <userDefinedRuntimeAttribute type="string" keyPath="allowedChars" value="0123456789"/>
                                                                 </userDefinedRuntimeAttributes>
                                                                 <variation key="widthClass=compact">
                                                                     <fontDescription key="fontDescription" type="system" pointSize="20"/>
@@ -1964,7 +1981,7 @@
                                                     <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                                 </variation>
                                             </label>
-                                            <textField opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="fill" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="0.0" textAlignment="center" adjustsFontSizeToFit="NO" minimumFontSize="15" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="u8H-au-Kf5">
+                                            <textField opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="fill" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="0.0" textAlignment="center" adjustsFontSizeToFit="NO" minimumFontSize="15" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="u8H-au-Kf5" customClass="AllowedCharsTextField" customModule="Master_Flight_App" customModuleProvider="target">
                                                 <rect key="frame" x="206" y="0.0" width="80.5" height="52"/>
                                                 <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                                 <color key="tintColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -1975,6 +1992,7 @@
                                                     <userDefinedRuntimeAttribute type="number" keyPath="maxLength">
                                                         <integer key="value" value="4"/>
                                                     </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="string" keyPath="allowedChars" value=".0123456789"/>
                                                 </userDefinedRuntimeAttributes>
                                                 <variation key="widthClass=compact">
                                                     <fontDescription key="fontDescription" type="system" pointSize="20"/>

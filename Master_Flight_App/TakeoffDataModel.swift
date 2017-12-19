@@ -151,7 +151,7 @@ struct WindComponent {
     
     mutating func CalculateWinds(runway: Int, windDirection: Int, windVelocity: Int) -> (headWind: Double, xWind: Double) {
         windAngle = abs((runway*10) - windDirection)
-        xWind = (round((sin(Double(windAngle) * Double.pi/180) * Double(windVelocity)) * 10))/10
+        xWind = abs((round((sin(Double(windAngle) * Double.pi/180) * Double(windVelocity)) * 10))/10)
         headWind = (round((cos(Double(windAngle) * Double.pi/180.0) * Double(windVelocity)) * 10))/10
 
         return (headWind, xWind)
