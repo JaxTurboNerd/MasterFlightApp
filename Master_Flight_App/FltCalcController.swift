@@ -54,8 +54,6 @@ class ViewController: UIViewController {
     
     @IBAction func calculateTime(_ sender: UIButton) {
         
-        //Code using MVC file
-        
         //Catch empty flight time field
         if inputTime.text?.isEmpty == true {
             emptyAlert(alertTitle: "Flight Time Not Entered", alertMessage: "Enter flight time")

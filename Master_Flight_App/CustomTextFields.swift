@@ -77,3 +77,35 @@ private extension String {
     }
     
 }
+
+//Class for text field input formats: xx.x or xxx.x, etc.
+/*
+class FormattedTextField: AllowedCharsTextField {
+    
+    required init?(coder aDecoder: NSCoder) {
+        super.init(coder: aDecoder)
+        delegate = self
+        autocorrectionType = .no
+    }
+    
+    @IBInspectable var maxDigitsBeforeDecimal: String = ""
+ 
+    func valid(_ textField:String) -> Bool {
+        func roundToPlaces(value:Double, places:Int) -> Double {
+            let divisor = pow(10.0, Double(places))
+            return round(value * divisor) / divisor
+        }
+        if let num = Double(textField) {
+            if num >= 1000.0 {
+                return false
+            }
+            if roundToPlaces(value:num, places:1) != num {
+                return false
+            }
+            return true
+        } else {
+            return false
+        }
+    }
+}
+*/

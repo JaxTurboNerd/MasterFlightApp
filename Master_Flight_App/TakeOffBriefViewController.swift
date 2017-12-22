@@ -47,8 +47,8 @@ class TakeOffBriefViewController: UIViewController {
         VroDistance.text = globalRotateDistance
         VlofDistance.text = globalLOFDistance
         CG.text = globalCG + "%"
-        ZFW.text = globalZFW + " lbs"
-        GW.text = globalGW + " lbs"
+        ZFW.text = globalZFW + "K lbs"
+        GW.text = globalGW + "K lbs"
         OAT.text = globalTemp + "℃"
         PA.text = globalPressureAlt + " ft"
         Runway.text = globalRunway
@@ -70,6 +70,5 @@ class TakeOffBriefViewController: UIViewController {
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
     }
 }

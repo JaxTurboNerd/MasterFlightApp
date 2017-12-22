@@ -49,32 +49,17 @@ class MissionViewController: UIViewController {
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
     }
     
-
     // MARK: - Navigation
     
     @IBAction func calcMission(_ sender: UIButton) {
         var missionCalculation = MissionData()
 
-        //Catch empty input fields
-        if zeroFuelWeight.placeholder?.isEmpty == false {
-            zeroFuelWeight.text = zeroFuelWeight.placeholder
-            zeroFuelWeight.placeholder = nil
-        }
-        if zeroFuelWeight.text?.isEmpty == true {
-            emptyAlert(alertTitle: "ZFW not entered", alertMessage: "Enter ZFW")
-            zeroFuelWeight.text = "00.0"
-        }
-        else if TotalFuel.text?.isEmpty == true {
-            emptyAlert(alertTitle: "Fuel total not entered", alertMessage: "Enter fuel")
-            TotalFuel.text = "00.0"
-        }
-        else if Altitude.text?.isEmpty == true {
-            emptyAlert(alertTitle: "Altitude not entered", alertMessage: "Enter altitude")
-            Altitude.text = "00.0"
-        }
+        //Check input text field values:
+        checkZFW(textField: zeroFuelWeight)
+        checkTotalFuel(textField: TotalFuel)
+        checkAltitude(textField: Altitude)
         
         MaxRange.text = "\(missionCalculation.calcMissionData(zfw: Double(zeroFuelWeight.text!)!, totalFuel: Double(TotalFuel.text!)!, altitude: Double(Altitude.text!)!).stringMaxRange) kts"
         LoiterSpeed.text = "\(missionCalculation.calcMissionData(zfw: Double(zeroFuelWeight.text!)!, totalFuel: Double(TotalFuel.text!)!, altitude: Double(Altitude.text!)!).stringLoiterSpeed) kts"
