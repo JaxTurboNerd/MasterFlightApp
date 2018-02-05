@@ -56,6 +56,7 @@ extension TakeoffDataViewController {
     func checkWindDirection(textField: UITextField) -> Void {
         if textField.text?.isEmpty == true {
             emptyAlert(alertTitle: "Wind Direction NOT entered", alertMessage: "Enter Wind Direction")
+            windDirection.text = "000"
         }
         if Int(textField.text!)! < 010 || Int(textField.text!)! > 360 {
             outOfRangeAlert(alertTitle: "Wind Direction Invalid", alertMessage: "Enter Wind direction")
@@ -90,12 +91,6 @@ extension TakeoffDataViewController {
 extension MissionViewController {
     
     func checkZFW(textField: UITextField) -> Void {
-        
-        if textField.placeholder?.isEmpty == false {
-            zeroFuelWeight.text = zeroFuelWeight.placeholder
-            zeroFuelWeight.placeholder = nil
-        }
-        
         if textField.text?.isEmpty == true {
             emptyAlert(alertTitle: "ZFW Not Entered", alertMessage: "Enter ZFW")
             zeroFuelWeight.text = "000"
@@ -103,12 +98,6 @@ extension MissionViewController {
         
         if textField.text == "000" {
             emptyAlert(alertTitle: "ZFW not Entered", alertMessage: "Enter ZFW")
-        }
-        if globalAircraftType == "LRT" && Double(textField.text!)! > 71.6 {
-            outOfRangeAlert(alertTitle: "ZFW entered NOT valid", alertMessage: "Enter ZFW")
-        }
-        if globalAircraftType == "AEW" && Double(textField.text!)! > 77.2 {
-            outOfRangeAlert(alertTitle: "ZFW entered NOT valid", alertMessage: "Enter ZFW")
         }
     }
     

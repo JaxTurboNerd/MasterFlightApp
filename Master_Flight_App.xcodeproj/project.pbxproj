@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		9308E1591F5E22C300CBFDC0 /* MissionModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9308E1581F5E22C300CBFDC0 /* MissionModel.swift */; };
+		9311E1022027B9FC00CE1527 /* SwiftMaskField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9311E1002027B9FC00CE1527 /* SwiftMaskField.swift */; };
+		9311E1032027B9FC00CE1527 /* StringExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9311E1012027B9FC00CE1527 /* StringExtensions.swift */; };
 		93183A621F3E818200E7350D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93183A611F3E818200E7350D /* AppDelegate.swift */; };
 		93183A641F3E818200E7350D /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93183A631F3E818200E7350D /* HomeViewController.swift */; };
 		93183A691F3E818200E7350D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 93183A671F3E818200E7350D /* Main.storyboard */; };
@@ -20,7 +22,11 @@
 		93678B331F9830BE005DCF5C /* TakeoffDataViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93678B321F9830BE005DCF5C /* TakeoffDataViewController.swift */; };
 		93678B551F983F42005DCF5C /* TakeoffDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93678B541F983F42005DCF5C /* TakeoffDataModel.swift */; };
 		936C87491F5F2C7000ACD0E7 /* OnstationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 936C87481F5F2C7000ACD0E7 /* OnstationViewController.swift */; };
+		93940C54200003F100742D16 /* RunwayDataViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93940C53200003F100742D16 /* RunwayDataViewController.swift */; };
+		93A571741FF9AE84004AD795 /* NearbyAirportViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93A571731FF9AE84004AD795 /* NearbyAirportViewController.swift */; };
+		93A571771FF9B0F7004AD795 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 93A571761FF9B0F7004AD795 /* MapKit.framework */; };
 		93E2F0491F5DB76A00E2BB7F /* MissionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93E2F0481F5DB76A00E2BB7F /* MissionViewController.swift */; };
+		93FF846F2002BCC100D2AA75 /* KVQQViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93FF846E2002BCC100D2AA75 /* KVQQViewController.swift */; };
 		FA6594311FE89EE400F4A300 /* CustomTextFields.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA6594301FE89EE400F4A300 /* CustomTextFields.swift */; };
 		FA7060501F5E3A14006FD6A0 /* FlightCalcModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA70604F1F5E3A14006FD6A0 /* FlightCalcModel.swift */; };
 		FA7060521F5E3A20006FD6A0 /* FltCalcController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA7060511F5E3A20006FD6A0 /* FltCalcController.swift */; };
@@ -30,6 +36,8 @@
 
 /* Begin PBXFileReference section */
 		9308E1581F5E22C300CBFDC0 /* MissionModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MissionModel.swift; sourceTree = "<group>"; };
+		9311E1002027B9FC00CE1527 /* SwiftMaskField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwiftMaskField.swift; sourceTree = "<group>"; };
+		9311E1012027B9FC00CE1527 /* StringExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StringExtensions.swift; sourceTree = "<group>"; };
 		93183A5E1F3E818200E7350D /* Master_Flight_App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Master_Flight_App.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		93183A611F3E818200E7350D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		93183A631F3E818200E7350D /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
@@ -44,7 +52,11 @@
 		93678B321F9830BE005DCF5C /* TakeoffDataViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TakeoffDataViewController.swift; sourceTree = "<group>"; };
 		93678B541F983F42005DCF5C /* TakeoffDataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TakeoffDataModel.swift; sourceTree = "<group>"; };
 		936C87481F5F2C7000ACD0E7 /* OnstationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OnstationViewController.swift; sourceTree = "<group>"; };
-		93E2F0481F5DB76A00E2BB7F /* MissionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MissionViewController.swift; path = ../MissionViewController.swift; sourceTree = "<group>"; };
+		93940C53200003F100742D16 /* RunwayDataViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RunwayDataViewController.swift; sourceTree = "<group>"; };
+		93A571731FF9AE84004AD795 /* NearbyAirportViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NearbyAirportViewController.swift; sourceTree = "<group>"; };
+		93A571761FF9B0F7004AD795 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		93E2F0481F5DB76A00E2BB7F /* MissionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MissionViewController.swift; sourceTree = "<group>"; };
+		93FF846E2002BCC100D2AA75 /* KVQQViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KVQQViewController.swift; sourceTree = "<group>"; };
 		FA6594301FE89EE400F4A300 /* CustomTextFields.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomTextFields.swift; sourceTree = "<group>"; };
 		FA70604F1F5E3A14006FD6A0 /* FlightCalcModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FlightCalcModel.swift; sourceTree = "<group>"; };
 		FA7060511F5E3A20006FD6A0 /* FltCalcController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FltCalcController.swift; sourceTree = "<group>"; };
@@ -57,6 +69,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				93A571771FF9B0F7004AD795 /* MapKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -68,6 +81,7 @@
 			children = (
 				93183A601F3E818200E7350D /* Master_Flight_App */,
 				93183A5F1F3E818200E7350D /* Products */,
+				93A571751FF9B0F7004AD795 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -83,19 +97,13 @@
 			isa = PBXGroup;
 			children = (
 				93183A611F3E818200E7350D /* AppDelegate.swift */,
-				93183A631F3E818200E7350D /* HomeViewController.swift */,
-				FA7060511F5E3A20006FD6A0 /* FltCalcController.swift */,
-				FA70604F1F5E3A14006FD6A0 /* FlightCalcModel.swift */,
-				93E2F0481F5DB76A00E2BB7F /* MissionViewController.swift */,
-				9308E1581F5E22C300CBFDC0 /* MissionModel.swift */,
-				936C87481F5F2C7000ACD0E7 /* OnstationViewController.swift */,
-				9322D4E11F6B088C006C9425 /* OnStationModel.swift */,
 				93183A671F3E818200E7350D /* Main.storyboard */,
-				FA810BEA1FD0B185002BB188 /* TakeOffBriefViewController.swift */,
-				93678B321F9830BE005DCF5C /* TakeoffDataViewController.swift */,
-				93678B541F983F42005DCF5C /* TakeoffDataModel.swift */,
-				9331D32C1F868F9D005984D0 /* FlightSegmentViewController.swift */,
+				93FF84732002BEBA00D2AA75 /* Runway VC's */,
+				93FF84712002BE8300D2AA75 /* Models */,
+				93FF84722002BEA400D2AA75 /* View Controllers */,
 				FAF2C2A61FE8AEAA0084ADF5 /* CheckFields.swift */,
+				9311E1002027B9FC00CE1527 /* SwiftMaskField.swift */,
+				9311E1012027B9FC00CE1527 /* StringExtensions.swift */,
 				FA6594301FE89EE400F4A300 /* CustomTextFields.swift */,
 				934195E11F8296FB00C1B046 /* AlertFunction.swift */,
 				9322D4DF1F678827006C9425 /* CustomButtons.swift */,
@@ -104,6 +112,49 @@
 				93183A6F1F3E818200E7350D /* Info.plist */,
 			);
 			path = Master_Flight_App;
+			sourceTree = "<group>";
+		};
+		93A571751FF9B0F7004AD795 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				93A571761FF9B0F7004AD795 /* MapKit.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		93FF84712002BE8300D2AA75 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				FA70604F1F5E3A14006FD6A0 /* FlightCalcModel.swift */,
+				9308E1581F5E22C300CBFDC0 /* MissionModel.swift */,
+				9322D4E11F6B088C006C9425 /* OnStationModel.swift */,
+				93678B541F983F42005DCF5C /* TakeoffDataModel.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		93FF84722002BEA400D2AA75 /* View Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				93183A631F3E818200E7350D /* HomeViewController.swift */,
+				FA7060511F5E3A20006FD6A0 /* FltCalcController.swift */,
+				93E2F0481F5DB76A00E2BB7F /* MissionViewController.swift */,
+				936C87481F5F2C7000ACD0E7 /* OnstationViewController.swift */,
+				93A571731FF9AE84004AD795 /* NearbyAirportViewController.swift */,
+				93940C53200003F100742D16 /* RunwayDataViewController.swift */,
+				FA810BEA1FD0B185002BB188 /* TakeOffBriefViewController.swift */,
+				93678B321F9830BE005DCF5C /* TakeoffDataViewController.swift */,
+				9331D32C1F868F9D005984D0 /* FlightSegmentViewController.swift */,
+			);
+			path = "View Controllers";
+			sourceTree = "<group>";
+		};
+		93FF84732002BEBA00D2AA75 /* Runway VC's */ = {
+			isa = PBXGroup;
+			children = (
+				93FF846E2002BCC100D2AA75 /* KVQQViewController.swift */,
+			);
+			path = "Runway VC's";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -141,6 +192,11 @@
 						DevelopmentTeam = YKY42GMVFE;
 						LastSwiftMigration = 0900;
 						ProvisioningStyle = Automatic;
+						SystemCapabilities = {
+							com.apple.Maps.iOS = {
+								enabled = 1;
+							};
+						};
 					};
 				};
 			};
@@ -183,18 +239,23 @@
 				9308E1591F5E22C300CBFDC0 /* MissionModel.swift in Sources */,
 				FAF2C2A71FE8AEAA0084ADF5 /* CheckFields.swift in Sources */,
 				936C87491F5F2C7000ACD0E7 /* OnstationViewController.swift in Sources */,
+				9311E1032027B9FC00CE1527 /* StringExtensions.swift in Sources */,
 				93678B331F9830BE005DCF5C /* TakeoffDataViewController.swift in Sources */,
 				93183A621F3E818200E7350D /* AppDelegate.swift in Sources */,
 				FA7060501F5E3A14006FD6A0 /* FlightCalcModel.swift in Sources */,
 				9322D4E01F678827006C9425 /* CustomButtons.swift in Sources */,
+				93A571741FF9AE84004AD795 /* NearbyAirportViewController.swift in Sources */,
 				FA6594311FE89EE400F4A300 /* CustomTextFields.swift in Sources */,
 				93183A641F3E818200E7350D /* HomeViewController.swift in Sources */,
 				9322D4E21F6B088C006C9425 /* OnStationModel.swift in Sources */,
 				FA810BEB1FD0B185002BB188 /* TakeOffBriefViewController.swift in Sources */,
+				9311E1022027B9FC00CE1527 /* SwiftMaskField.swift in Sources */,
 				934195E21F8296FB00C1B046 /* AlertFunction.swift in Sources */,
 				93678B551F983F42005DCF5C /* TakeoffDataModel.swift in Sources */,
+				93940C54200003F100742D16 /* RunwayDataViewController.swift in Sources */,
 				93E2F0491F5DB76A00E2BB7F /* MissionViewController.swift in Sources */,
 				FA7060521F5E3A20006FD6A0 /* FltCalcController.swift in Sources */,
+				93FF846F2002BCC100D2AA75 /* KVQQViewController.swift in Sources */,
 				9331D32D1F868F9D005984D0 /* FlightSegmentViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
