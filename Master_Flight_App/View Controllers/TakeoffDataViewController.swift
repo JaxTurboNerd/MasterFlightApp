@@ -103,17 +103,17 @@ class TakeoffDataViewController: UIViewController, UIPickerViewDelegate, UIPicke
         SHP95.text = powerCalculation.calculatePower(pickerData: selectedTIT!, airTemp: Int(OAT.text!)!, isAntiIceOn: isAntiIceOn, pressureAltitude: Int(PA.text!)!).stringSHP95
         globalSHP95 = SHP95.text!
         
-        Vro.text = String(Int(rotateSpeed.RotateSpeed(grossWeight: Double(grossWeight.text!)!, aircraftType: aircraftType)))
-        Vlof.text = String(Int(liftOffSpeed.LiftOffSpeed(grossWeight: Double(grossWeight.text!)!, aircraftType: aircraftType)))
+        Vro.text = String(Int(rotateSpeed.rotateSpeed(grossWeight: Double(grossWeight.text!)!, aircraftType: aircraftType)))
+        Vlof.text = String(Int(liftOffSpeed.liftOffSpeed(grossWeight: Double(grossWeight.text!)!, aircraftType: aircraftType)))
         V50three.text = String(Int(V50threeSpeed.V50three(grossWeight: Double(grossWeight.text!)!, aircraftType: aircraftType)))
         Vr.text = Vro.text
-        threeEngineROC.text = String(threeROC.Calculate3ROC(GW: Double(grossWeight.text!)!, OAT: Int(OAT.text!)!))
+        threeEngineROC.text = String(threeROC.calculate3ROC(GW: Double(grossWeight.text!)!, OAT: Int(OAT.text!)!))
         
         
         //Wind Components:
-        globalHeadWindComponent = windComponents.CalculateWinds(runway: Int(runway.text!)!, windDirection: Int(windDirection.text!)!, windVelocity: Int(windSpeed.text!)!).headWind
+        globalHeadWindComponent = windComponents.calculateWinds(runway: Int(runway.text!)!, windDirection: Int(windDirection.text!)!, windVelocity: Int(windSpeed.text!)!).headWind
       
-        globalCrossWindComponent = windComponents.CalculateWinds(runway: Int(runway.text!)!, windDirection: Int(windDirection.text!)!, windVelocity: Int(windSpeed.text!)!).xWind
+        globalCrossWindComponent = windComponents.calculateWinds(runway: Int(runway.text!)!, windDirection: Int(windDirection.text!)!, windVelocity: Int(windSpeed.text!)!).xWind
         
         if aircraftType == "AEW" {
             V50four.text = "N/A"
@@ -124,14 +124,14 @@ class TakeoffDataViewController: UIViewController, UIPickerViewDelegate, UIPicke
         globalV50four = V50four.text!
         
         //Distances
-        rotateDistance.text = "\(String(Int(takeoffDistance.AccelDistance(grossWeight: Double(grossWeight.text!)!, SHP: Double(SHP100.text!)!, pressAltitude: Double(PA.text!)!, airTemp: Double(OAT.text!)!, speed: Double(Vro.text!)!)))) ft"
-        LOFDistance.text = "\(String(Int(takeoffDistance.AccelDistance(grossWeight: Double(grossWeight.text!)!, SHP: Double(SHP100.text!)!, pressAltitude: Double(PA.text!)!, airTemp: Double(OAT.text!)!, speed: Double(Vlof.text!)!)))) ft"
+        rotateDistance.text = "\(String(Int(takeoffDistance.accelerationDistance(grossWeight: Double(grossWeight.text!)!, SHP: Double(SHP100.text!)!, pressAltitude: Double(PA.text!)!, airTemp: Double(OAT.text!)!, speed: Double(Vro.text!)!)))) ft"
+        LOFDistance.text = "\(String(Int(takeoffDistance.accelerationDistance(grossWeight: Double(grossWeight.text!)!, SHP: Double(SHP100.text!)!, pressAltitude: Double(PA.text!)!, airTemp: Double(OAT.text!)!, speed: Double(Vlof.text!)!)))) ft"
         
         globalRotateDistance = rotateDistance.text!
         globalLOFDistance = LOFDistance.text!
         
         //Three ROC:
-        global3ROC = "\(String(threeROC.Calculate3ROC(GW: Double(grossWeight.text!)!, OAT: Int(OAT.text!)!))) fpm"
+        global3ROC = "\(String(threeROC.calculate3ROC(GW: Double(grossWeight.text!)!, OAT: Int(OAT.text!)!))) fpm"
         
         //dismiss keyboard after clicking the calculate button
         self.doneClicked()
@@ -142,7 +142,7 @@ class TakeoffDataViewController: UIViewController, UIPickerViewDelegate, UIPicke
         if sender.selectedSegmentIndex == 0 {isAntiIceOn = true}
         else {isAntiIceOn = false}
     }
-    
+ 
     @IBAction func AircraftType(_ sender: UISegmentedControl) {
         if sender.selectedSegmentIndex == 0 {
             globalAircraftType = "LRT"
@@ -156,7 +156,7 @@ class TakeoffDataViewController: UIViewController, UIPickerViewDelegate, UIPicke
     
     //Picker View:
     @IBOutlet weak var TIT_Picker: UIPickerView!
-    var TIT_PickerData: [String] = [String]()
+    var TIT_PickerData = [String]()
     
     override func viewDidLoad() {
         super.viewDidLoad()

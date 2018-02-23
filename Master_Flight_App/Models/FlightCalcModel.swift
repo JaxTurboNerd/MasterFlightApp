@@ -15,11 +15,11 @@ struct FlightTime {
         //convert flightTime to type Int
         let intFlightTime = Int(flightTime * 10)
         
-        let divideResult = intFlightTime/3
+        let dividedResult = intFlightTime/3
         
-        var intTime1 = divideResult
-        var intTime2 = divideResult
-        var intTime3 = divideResult
+        var intTime1 = dividedResult
+        var intTime2 = dividedResult
+        var intTime3 = dividedResult
         
         var sumTime = intTime1 + intTime2 + intTime3
         

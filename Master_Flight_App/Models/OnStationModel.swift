@@ -19,7 +19,7 @@ struct OnStation {
         let onStationFuel = Double(Int(totalFuel * 1000) - (Int(onTopFuel * 1000)) - flyHomeFuel)
         let onStationTime = (round(onStationFuel/onStationFuelFlow * 10)/10)
         let departFuel = flyHomeFuel + Int(onTopFuel * 1000)
-        
+    
         //Catch zero errors
         if Double(returnFuelFlow) == 0 {
             

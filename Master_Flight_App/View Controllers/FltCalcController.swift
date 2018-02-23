@@ -8,12 +8,12 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class FltCalcViewController: UIViewController {
     
         //Mark: Properties
     
     @IBOutlet weak var inputTime: UITextField!
-
+    
     @IBOutlet weak var pic1Label: UILabel!
     @IBOutlet weak var pic2Label: UILabel!
     @IBOutlet weak var pic3Label: UILabel!

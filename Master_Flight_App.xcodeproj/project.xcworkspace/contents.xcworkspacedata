@@ -2,12 +2,6 @@
 <Workspace
    version = "1.0">
    <FileRef
-      location = "group:StringExtensions.swift">
-   </FileRef>
-   <FileRef
-      location = "group:SwiftMaskField.swift">
-   </FileRef>
-   <FileRef
       location = "self:">
    </FileRef>
 </Workspace>
