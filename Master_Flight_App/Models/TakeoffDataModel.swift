@@ -8,6 +8,9 @@
 
 import Foundation
 
+//global variables:
+var globalPredictedTIT:String?
+
 struct TOPower {
     //Takeoff Power Settings:
     let SHP1077List  = [4600, 4560, 4530, 4490, 4450, 4420, 4390, 4360, 4320, 4290, 4260, 4220, 4185, 4150, 4120, 4080, 4040,
@@ -20,55 +23,64 @@ struct TOPower {
     
     let SHP4600List = [908, 910, 913, 915, 918, 920, 923, 925, 928, 930, 932, 936, 938, 940, 943, 946, 948, 950, 953, 955, 958, 961, 964, 966, 969, 972, 975, 978, 980, 983, 986, 989, 992, 995, 998, 1001, 1006, 1008, 1010, 1014, 1017, 1020, 1024, 1027, 1030, 1033, 1035, 1040, 1046, 1049, 1052, 1056, 1059, 1063, 1066, 1069, 1073, 1077]
     
-    let SHP3500List = [856, 858, 860, 863, 865, 867, 869, 872, 875, 877, 879, 881, 884, 888, 890, 892, 898, 901, 904, 906, 909, 912, 915, 917, 920, 923, 927, 930, 932, 935, 937, 941, 945, 949, 952, 956, 959, 961, 966, 970, 973, 976, 979, 983, 987, 990, 993, 996, 1001, 1006, 1010]
-    
-    mutating func calculatePower(pickerData: String, airTemp: Int, isAntiIceOn: Bool, pressureAltitude: Int) -> (stringSHP100:String, stringSHP95: String) {
-        var pressureCorrection:Int = 0
+    let SHP3500List = [856, 858, 860, 863, 865, 867, 869, 872, 875, 877, 879, 881, 884, 888, 890, 892, 895, 898, 901, 904, 906, 909, 912, 915, 917, 920, 923, 927, 930, 932, 935, 937, 941, 945, 949, 952, 956, 959, 961, 966, 970, 973, 976, 979, 983, 987, 990, 993, 996, 1001, 1006, 1010]
+
+    mutating func calculatePower(selectedPower: String, airTemp: Int, isAntiIceOn: Bool, pressureAltitude: Int) -> (stringSHP100:String, stringSHP95: String, predictedTIT: Int) {
+        var pressureCorrection = 0
         var SHP100 = 0
         var SHP95 = 0.0
+        var predictedTIT = 0
         
         //Adjusts for use of Engine Anti-ice
         var workingOAT = airTemp
-        if isAntiIceOn == true {
-            workingOAT = workingOAT + 13
-        }
+        if isAntiIceOn == true {workingOAT +=  13}
         
         // Pressure Altitude correction
         if pressureAltitude >= 100 {
             pressureCorrection = 12*(pressureAltitude/100)
         }
-        else {
-            pressureCorrection = 0
-        }
+        else {pressureCorrection = 0}
         
         // Code for determining which picker data was selected goes here:
-        
-        if pickerData == "1077" {
+        switch selectedPower {
+        case "1077":
             if workingOAT > 45 {workingOAT = 45}
-            else if workingOAT < 17 {workingOAT =  17}
+            if workingOAT < 17 {workingOAT =  17}
             SHP100 = SHP1077List[workingOAT - 17] - pressureCorrection
-        }
-        else if pickerData == "1010" {
+            SHP95 = Double(SHP100) * 0.95
+        case "1010":
             if workingOAT > 45 {workingOAT = 45}
-            else if workingOAT < -2 {workingOAT = -2}
+            if workingOAT < -2 {workingOAT = -2}
             SHP100 = SHP1010List[workingOAT + 2] - pressureCorrection
-        }
-        else if pickerData == "950" {
+            SHP95 = Double(SHP100) * 0.95
+        case "950":
             if workingOAT > 45 {workingOAT = 45}
-            else if workingOAT < -18 {workingOAT = -18}
+            if workingOAT < -18 {workingOAT = -18}
             SHP100 = SHP950List[workingOAT + 18] - pressureCorrection
+            SHP95 = Double(SHP100) * 0.95
+        case "4600":
+            if workingOAT > 17 {workingOAT = 17}
+            if workingOAT < -40 {workingOAT = -40}
+            SHP100 = 4600
+            SHP95 = 4370
+            predictedTIT = SHP4600List[workingOAT + 40] + pressureCorrection
+            globalPredictedTIT = String(predictedTIT)
+        case "3500":
+            if workingOAT > 33 {workingOAT = 33}
+            if workingOAT < -18 {workingOAT = -18}
+            SHP100 = 3500
+            SHP95 = 3325
+            predictedTIT = SHP3500List[workingOAT + 18] + pressureCorrection
+            globalPredictedTIT = String(predictedTIT)
+        default:
+            break
         }
-        //case "3500":
-        //case "3000":
-        
-        //95% SHP Calculations
-        SHP95 = Double(SHP100) * 0.95
-        
+    
         //Convert final SHP to type String
         let stringSHP100 = String(SHP100)
         let stringSHP95 = String(Int(SHP95))
         
-        return (stringSHP100, stringSHP95)
+        return (stringSHP100, stringSHP95, predictedTIT)
     }
 }
 struct CalculateVroSpeed {
@@ -164,6 +176,8 @@ struct ThreeROC {
     var threeROC = 0
     
     mutating func calculate3ROC(GW: Double, OAT: Int) -> (Int) {
+        //Limit OAT:
+        
         if OAT == 15 {deltaT = 0}
         else {deltaT = OAT - 15}
         
@@ -173,7 +187,7 @@ struct ThreeROC {
         case 1...:
             threeROC = Int((12391.51 * (pow(0.977896843, GW))) - 130) - (deltaT * 10)
         case ...0:
-            threeROC = Int((12391.51 * (pow(0.977896843, GW))) - 130) + (deltaT * 10)
+            threeROC = Int((12391.51 * (pow(0.977896843, GW))) - 130) + (abs(deltaT * 10))
         default:
             break
         }

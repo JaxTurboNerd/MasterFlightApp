@@ -37,7 +37,15 @@ class TakeOffBriefViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        TIT.text = selectedTIT
+        switch selectedTIT {
+        case "1077"?, "1010"?, "950"?:
+            TIT.text = selectedTIT
+        case "4600"?, "3500"?:
+            TIT.text = globalPredictedTIT
+        default:
+            break
+        }
+        //TIT.text = selectedTIT
         SHP100.text = globalSHP100
         SHP95.text = globalSHP95
         Vr.text = globalVr + " kts"

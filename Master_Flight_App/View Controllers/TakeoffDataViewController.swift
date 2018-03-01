@@ -59,6 +59,8 @@ class TakeoffDataViewController: UIViewController, UIPickerViewDelegate, UIPicke
     @IBOutlet weak var rotateDistance: UILabel!
     @IBOutlet weak var LOFDistance: UILabel!
     @IBOutlet weak var threeEngineROC: UILabel!
+    @IBOutlet weak var setPowerLabel: UILabel!
+    @IBOutlet weak var TIT_Picker: UIPickerView!
     
     @IBAction func calculatePower(_ sender: CustomButton) {
         //Create Instance Variables:
@@ -98,11 +100,25 @@ class TakeoffDataViewController: UIViewController, UIPickerViewDelegate, UIPicke
         globalZFW = zeroFuelWeight.text!
         
         //Assign values to labels from calculations
-        SHP100.text = powerCalculation.calculatePower(pickerData: selectedTIT!, airTemp: Int(OAT.text!)!, isAntiIceOn: isAntiIceOn, pressureAltitude: Int(PA.text!)!).stringSHP100
+        
+        //SHP:
+        SHP100.text = powerCalculation.calculatePower(selectedPower: selectedTIT!, airTemp: Int(OAT.text!)!, isAntiIceOn: isAntiIceOn, pressureAltitude: Int(PA.text!)!).stringSHP100
         globalSHP100 = SHP100.text!
-        SHP95.text = powerCalculation.calculatePower(pickerData: selectedTIT!, airTemp: Int(OAT.text!)!, isAntiIceOn: isAntiIceOn, pressureAltitude: Int(PA.text!)!).stringSHP95
+            
+        SHP95.text = powerCalculation.calculatePower(selectedPower: selectedTIT!, airTemp: Int(OAT.text!)!, isAntiIceOn: isAntiIceOn, pressureAltitude: Int(PA.text!)!).stringSHP95
         globalSHP95 = SHP95.text!
         
+        switch selectedTIT {
+        case "1077"?, "1010"?, "950"?:
+            setPowerLabel.text = "\(selectedTIT!) TIT"
+        case "4600"?, "3500"?:
+            setPowerLabel.text = "\(powerCalculation.calculatePower(selectedPower: selectedTIT!, airTemp: Int(OAT.text!)!, isAntiIceOn: isAntiIceOn, pressureAltitude: Int(PA.text!)!).predictedTIT) TIT"
+        default:
+            break
+        }
+        
+        
+        //Speeds:
         Vro.text = String(Int(rotateSpeed.rotateSpeed(grossWeight: Double(grossWeight.text!)!, aircraftType: aircraftType)))
         Vlof.text = String(Int(liftOffSpeed.liftOffSpeed(grossWeight: Double(grossWeight.text!)!, aircraftType: aircraftType)))
         V50three.text = String(Int(V50threeSpeed.V50three(grossWeight: Double(grossWeight.text!)!, aircraftType: aircraftType)))
@@ -154,15 +170,11 @@ class TakeoffDataViewController: UIViewController, UIPickerViewDelegate, UIPicke
         }
     }
     
-    //Picker View:
-    @IBOutlet weak var TIT_Picker: UIPickerView!
-    var TIT_PickerData = [String]()
-    
+    //TIT Pickerview Data:
+    let TIT_PickerData = ["1077", "1010", "950", "4600", "3500"]
     override func viewDidLoad() {
+    
         super.viewDidLoad()
-        
-        //TIT Pickerview Data:
-        TIT_PickerData = ["1077", "1010", "950"]
         
         //Add Done Button to top of keypad
         let toolBar = UIToolbar()
@@ -190,7 +202,6 @@ class TakeoffDataViewController: UIViewController, UIPickerViewDelegate, UIPicke
         //dismiss keyboard by tapping anywhere
         self.view.addGestureRecognizer(UITapGestureRecognizer(target:
             self.view, action: #selector(UIView.endEditing(_:))))
-        
     }
     
     @objc func doneClicked() {
@@ -217,10 +228,10 @@ class TakeoffDataViewController: UIViewController, UIPickerViewDelegate, UIPicke
     func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
         return TIT_PickerData.count
         }
-    
     func pickerView(_ pickerView: UIPickerView, rowHeightForComponent component: Int) -> CGFloat {
-        return pickerView.frame.height/2.5
+        return 40 //Do NOT change this number.
     }
+    
     //MARK: Delegates
     
     func pickerView(_ pickerView: UIPickerView, viewForRow row: Int, forComponent component: Int, reusing view: UIView?) -> UIView {
@@ -230,13 +241,21 @@ class TakeoffDataViewController: UIViewController, UIPickerViewDelegate, UIPicke
             //Background color:
             let hue = CGFloat(row)/CGFloat(TIT_PickerData.count)
             pickerLabel?.backgroundColor = UIColor(hue: hue, saturation: 1.0, brightness: 1.0, alpha: 0.6)
-            pickerLabel?.font = UIFont(name: "Times New Roman", size: (pickerView.frame.height)/2.6)
+            pickerLabel?.font = UIFont(name: "Times New Roman", size: (pickerView.frame.height)/2.7)
             pickerLabel?.textAlignment = .center
         }
         pickerLabel?.text = TIT_PickerData[row]
         pickerLabel?.textColor = UIColor.black
         selectedTIT = TIT_PickerData[row]
         
+        switch selectedTIT {
+        case "1077"?, "1010"?, "950"?:
+            setPowerLabel.text = "\(TIT_PickerData[row]) TIT"
+        case "4600"?, "3500"?:
+            setPowerLabel.text = "\(TIT_PickerData[row]) SHP"
+        default:
+            break
+        }
         return pickerLabel!
     }
 }
