@@ -13,7 +13,7 @@ var globalPredictedTIT:String?
 
 struct TOPower {
     //Takeoff Power Settings:
-    let SHP1077List  = [4600, 4560, 4530, 4490, 4450, 4420, 4390, 4360, 4320, 4290, 4260, 4220, 4185, 4150, 4120, 4080, 4040,
+     let SHP1077List  = [4600, 4560, 4530, 4490, 4450, 4420, 4390, 4360, 4320, 4290, 4260, 4220, 4185, 4150, 4120, 4080, 4040,
         4010, 3970, 3940, 3910, 3870, 3840, 3810, 3770, 3740, 3700, 3660, 3630]
     
     let SHP1010List = [4600, 4560, 4525, 4500, 4465, 4435, 4400, 4380, 4355, 4320, 4290, 4260, 4220, 4195, 4160, 4130, 4100, 4080, 4040, 4010, 3980, 3950, 3910, 3880, 3850, 3820, 3790, 3760, 3730, 3700, 3665, 3640, 3610, 3580, 3545, 3510, 3480, 3440,
@@ -176,18 +176,18 @@ struct ThreeROC {
     var threeROC = 0
     
     mutating func calculate3ROC(GW: Double, OAT: Int) -> (Int) {
-        //Limit OAT:
-        
+        //Pressure Altitude adjustment
+        //decrease 5SHP for every 100' increase in PA
         if OAT == 15 {deltaT = 0}
         else {deltaT = OAT - 15}
         
         switch deltaT {
         case 0:
-            threeROC = Int((12391.51 * (pow(0.977896843, GW))) - 130)
+            threeROC = Int((11771.93 * (pow(0.977896843, GW))) - 130)
         case 1...:
-            threeROC = Int((12391.51 * (pow(0.977896843, GW))) - 130) - (deltaT * 10)
+            threeROC = Int((11771.93 * (pow(0.977896843, GW))) - 130) - (deltaT * 10)
         case ...0:
-            threeROC = Int((12391.51 * (pow(0.977896843, GW))) - 130) + (abs(deltaT * 10))
+            threeROC = Int((11771.93 * (pow(0.977896843, GW))) - 130) + (abs(deltaT * 10))
         default:
             break
         }

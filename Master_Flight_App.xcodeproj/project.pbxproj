@@ -22,6 +22,8 @@
 		93678B331F9830BE005DCF5C /* TakeoffDataViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93678B321F9830BE005DCF5C /* TakeoffDataViewController.swift */; };
 		93678B551F983F42005DCF5C /* TakeoffDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93678B541F983F42005DCF5C /* TakeoffDataModel.swift */; };
 		936C87491F5F2C7000ACD0E7 /* OnstationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 936C87481F5F2C7000ACD0E7 /* OnstationViewController.swift */; };
+		93817A7B20603559000A5869 /* GLOReportViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93817A7A20603559000A5869 /* GLOReportViewController.swift */; };
+		93817A7D2060453A000A5869 /* MessageUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 93817A7C2060453A000A5869 /* MessageUI.framework */; };
 		93940C54200003F100742D16 /* RunwayDataViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93940C53200003F100742D16 /* RunwayDataViewController.swift */; };
 		93A571741FF9AE84004AD795 /* NearbyAirportViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93A571731FF9AE84004AD795 /* NearbyAirportViewController.swift */; };
 		93A571771FF9B0F7004AD795 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 93A571761FF9B0F7004AD795 /* MapKit.framework */; };
@@ -52,6 +54,8 @@
 		93678B321F9830BE005DCF5C /* TakeoffDataViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TakeoffDataViewController.swift; sourceTree = "<group>"; };
 		93678B541F983F42005DCF5C /* TakeoffDataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TakeoffDataModel.swift; sourceTree = "<group>"; };
 		936C87481F5F2C7000ACD0E7 /* OnstationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OnstationViewController.swift; sourceTree = "<group>"; };
+		93817A7A20603559000A5869 /* GLOReportViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GLOReportViewController.swift; sourceTree = "<group>"; };
+		93817A7C2060453A000A5869 /* MessageUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MessageUI.framework; path = System/Library/Frameworks/MessageUI.framework; sourceTree = SDKROOT; };
 		93940C53200003F100742D16 /* RunwayDataViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RunwayDataViewController.swift; sourceTree = "<group>"; };
 		93A571731FF9AE84004AD795 /* NearbyAirportViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NearbyAirportViewController.swift; sourceTree = "<group>"; };
 		93A571761FF9B0F7004AD795 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
@@ -69,6 +73,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				93817A7D2060453A000A5869 /* MessageUI.framework in Frameworks */,
 				93A571771FF9B0F7004AD795 /* MapKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -117,6 +122,7 @@
 		93A571751FF9B0F7004AD795 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				93817A7C2060453A000A5869 /* MessageUI.framework */,
 				93A571761FF9B0F7004AD795 /* MapKit.framework */,
 			);
 			name = Frameworks;
@@ -145,6 +151,7 @@
 				FA810BEA1FD0B185002BB188 /* TakeOffBriefViewController.swift */,
 				93678B321F9830BE005DCF5C /* TakeoffDataViewController.swift */,
 				9331D32C1F868F9D005984D0 /* FlightSegmentViewController.swift */,
+				93817A7A20603559000A5869 /* GLOReportViewController.swift */,
 			);
 			path = "View Controllers";
 			sourceTree = "<group>";
@@ -237,6 +244,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				9308E1591F5E22C300CBFDC0 /* MissionModel.swift in Sources */,
+				93817A7B20603559000A5869 /* GLOReportViewController.swift in Sources */,
 				FAF2C2A71FE8AEAA0084ADF5 /* CheckFields.swift in Sources */,
 				936C87491F5F2C7000ACD0E7 /* OnstationViewController.swift in Sources */,
 				9311E1032027B9FC00CE1527 /* StringExtensions.swift in Sources */,
