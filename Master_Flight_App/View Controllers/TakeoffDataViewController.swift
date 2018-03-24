@@ -5,7 +5,6 @@
 //  Created by Gregory Boyd on 10/18/17.
 //  Copyright © 2017 Gregory Boyd. All rights reserved.
 //
-import Foundation
 import UIKit
 
 // Define Global variables
@@ -175,6 +174,10 @@ class TakeoffDataViewController: UIViewController, UIPickerViewDelegate, UIPicke
     override func viewDidLoad() {
     
         super.viewDidLoad()
+        //Right align textfields with decimal
+        centerOfGravity.textAlignment = .right
+        zeroFuelWeight.textAlignment = .right
+        grossWeight.textAlignment = .right
         
         //Add Done Button to top of keypad
         let toolBar = UIToolbar()
@@ -203,7 +206,7 @@ class TakeoffDataViewController: UIViewController, UIPickerViewDelegate, UIPicke
         self.view.addGestureRecognizer(UITapGestureRecognizer(target:
             self.view, action: #selector(UIView.endEditing(_:))))
     }
-    
+    //dismisses keyboard by touching done button on keyboard
     @objc func doneClicked() {
         view.endEditing(true)
     }

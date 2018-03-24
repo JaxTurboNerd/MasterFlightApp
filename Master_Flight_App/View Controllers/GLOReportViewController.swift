@@ -9,9 +9,44 @@
 import UIKit
 import MessageUI
 
-class GLOReportViewController: UIViewController, MFMailComposeViewControllerDelegate {
+class GLOReportViewController: UIViewController, UITextViewDelegate, MFMailComposeViewControllerDelegate {
     
     @IBOutlet weak var GLOReportTextView: UITextView!
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        
+        //dismiss keyboard by tapping anywhere
+        self.view.addGestureRecognizer(UITapGestureRecognizer(target:
+            self.view, action: #selector(UIView.endEditing(_:))))
+        
+        //User Default settings for email
+        let defaults = UserDefaults.standard
+        defaults.set(GLOReportTextView.text, forKey: "defaultEmailFormat")
+        //defaults.set(false, forKey: "HasBeenSaved")
+        
+        if defaults.bool(forKey: "HasBeenSaved") == true {
+            GLOReportTextView.text = defaults.string(forKey: "savedEmail")
+        }
+    }
+    
+    @objc func doneClicked() {
+        view.endEditing(true)
+    }
+    override func didReceiveMemoryWarning() {
+        super.didReceiveMemoryWarning()
+    }
+    
+    @IBAction func saveEmailView(_ sender: UIButton) {
+        UserDefaults.standard.set(GLOReportTextView.text, forKey: "savedEmail")
+        UserDefaults.standard.set(true, forKey: "HasBeenSaved")
+        UserDefaults.standard.synchronize()
+    }
+    
+    @IBAction func clearEmailView(_ sender: UIButton) {
+        GLOReportTextView.text = UserDefaults.standard.string(forKey: "defaultEmailFormat")
+        UserDefaults.standard.set(false, forKey: "HasBeenSaved")
+    }
     
     @IBAction func sendEmail(_ sender: UIButton) {
         let mailComposeViewController = configureMailController()
@@ -20,37 +55,6 @@ class GLOReportViewController: UIViewController, MFMailComposeViewControllerDele
         } else {
             showMailError()
         }
-    }
-    
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        
-        //Add Done Button to top of keypad
-        let toolBar = UIToolbar()
-        toolBar.sizeToFit()
-        
-        //pushes the done button to the right side of the toolbar
-        let flexibleSpace = UIBarButtonItem(barButtonSystemItem: UIBarButtonSystemItem.flexibleSpace, target: nil, action: nil)
-        
-        //adds done button to a toolbar above the keypad
-        let doneButton = UIBarButtonItem(barButtonSystemItem: UIBarButtonSystemItem.done, target: self, action: #selector(self.doneClicked))
-        
-        toolBar.setItems([flexibleSpace, doneButton], animated: false)
-        
-        GLOReportTextView.inputAccessoryView = toolBar
-        
-        //dismiss keyboard by tapping anywhere
-        self.view.addGestureRecognizer(UITapGestureRecognizer(target:
-            self.view, action: #selector(UIView.endEditing(_:))))
-    }
-    
-    @objc func doneClicked() {
-        view.endEditing(true)
-    }
-    
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
     }
     
     func configureMailController() -> MFMailComposeViewController {

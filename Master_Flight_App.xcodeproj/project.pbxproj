@@ -26,7 +26,6 @@
 		93817A7B20603559000A5869 /* GLOReportViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93817A7A20603559000A5869 /* GLOReportViewController.swift */; };
 		93817A7D2060453A000A5869 /* MessageUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 93817A7C2060453A000A5869 /* MessageUI.framework */; };
 		93940C54200003F100742D16 /* RunwayDataViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93940C53200003F100742D16 /* RunwayDataViewController.swift */; };
-		93A571741FF9AE84004AD795 /* NearbyAirportViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93A571731FF9AE84004AD795 /* NearbyAirportViewController.swift */; };
 		93E2F0491F5DB76A00E2BB7F /* MissionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93E2F0481F5DB76A00E2BB7F /* MissionViewController.swift */; };
 		93FF846F2002BCC100D2AA75 /* KVQQViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93FF846E2002BCC100D2AA75 /* KVQQViewController.swift */; };
 		FA6594311FE89EE400F4A300 /* CustomTextFields.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA6594301FE89EE400F4A300 /* CustomTextFields.swift */; };
@@ -58,7 +57,6 @@
 		93817A7A20603559000A5869 /* GLOReportViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GLOReportViewController.swift; sourceTree = "<group>"; };
 		93817A7C2060453A000A5869 /* MessageUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MessageUI.framework; path = System/Library/Frameworks/MessageUI.framework; sourceTree = SDKROOT; };
 		93940C53200003F100742D16 /* RunwayDataViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RunwayDataViewController.swift; sourceTree = "<group>"; };
-		93A571731FF9AE84004AD795 /* NearbyAirportViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NearbyAirportViewController.swift; sourceTree = "<group>"; };
 		93E2F0481F5DB76A00E2BB7F /* MissionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MissionViewController.swift; sourceTree = "<group>"; };
 		93FF846E2002BCC100D2AA75 /* KVQQViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KVQQViewController.swift; sourceTree = "<group>"; };
 		9DBFC63D0384028D0205CE49 /* Pods_Master_Flight_App.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Master_Flight_App.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -157,7 +155,6 @@
 				FA7060511F5E3A20006FD6A0 /* FltCalcController.swift */,
 				93E2F0481F5DB76A00E2BB7F /* MissionViewController.swift */,
 				936C87481F5F2C7000ACD0E7 /* OnstationViewController.swift */,
-				93A571731FF9AE84004AD795 /* NearbyAirportViewController.swift */,
 				93940C53200003F100742D16 /* RunwayDataViewController.swift */,
 				FA810BEA1FD0B185002BB188 /* TakeOffBriefViewController.swift */,
 				93678B321F9830BE005DCF5C /* TakeoffDataViewController.swift */,
@@ -329,7 +326,6 @@
 				93183A621F3E818200E7350D /* AppDelegate.swift in Sources */,
 				FA7060501F5E3A14006FD6A0 /* FlightCalcModel.swift in Sources */,
 				9322D4E01F678827006C9425 /* CustomButtons.swift in Sources */,
-				93A571741FF9AE84004AD795 /* NearbyAirportViewController.swift in Sources */,
 				FA6594311FE89EE400F4A300 /* CustomTextFields.swift in Sources */,
 				93183A641F3E818200E7350D /* HomeViewController.swift in Sources */,
 				9322D4E21F6B088C006C9425 /* OnStationModel.swift in Sources */,
