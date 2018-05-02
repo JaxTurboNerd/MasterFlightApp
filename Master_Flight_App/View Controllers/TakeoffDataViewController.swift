@@ -206,6 +206,7 @@ class TakeoffDataViewController: UIViewController, UIPickerViewDelegate, UIPicke
         self.view.addGestureRecognizer(UITapGestureRecognizer(target:
             self.view, action: #selector(UIView.endEditing(_:))))
     }
+    
     //dismisses keyboard by touching done button on keyboard
     @objc func doneClicked() {
         view.endEditing(true)

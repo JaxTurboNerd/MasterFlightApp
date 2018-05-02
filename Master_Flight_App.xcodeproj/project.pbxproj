@@ -27,7 +27,6 @@
 		93817A7D2060453A000A5869 /* MessageUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 93817A7C2060453A000A5869 /* MessageUI.framework */; };
 		93940C54200003F100742D16 /* RunwayDataViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93940C53200003F100742D16 /* RunwayDataViewController.swift */; };
 		93E2F0491F5DB76A00E2BB7F /* MissionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93E2F0481F5DB76A00E2BB7F /* MissionViewController.swift */; };
-		93FF846F2002BCC100D2AA75 /* KVQQViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93FF846E2002BCC100D2AA75 /* KVQQViewController.swift */; };
 		FA6594311FE89EE400F4A300 /* CustomTextFields.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA6594301FE89EE400F4A300 /* CustomTextFields.swift */; };
 		FA7060501F5E3A14006FD6A0 /* FlightCalcModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA70604F1F5E3A14006FD6A0 /* FlightCalcModel.swift */; };
 		FA7060521F5E3A20006FD6A0 /* FltCalcController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA7060511F5E3A20006FD6A0 /* FltCalcController.swift */; };
@@ -58,7 +57,6 @@
 		93817A7C2060453A000A5869 /* MessageUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MessageUI.framework; path = System/Library/Frameworks/MessageUI.framework; sourceTree = SDKROOT; };
 		93940C53200003F100742D16 /* RunwayDataViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RunwayDataViewController.swift; sourceTree = "<group>"; };
 		93E2F0481F5DB76A00E2BB7F /* MissionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MissionViewController.swift; sourceTree = "<group>"; };
-		93FF846E2002BCC100D2AA75 /* KVQQViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KVQQViewController.swift; sourceTree = "<group>"; };
 		9DBFC63D0384028D0205CE49 /* Pods_Master_Flight_App.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Master_Flight_App.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		CFBA05ED633101CE5750AC3A /* Pods-Master_Flight_App.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Master_Flight_App.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Master_Flight_App/Pods-Master_Flight_App.debug.xcconfig"; sourceTree = "<group>"; };
 		FA6594301FE89EE400F4A300 /* CustomTextFields.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomTextFields.swift; sourceTree = "<group>"; };
@@ -104,7 +102,6 @@
 			children = (
 				93183A611F3E818200E7350D /* AppDelegate.swift */,
 				93183A671F3E818200E7350D /* Main.storyboard */,
-				93FF84732002BEBA00D2AA75 /* Runway VC's */,
 				93FF84712002BE8300D2AA75 /* Models */,
 				93FF84722002BEA400D2AA75 /* View Controllers */,
 				93E046F22062E32A001BEDCC /* Custom Files */,
@@ -162,14 +159,6 @@
 				93817A7A20603559000A5869 /* GLOReportViewController.swift */,
 			);
 			path = "View Controllers";
-			sourceTree = "<group>";
-		};
-		93FF84732002BEBA00D2AA75 /* Runway VC's */ = {
-			isa = PBXGroup;
-			children = (
-				93FF846E2002BCC100D2AA75 /* KVQQViewController.swift */,
-			);
-			path = "Runway VC's";
 			sourceTree = "<group>";
 		};
 		D81B339904522AA0C3E9FB09 /* Pods */ = {
@@ -336,7 +325,6 @@
 				93940C54200003F100742D16 /* RunwayDataViewController.swift in Sources */,
 				93E2F0491F5DB76A00E2BB7F /* MissionViewController.swift in Sources */,
 				FA7060521F5E3A20006FD6A0 /* FltCalcController.swift in Sources */,
-				93FF846F2002BCC100D2AA75 /* KVQQViewController.swift in Sources */,
 				9331D32D1F868F9D005984D0 /* FlightSegmentViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

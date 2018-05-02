@@ -23,7 +23,6 @@ class GLOReportViewController: UIViewController, UITextViewDelegate, MFMailCompo
         //User Default settings for email
         let defaults = UserDefaults.standard
         defaults.set(GLOReportTextView.text, forKey: "defaultEmailFormat")
-        //defaults.set(false, forKey: "HasBeenSaved")
         
         if defaults.bool(forKey: "HasBeenSaved") == true {
             GLOReportTextView.text = defaults.string(forKey: "savedEmail")
@@ -41,11 +40,13 @@ class GLOReportViewController: UIViewController, UITextViewDelegate, MFMailCompo
         UserDefaults.standard.set(GLOReportTextView.text, forKey: "savedEmail")
         UserDefaults.standard.set(true, forKey: "HasBeenSaved")
         UserDefaults.standard.synchronize()
+        showSavedEmailAlert()
     }
     
     @IBAction func clearEmailView(_ sender: UIButton) {
         GLOReportTextView.text = UserDefaults.standard.string(forKey: "defaultEmailFormat")
         UserDefaults.standard.set(false, forKey: "HasBeenSaved")
+        UserDefaults.standard.synchronize()
     }
     
     @IBAction func sendEmail(_ sender: UIButton) {
@@ -73,6 +74,14 @@ class GLOReportViewController: UIViewController, UITextViewDelegate, MFMailCompo
         let dismiss = UIAlertAction(title: "OK", style: .default, handler: nil)
         sendMailErrorAlert.addAction(dismiss)
         self.present(sendMailErrorAlert, animated: true, completion: nil)
+    }
+    
+    func showSavedEmailAlert() {
+        let savedEmailAlert = UIAlertController(title: "Email has been saved", message: "Your email has been saved", preferredStyle: .alert)
+        let dismiss = UIAlertAction(title: "OK", style: .default, handler: nil)
+        savedEmailAlert.addAction(dismiss)
+        self.present(savedEmailAlert, animated: true, completion: nil)
+        
     }
     // MARK: - Delegate
     func mailComposeController(_ controller: MFMailComposeViewController, didFinishWith result: MFMailComposeResult, error: Error?) {
