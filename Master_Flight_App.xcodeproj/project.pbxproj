@@ -18,7 +18,6 @@
 		93183A6E1F3E818200E7350D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 93183A6C1F3E818200E7350D /* LaunchScreen.storyboard */; };
 		9322D4E01F678827006C9425 /* CustomButtons.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9322D4DF1F678827006C9425 /* CustomButtons.swift */; };
 		9322D4E21F6B088C006C9425 /* OnStationModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9322D4E11F6B088C006C9425 /* OnStationModel.swift */; };
-		9331D32D1F868F9D005984D0 /* FlightSegmentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9331D32C1F868F9D005984D0 /* FlightSegmentViewController.swift */; };
 		934195E21F8296FB00C1B046 /* AlertFunction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 934195E11F8296FB00C1B046 /* AlertFunction.swift */; };
 		93678B331F9830BE005DCF5C /* TakeoffDataViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93678B321F9830BE005DCF5C /* TakeoffDataViewController.swift */; };
 		93678B551F983F42005DCF5C /* TakeoffDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93678B541F983F42005DCF5C /* TakeoffDataModel.swift */; };
@@ -48,7 +47,6 @@
 		93183A6F1F3E818200E7350D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9322D4DF1F678827006C9425 /* CustomButtons.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomButtons.swift; sourceTree = "<group>"; };
 		9322D4E11F6B088C006C9425 /* OnStationModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OnStationModel.swift; sourceTree = "<group>"; };
-		9331D32C1F868F9D005984D0 /* FlightSegmentViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlightSegmentViewController.swift; sourceTree = "<group>"; };
 		934195E11F8296FB00C1B046 /* AlertFunction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertFunction.swift; sourceTree = "<group>"; };
 		93678B321F9830BE005DCF5C /* TakeoffDataViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TakeoffDataViewController.swift; sourceTree = "<group>"; };
 		93678B541F983F42005DCF5C /* TakeoffDataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TakeoffDataModel.swift; sourceTree = "<group>"; };
@@ -155,7 +153,6 @@
 				93940C53200003F100742D16 /* RunwayDataViewController.swift */,
 				FA810BEA1FD0B185002BB188 /* TakeOffBriefViewController.swift */,
 				93678B321F9830BE005DCF5C /* TakeoffDataViewController.swift */,
-				9331D32C1F868F9D005984D0 /* FlightSegmentViewController.swift */,
 				93817A7A20603559000A5869 /* GLOReportViewController.swift */,
 			);
 			path = "View Controllers";
@@ -200,13 +197,13 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0830;
-				LastUpgradeCheck = 0900;
+				LastUpgradeCheck = 0930;
 				ORGANIZATIONNAME = "Gregory Boyd";
 				TargetAttributes = {
 					93183A5D1F3E818200E7350D = {
 						CreatedOnToolsVersion = 8.3.3;
 						DevelopmentTeam = YKY42GMVFE;
-						LastSwiftMigration = 0900;
+						LastSwiftMigration = 1010;
 						ProvisioningStyle = Automatic;
 						SystemCapabilities = {
 							com.apple.Maps.iOS = {
@@ -325,7 +322,6 @@
 				93940C54200003F100742D16 /* RunwayDataViewController.swift in Sources */,
 				93E2F0491F5DB76A00E2BB7F /* MissionViewController.swift in Sources */,
 				FA7060521F5E3A20006FD6A0 /* FltCalcController.swift in Sources */,
-				9331D32D1F868F9D005984D0 /* FlightSegmentViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -365,6 +361,7 @@
 				CLANG_WARN_BOOL_CONVERSION = YES;
 				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
 				CLANG_WARN_EMPTY_BODY = YES;
@@ -372,6 +369,7 @@
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
@@ -422,6 +420,7 @@
 				CLANG_WARN_BOOL_CONVERSION = YES;
 				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
 				CLANG_WARN_EMPTY_BODY = YES;
@@ -429,6 +428,7 @@
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
@@ -468,9 +468,8 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.GregoryBoyd.Master-Flight-App";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_SWIFT3_OBJC_INFERENCE = Default;
-				SWIFT_VERSION = 4.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = 2;
 			};
 			name = Debug;
 		};
@@ -484,9 +483,8 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.GregoryBoyd.Master-Flight-App";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_SWIFT3_OBJC_INFERENCE = Default;
-				SWIFT_VERSION = 4.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = 2;
 			};
 			name = Release;
 		};

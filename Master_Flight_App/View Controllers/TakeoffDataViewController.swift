@@ -72,7 +72,7 @@ class TakeoffDataViewController: UIViewController, UIPickerViewDelegate, UIPicke
         var windComponents = WindComponent()
         var threeROC = ThreeROC()
         
-        //Check text fields for nil and out of range values:
+        //Checks text fields for nil and out of range values:
         checkCG(textField: centerOfGravity)
         checkZFW(textField: zeroFuelWeight)
         checkGrossWeight(textField: grossWeight)
@@ -122,7 +122,7 @@ class TakeoffDataViewController: UIViewController, UIPickerViewDelegate, UIPicke
         Vlof.text = String(Int(liftOffSpeed.liftOffSpeed(grossWeight: Double(grossWeight.text!)!, aircraftType: aircraftType)))
         V50three.text = String(Int(V50threeSpeed.V50three(grossWeight: Double(grossWeight.text!)!, aircraftType: aircraftType)))
         Vr.text = Vro.text
-        threeEngineROC.text = String(threeROC.calculate3ROC(GW: Double(grossWeight.text!)!, OAT: Int(OAT.text!)!))
+        threeEngineROC.text = String(threeROC.calculate3ROC(GW: Double(grossWeight.text!)!, OAT: Int(OAT.text!)!, PA: Int(PA.text!)!))
         
         
         //Wind Components:
@@ -146,7 +146,7 @@ class TakeoffDataViewController: UIViewController, UIPickerViewDelegate, UIPicke
         globalLOFDistance = LOFDistance.text!
         
         //Three ROC:
-        global3ROC = "\(String(threeROC.calculate3ROC(GW: Double(grossWeight.text!)!, OAT: Int(OAT.text!)!))) fpm"
+        global3ROC = "\(String(threeROC.calculate3ROC(GW: Double(grossWeight.text!)!, OAT: Int(OAT.text!)!, PA: Int(PA.text!)!))) fpm"
         
         //dismiss keyboard after clicking the calculate button
         self.doneClicked()
@@ -184,10 +184,10 @@ class TakeoffDataViewController: UIViewController, UIPickerViewDelegate, UIPicke
         toolBar.sizeToFit()
         
         //pushes the done button to the right side of the toolbar
-        let flexibleSpace = UIBarButtonItem(barButtonSystemItem: UIBarButtonSystemItem.flexibleSpace, target: nil, action: nil)
+        let flexibleSpace = UIBarButtonItem(barButtonSystemItem: UIBarButtonItem.SystemItem.flexibleSpace, target: nil, action: nil)
         
         //adds done button to a toolbar above the keypad
-        let doneButton = UIBarButtonItem(barButtonSystemItem: UIBarButtonSystemItem.done, target: self, action: #selector(self.doneClicked))
+        let doneButton = UIBarButtonItem(barButtonSystemItem: UIBarButtonItem.SystemItem.done, target: self, action: #selector(self.doneClicked))
         
         let minusButton = UIBarButtonItem(title: "—",style: .plain, target: self, action: #selector(toggleMinus))
         

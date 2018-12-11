@@ -170,7 +170,7 @@ public class SwiftMaskField: UITextField {
         
         addObserver(self, forKeyPath: "text", options: NSKeyValueObservingOptions(), context: nil)
         
-        self.addTarget(self, action: #selector(textFieldDidChange(textField:)), for: UIControlEvents.editingChanged)
+        self.addTarget(self, action: #selector(textFieldDidChange(textField:)), for: UIControl.Event.editingChanged)
     }
     
     

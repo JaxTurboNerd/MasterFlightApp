@@ -32,10 +32,10 @@ class FltCalcViewController: UIViewController {
         toolBar.sizeToFit()
         
         //pushes the done button to the right side of the toolbar
-        let flexibleSpace = UIBarButtonItem(barButtonSystemItem: UIBarButtonSystemItem.flexibleSpace, target: nil, action: nil)
+        let flexibleSpace = UIBarButtonItem(barButtonSystemItem: UIBarButtonItem.SystemItem.flexibleSpace, target: nil, action: nil)
         
         //adds done button to a toolbar above the keypad
-        let doneButton = UIBarButtonItem(barButtonSystemItem: UIBarButtonSystemItem.done, target: self, action: #selector(self.doneClicked))
+        let doneButton = UIBarButtonItem(barButtonSystemItem: UIBarButtonItem.SystemItem.done, target: self, action: #selector(self.doneClicked))
         
         toolBar.setItems([flexibleSpace, doneButton], animated: false)
         

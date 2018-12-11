@@ -15,7 +15,7 @@ class CustomButton: UIButton {
         //let layer = CALayer
         layer.borderWidth = 3/UIScreen.main.nativeScale
         layer.shadowColor = UIColor.black.cgColor
-        contentEdgeInsets = UIEdgeInsetsMake(2, 5, 2, 5)
+        contentEdgeInsets = UIEdgeInsets.init(top: 2, left: 5, bottom: 2, right: 5)
         titleLabel?.adjustsFontForContentSizeCategory = true
     }
     
@@ -31,7 +31,7 @@ class RoundedButton: UIButton {
         
         layer.borderWidth = 3/UIScreen.main.nativeScale
         layer.shadowColor = UIColor.lightGray.cgColor
-        contentEdgeInsets = UIEdgeInsetsMake(0, 16, 0, 16)
+        contentEdgeInsets = UIEdgeInsets.init(top: 0, left: 16, bottom: 0, right: 16)
         titleLabel?.adjustsFontForContentSizeCategory = true
     }
     

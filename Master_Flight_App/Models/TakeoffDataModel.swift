@@ -148,11 +148,17 @@ struct CalculateV50three {
 }
 
 struct CalculateFourEngineAccelDistance {
+    // Add 500 feet for AEW.  Will need to add AircraftType to function parameters.
     mutating func accelerationDistance(grossWeight: Double, SHP: Double, pressAltitude: Double, airTemp: Double, speed: Double)-> Double {
-        let pressureRatio = pow(1 - ((68758 * pow(10, -10)) * pressAltitude), 5.2557)
+        let grossWeight = grossWeight * 1000
+        let pressureRatioCore = 1 - ((68758 * pow(10.0, -10.0)) * pressAltitude)
+        let pressureRatio = pow(pressureRatioCore, 5.2557)
         let rho = pressureRatio * (288.15 / (airTemp + 273.15))
-        let distance = (0.0422 - ((3 * pow(10, -8)) * (grossWeight * 1000))) * ((grossWeight * 1000) * (pow(speed, 2)/rho)) / ((4 * SHP) - (0.025 * (grossWeight * 1000)) - (0.171 - (0.000164 * (speed/pow(rho, 0.5))) * pow(speed, 2)))
-        
+        let distanceTopOne = Double(0.0422 - ((3 * pow(10, -8)) * grossWeight))
+        let distanceTopTwo = grossWeight * (pow(speed, 2)/rho)
+        let distanceTop =  distanceTopOne * distanceTopTwo
+        let distanceBottom = (4 * SHP) - (0.025 * grossWeight) - ((0.171 - (0.000164 * (speed/pow(rho, 0.5)))) * pow(speed, 2))
+        let distance = (distanceTop / distanceBottom) * 0.56
         return distance
     }
 }
@@ -174,20 +180,21 @@ struct WindComponent {
 struct ThreeROC {
     var deltaT = 0
     var threeROC = 0
+    var pressAltAdjust = 0
     
-    mutating func calculate3ROC(GW: Double, OAT: Int) -> (Int) {
-        //Pressure Altitude adjustment
-        //decrease 5SHP for every 100' increase in PA
+    mutating func calculate3ROC(GW: Double, OAT: Int, PA: Int) -> (Int) {
+        //Pressure Altitude adjustment - decrease 5SHP for every 100' increase in PA
+        pressAltAdjust = (PA/100) * 5
         if OAT == 15 {deltaT = 0}
         else {deltaT = OAT - 15}
         
         switch deltaT {
         case 0:
-            threeROC = Int((11771.93 * (pow(0.977896843, GW))) - 130)
+            threeROC = Int((12391.51 * (pow(0.977896843, GW))) - 130) - pressAltAdjust
         case 1...:
-            threeROC = Int((11771.93 * (pow(0.977896843, GW))) - 130) - (deltaT * 10)
+            threeROC = Int(((12391.51 * (pow(0.977896843, GW))) - 130) - Double(deltaT * 10)) - pressAltAdjust
         case ...0:
-            threeROC = Int((11771.93 * (pow(0.977896843, GW))) - 130) + (abs(deltaT * 10))
+            threeROC = Int((12391.51 * (pow(0.977896843, GW))) - 130) + ((abs(deltaT * 10))) - pressAltAdjust
         default:
             break
         }
