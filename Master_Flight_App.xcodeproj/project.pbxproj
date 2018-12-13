@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		3158F312481869154693AFF2 /* Pods_Master_Flight_App.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9DBFC63D0384028D0205CE49 /* Pods_Master_Flight_App.framework */; };
 		9308E1591F5E22C300CBFDC0 /* MissionModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9308E1581F5E22C300CBFDC0 /* MissionModel.swift */; };
+		930ACCA121C1D6A300F1D650 /* WeightBalanceModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 930ACCA021C1D6A300F1D650 /* WeightBalanceModel.swift */; };
+		930ACCA321C1FEDF00F1D650 /* WBPopoverViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 930ACCA221C1FEDF00F1D650 /* WBPopoverViewController.swift */; };
 		9311E1022027B9FC00CE1527 /* SwiftMaskField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9311E1002027B9FC00CE1527 /* SwiftMaskField.swift */; };
 		9311E1032027B9FC00CE1527 /* StringExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9311E1012027B9FC00CE1527 /* StringExtensions.swift */; };
 		93183A621F3E818200E7350D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93183A611F3E818200E7350D /* AppDelegate.swift */; };
@@ -21,6 +23,7 @@
 		934195E21F8296FB00C1B046 /* AlertFunction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 934195E11F8296FB00C1B046 /* AlertFunction.swift */; };
 		93678B331F9830BE005DCF5C /* TakeoffDataViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93678B321F9830BE005DCF5C /* TakeoffDataViewController.swift */; };
 		93678B551F983F42005DCF5C /* TakeoffDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93678B541F983F42005DCF5C /* TakeoffDataModel.swift */; };
+		9368741421C02DA4007EF7F4 /* LRTWeightBalanceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9368741321C02DA4007EF7F4 /* LRTWeightBalanceViewController.swift */; };
 		936C87491F5F2C7000ACD0E7 /* OnstationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 936C87481F5F2C7000ACD0E7 /* OnstationViewController.swift */; };
 		93817A7B20603559000A5869 /* GLOReportViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93817A7A20603559000A5869 /* GLOReportViewController.swift */; };
 		93817A7D2060453A000A5869 /* MessageUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 93817A7C2060453A000A5869 /* MessageUI.framework */; };
@@ -36,6 +39,8 @@
 /* Begin PBXFileReference section */
 		8FB7DFCF777ACB73ED669A6E /* Pods-Master_Flight_App.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Master_Flight_App.release.xcconfig"; path = "Pods/Target Support Files/Pods-Master_Flight_App/Pods-Master_Flight_App.release.xcconfig"; sourceTree = "<group>"; };
 		9308E1581F5E22C300CBFDC0 /* MissionModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MissionModel.swift; sourceTree = "<group>"; };
+		930ACCA021C1D6A300F1D650 /* WeightBalanceModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeightBalanceModel.swift; sourceTree = "<group>"; };
+		930ACCA221C1FEDF00F1D650 /* WBPopoverViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WBPopoverViewController.swift; sourceTree = "<group>"; };
 		9311E1002027B9FC00CE1527 /* SwiftMaskField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwiftMaskField.swift; sourceTree = "<group>"; };
 		9311E1012027B9FC00CE1527 /* StringExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StringExtensions.swift; sourceTree = "<group>"; };
 		93183A5E1F3E818200E7350D /* Master_Flight_App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Master_Flight_App.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -50,6 +55,7 @@
 		934195E11F8296FB00C1B046 /* AlertFunction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertFunction.swift; sourceTree = "<group>"; };
 		93678B321F9830BE005DCF5C /* TakeoffDataViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TakeoffDataViewController.swift; sourceTree = "<group>"; };
 		93678B541F983F42005DCF5C /* TakeoffDataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TakeoffDataModel.swift; sourceTree = "<group>"; };
+		9368741321C02DA4007EF7F4 /* LRTWeightBalanceViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LRTWeightBalanceViewController.swift; sourceTree = "<group>"; };
 		936C87481F5F2C7000ACD0E7 /* OnstationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OnstationViewController.swift; sourceTree = "<group>"; };
 		93817A7A20603559000A5869 /* GLOReportViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GLOReportViewController.swift; sourceTree = "<group>"; };
 		93817A7C2060453A000A5869 /* MessageUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MessageUI.framework; path = System/Library/Frameworks/MessageUI.framework; sourceTree = SDKROOT; };
@@ -139,6 +145,7 @@
 				9308E1581F5E22C300CBFDC0 /* MissionModel.swift */,
 				9322D4E11F6B088C006C9425 /* OnStationModel.swift */,
 				93678B541F983F42005DCF5C /* TakeoffDataModel.swift */,
+				930ACCA021C1D6A300F1D650 /* WeightBalanceModel.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -154,6 +161,8 @@
 				FA810BEA1FD0B185002BB188 /* TakeOffBriefViewController.swift */,
 				93678B321F9830BE005DCF5C /* TakeoffDataViewController.swift */,
 				93817A7A20603559000A5869 /* GLOReportViewController.swift */,
+				9368741321C02DA4007EF7F4 /* LRTWeightBalanceViewController.swift */,
+				930ACCA221C1FEDF00F1D650 /* WBPopoverViewController.swift */,
 			);
 			path = "View Controllers";
 			sourceTree = "<group>";
@@ -308,8 +317,11 @@
 				FAF2C2A71FE8AEAA0084ADF5 /* CheckFields.swift in Sources */,
 				936C87491F5F2C7000ACD0E7 /* OnstationViewController.swift in Sources */,
 				9311E1032027B9FC00CE1527 /* StringExtensions.swift in Sources */,
+				930ACCA321C1FEDF00F1D650 /* WBPopoverViewController.swift in Sources */,
 				93678B331F9830BE005DCF5C /* TakeoffDataViewController.swift in Sources */,
 				93183A621F3E818200E7350D /* AppDelegate.swift in Sources */,
+				9368741421C02DA4007EF7F4 /* LRTWeightBalanceViewController.swift in Sources */,
+				930ACCA121C1D6A300F1D650 /* WeightBalanceModel.swift in Sources */,
 				FA7060501F5E3A14006FD6A0 /* FlightCalcModel.swift in Sources */,
 				9322D4E01F678827006C9425 /* CustomButtons.swift in Sources */,
 				FA6594311FE89EE400F4A300 /* CustomTextFields.swift in Sources */,
