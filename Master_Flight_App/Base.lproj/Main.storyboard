@@ -9,11 +9,16 @@
         <capability name="Stack View standard spacing" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
+    <customFonts key="customFonts">
+        <array key="Constantia.ttf">
+            <string>Constantia</string>
+        </array>
+    </customFonts>
     <scenes>
         <!--Mission-->
         <scene sceneID="oJI-pL-yRo">
             <objects>
-                <viewController storyboardIdentifier="Mission View Controller" title="Mission" id="Pqn-0L-TfT" customClass="MissionViewController" customModule="Master_Flight_App" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="MissionVC" title="Mission" id="Pqn-0L-TfT" customClass="MissionViewController" customModule="Master_Flight_App" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="mVD-Uf-3Eo"/>
                         <viewControllerLayoutGuide type="bottom" id="2vU-eY-W8F"/>
@@ -169,14 +174,25 @@
                                             </stackView>
                                         </subviews>
                                     </stackView>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="He6-lH-3k3" customClass="CustomButton" customModule="Master_Flight_App" customModuleProvider="target">
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="He6-lH-3k3" customClass="DesignableButton" customModule="Master_Flight_App" customModuleProvider="target">
                                         <rect key="frame" x="152.5" y="344" width="161" height="60"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="40"/>
                                         <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <state key="normal" title="Calculate">
-                                            <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <color key="titleColor" red="0.57919532060623169" green="0.068308182060718536" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         </state>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                                <real key="value" value="2"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                                <color key="value" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                <real key="value" value="5"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
                                         <variation key="widthClass=compact">
                                             <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                         </variation>
@@ -453,13 +469,24 @@
                                         </subviews>
                                         <variation key="widthClass=compact" spacing="8"/>
                                     </stackView>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hFk-qH-jK7" customClass="CustomButton" customModule="Master_Flight_App" customModuleProvider="target">
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hFk-qH-jK7" customClass="DesignableButton" customModule="Master_Flight_App" customModuleProvider="target">
                                         <rect key="frame" x="175.5" y="549" width="153" height="58"/>
                                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="38"/>
                                         <state key="normal" title="Calculate">
-                                            <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <color key="titleColor" red="0.57919532060000001" green="0.06830818206" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         </state>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                                <real key="value" value="2"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                <real key="value" value="10"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                                <color key="value" cocoaTouchSystemColor="darkTextColor"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
                                         <variation key="widthClass=compact">
                                             <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                         </variation>
@@ -508,15 +535,156 @@
             </objects>
             <point key="canvasLocation" x="1528.90625" y="1000.7812499999999"/>
         </scene>
+        <!--WB_Popover-->
+        <scene sceneID="64S-7D-91R">
+            <objects>
+                <viewController storyboardIdentifier="WBPopover" title="WB_Popover" id="B57-5c-sqW" customClass="WBPopoverViewController" customModule="Master_Flight_App" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="IKF-dN-8dc"/>
+                        <viewControllerLayoutGuide type="bottom" id="IZN-on-RFl"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="WvR-Wb-nAA">
+                        <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <visualEffectView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4F9-VR-xaG">
+                                <rect key="frame" x="0.0" y="20" width="768" height="1004"/>
+                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="X06-aH-8mK">
+                                    <rect key="frame" x="0.0" y="0.0" width="768" height="1004"/>
+                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                    <subviews>
+                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Wd9-kT-g8G">
+                                            <rect key="frame" x="0.0" y="0.0" width="768" height="1004"/>
+                                            <connections>
+                                                <action selector="dismissPopover:" destination="B57-5c-sqW" eventType="touchUpInside" id="m4s-ob-Sv4"/>
+                                            </connections>
+                                        </button>
+                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="pPm-Z3-0JX" customClass="DesignableView" customModule="Master_Flight_App" customModuleProvider="target">
+                                            <rect key="frame" x="144" y="327" width="480" height="350"/>
+                                            <subviews>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CfX-Cg-SDh" customClass="DesignableButton" customModule="Master_Flight_App" customModuleProvider="target">
+                                                    <rect key="frame" x="205" y="280" width="70" height="40"/>
+                                                    <color key="backgroundColor" white="1" alpha="0.59999999999999998" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="40" id="5Bl-xf-Hd0"/>
+                                                        <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="70" id="IXX-rO-cgz"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                                    <state key="normal" title="Close">
+                                                        <color key="titleColor" red="0.57919532060000001" green="0.06830818206" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    </state>
+                                                    <userDefinedRuntimeAttributes>
+                                                        <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                                            <real key="value" value="1"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                        <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                            <real key="value" value="5"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                    </userDefinedRuntimeAttributes>
+                                                </button>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JxS-NS-bYn" customClass="DesignableButton" customModule="Master_Flight_App" customModuleProvider="target">
+                                                    <rect key="frame" x="59" y="85" width="70" height="40"/>
+                                                    <color key="backgroundColor" red="0.8901960784313725" green="0.91764705882352937" blue="0.8901960784313725" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="40" id="LLb-sh-dlo"/>
+                                                        <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="70" id="kPq-gS-eJL"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                                    <state key="normal" title="LRT">
+                                                        <color key="titleColor" red="0.57919532060000001" green="0.06830818206" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    </state>
+                                                    <userDefinedRuntimeAttributes>
+                                                        <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                                            <real key="value" value="1"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                        <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                            <real key="value" value="5"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                        <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                                            <color key="value" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                    </userDefinedRuntimeAttributes>
+                                                </button>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FfI-xq-1bz" customClass="DesignableButton" customModule="Master_Flight_App" customModuleProvider="target">
+                                                    <rect key="frame" x="324" y="85" width="70" height="42"/>
+                                                    <color key="backgroundColor" red="0.89152652025222778" green="0.9179157018661499" blue="0.89178562164306641" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="70" id="a39-bN-fZL"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                                    <state key="normal" title="AEW">
+                                                        <color key="titleColor" red="0.58039215686274503" green="0.066666666666666666" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    </state>
+                                                    <userDefinedRuntimeAttributes>
+                                                        <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                                            <real key="value" value="1"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                        <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                                            <color key="value" cocoaTouchSystemColor="darkTextColor"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                        <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                            <real key="value" value="5"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                    </userDefinedRuntimeAttributes>
+                                                </button>
+                                            </subviews>
+                                            <color key="backgroundColor" red="0.44705882352941173" green="0.45098039215686275" blue="0.32549019607843138" alpha="0.58922838180000003" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <constraints>
+                                                <constraint firstItem="JxS-NS-bYn" firstAttribute="top" secondItem="pPm-Z3-0JX" secondAttribute="top" constant="85" id="7sQ-8q-KPQ"/>
+                                                <constraint firstItem="CfX-Cg-SDh" firstAttribute="centerX" secondItem="pPm-Z3-0JX" secondAttribute="centerX" id="9bY-xG-2M1"/>
+                                                <constraint firstItem="JxS-NS-bYn" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="pPm-Z3-0JX" secondAttribute="leading" constant="20" symbolic="YES" id="WnQ-zf-Rxe"/>
+                                                <constraint firstItem="JxS-NS-bYn" firstAttribute="top" secondItem="FfI-xq-1bz" secondAttribute="top" id="YbO-Ed-e3B"/>
+                                                <constraint firstAttribute="trailing" secondItem="FfI-xq-1bz" secondAttribute="trailing" constant="86" id="gPk-eb-c3u"/>
+                                                <constraint firstAttribute="bottom" secondItem="CfX-Cg-SDh" secondAttribute="bottom" constant="30" id="obm-Z4-fq5"/>
+                                                <constraint firstItem="FfI-xq-1bz" firstAttribute="leading" secondItem="JxS-NS-bYn" secondAttribute="trailing" constant="195" id="rD6-g4-nuM"/>
+                                            </constraints>
+                                            <userDefinedRuntimeAttributes>
+                                                <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                    <real key="value" value="15"/>
+                                                </userDefinedRuntimeAttribute>
+                                            </userDefinedRuntimeAttributes>
+                                        </view>
+                                    </subviews>
+                                    <color key="backgroundColor" red="0.043137254901960784" green="0.38431372549019605" blue="0.8784313725490196" alpha="0.20000000000000001" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <constraints>
+                                        <constraint firstItem="Wd9-kT-g8G" firstAttribute="centerX" secondItem="pPm-Z3-0JX" secondAttribute="centerX" id="A0c-7K-11Q"/>
+                                        <constraint firstItem="Wd9-kT-g8G" firstAttribute="leading" secondItem="X06-aH-8mK" secondAttribute="leading" id="BUw-hT-YK3"/>
+                                        <constraint firstItem="Wd9-kT-g8G" firstAttribute="centerY" secondItem="pPm-Z3-0JX" secondAttribute="centerY" id="ENe-Cm-bD7"/>
+                                        <constraint firstItem="Wd9-kT-g8G" firstAttribute="top" secondItem="X06-aH-8mK" secondAttribute="top" id="JZM-yI-XwZ"/>
+                                        <constraint firstItem="pPm-Z3-0JX" firstAttribute="top" secondItem="X06-aH-8mK" secondAttribute="top" constant="327" id="KLV-CR-Mo5"/>
+                                        <constraint firstItem="pPm-Z3-0JX" firstAttribute="leading" secondItem="X06-aH-8mK" secondAttribute="leading" constant="144" id="QfW-rY-Wm7"/>
+                                        <constraint firstAttribute="trailing" secondItem="Wd9-kT-g8G" secondAttribute="trailing" id="RBY-9b-Ibl"/>
+                                        <constraint firstAttribute="bottom" secondItem="Wd9-kT-g8G" secondAttribute="bottom" id="RX3-fa-fJG"/>
+                                        <constraint firstAttribute="trailing" secondItem="Wd9-kT-g8G" secondAttribute="trailing" id="arj-2P-9qf"/>
+                                        <constraint firstItem="Wd9-kT-g8G" firstAttribute="leading" secondItem="X06-aH-8mK" secondAttribute="leading" id="fc2-NO-gqT"/>
+                                        <constraint firstAttribute="bottom" secondItem="Wd9-kT-g8G" secondAttribute="bottom" id="zAu-iD-DK7"/>
+                                    </constraints>
+                                </view>
+                                <blurEffect style="light"/>
+                            </visualEffectView>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="4F9-VR-xaG" firstAttribute="bottom" secondItem="IZN-on-RFl" secondAttribute="top" id="0am-z9-2Af"/>
+                            <constraint firstItem="4F9-VR-xaG" firstAttribute="leading" secondItem="WvR-Wb-nAA" secondAttribute="leading" id="bi8-Ov-k64"/>
+                            <constraint firstAttribute="trailing" secondItem="4F9-VR-xaG" secondAttribute="trailing" id="kH2-8G-jvg"/>
+                            <constraint firstItem="4F9-VR-xaG" firstAttribute="top" secondItem="IKF-dN-8dc" secondAttribute="bottom" id="mf4-de-8W0"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="93B-a2-yiL" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1756.25" y="-770.5078125"/>
+        </scene>
         <!--LRT Weight & Balance-->
         <scene sceneID="9mK-Fj-6ml">
             <objects>
-                <viewController storyboardIdentifier="WeightBalance" title="LRT Weight &amp; Balance" id="Jc4-83-gTy" customClass="WeightBalanceViewController" customModule="Master_Flight_App" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="WeightBalanceVC" title="LRT Weight &amp; Balance" id="Jc4-83-gTy" customClass="WeightBalanceViewController" customModule="Master_Flight_App" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="KSq-23-zmU"/>
                         <viewControllerLayoutGuide type="bottom" id="x9L-1j-DdP"/>
                     </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="TiW-3h-zqO">
+                    <view key="view" alpha="0.59999999999999998" contentMode="scaleToFill" id="TiW-3h-zqO">
                         <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
@@ -873,7 +1041,8 @@
                                 </subviews>
                             </stackView>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="backgroundColor" red="0.73725490196078436" green="0.81358963251113892" blue="0.92367750406265259" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="92N-f0-RqO" firstAttribute="top" secondItem="KSq-23-zmU" secondAttribute="bottom" constant="50" id="5l7-Eb-vA0"/>
                             <constraint firstItem="92N-f0-RqO" firstAttribute="centerX" secondItem="TiW-3h-zqO" secondAttribute="centerX" id="HXg-8I-xLM"/>
@@ -881,15 +1050,16 @@
                             <constraint firstItem="gdM-mp-l0k" firstAttribute="centerX" secondItem="TiW-3h-zqO" secondAttribute="centerX" id="KUX-mi-6ph"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="KmZ-02-e8N"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="3mo-Bk-r3c" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1778" y="-754"/>
+            <point key="canvasLocation" x="2638" y="-776"/>
         </scene>
         <!--Home-->
         <scene sceneID="zoR-vY-jjJ">
             <objects>
-                <tableViewController storyboardIdentifier="Home View Controller" title="Home" id="e0O-3f-ifd" sceneMemberID="viewController">
+                <tableViewController storyboardIdentifier="HomeViewController" title="Home" id="e0O-3f-ifd" sceneMemberID="viewController">
                     <tableView key="view" contentMode="scaleToFill" alwaysBounceVertical="YES" maximumZoomScale="2" dataMode="static" style="grouped" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="18" sectionFooterHeight="18" id="H2U-Qs-VPe">
                         <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -921,9 +1091,7 @@
                                         </tableViewCellContentView>
                                         <color key="backgroundColor" red="0.7019608021" green="0.7019608021" blue="0.7019608021" alpha="1" colorSpace="calibratedRGB"/>
                                         <connections>
-                                            <segue destination="koH-xl-BUb" kind="popoverPresentation" popoverAnchorView="vue-Rz-UUG" id="uKH-rf-dEe">
-                                                <popoverArrowDirection key="popoverArrowDirection" up="YES" down="YES" left="YES" right="YES"/>
-                                            </segue>
+                                            <segue destination="B57-5c-sqW" kind="show" id="vwh-3s-a1Q"/>
                                         </connections>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" alpha="0.29999999999999999" contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" textLabel="iZw-bU-oFR" imageView="oFt-uh-cdf" style="IBUITableViewCellStyleDefault" id="De9-4g-Yab">
@@ -1101,7 +1269,7 @@
         <!--Take Off Data-->
         <scene sceneID="kAQ-oJ-fJB">
             <objects>
-                <viewController storyboardIdentifier="Take Off Data" title="Take Off Data" id="bvo-um-NOA" customClass="TakeoffDataViewController" customModule="Master_Flight_App" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="TakeOffDataVC" title="Take Off Data" id="bvo-um-NOA" customClass="TakeoffDataViewController" customModule="Master_Flight_App" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="jk3-Mn-msK"/>
                         <viewControllerLayoutGuide type="bottom" id="mf8-30-LRO"/>
@@ -1114,7 +1282,7 @@
                                 <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
                             </imageView>
                             <stackView opaque="NO" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" axis="vertical" distribution="equalSpacing" alignment="center" spacing="40" translatesAutoresizingMaskIntoConstraints="NO" id="YQ2-tc-tpU">
-                                <rect key="frame" x="60" y="60" width="648" height="884"/>
+                                <rect key="frame" x="60" y="60" width="648" height="934"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" alignment="top" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="Mh9-BZ-D6s">
                                         <rect key="frame" x="16" y="0.0" width="616.5" height="237"/>
@@ -1361,7 +1529,7 @@
                                         <variation key="widthClass=compact" spacing="-1"/>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" alignment="top" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="ppE-jS-drr">
-                                        <rect key="frame" x="7.5" y="279.5" width="633.5" height="344"/>
+                                        <rect key="frame" x="7.5" y="295.5" width="633.5" height="344"/>
                                         <subviews>
                                             <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" alignment="center" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="0lN-bZ-UjJ">
                                                 <rect key="frame" x="0.0" y="0.0" width="382" height="338"/>
@@ -1666,7 +1834,7 @@
                                         <variation key="widthClass=compact" spacing="4"/>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" alignment="center" spacing="40" translatesAutoresizingMaskIntoConstraints="NO" id="yjV-Pb-Yon">
-                                        <rect key="frame" x="93" y="665.5" width="462" height="116"/>
+                                        <rect key="frame" x="93" y="698.5" width="462" height="116"/>
                                         <subviews>
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" alignment="bottom" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="9wE-3H-JaX">
                                                 <rect key="frame" x="0.0" y="0.0" width="323" height="116"/>
@@ -1735,16 +1903,27 @@
                                         <variation key="widthClass=compact" spacing="19"/>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" alignment="center" spacing="80" translatesAutoresizingMaskIntoConstraints="NO" id="9Zc-IJ-vVU">
-                                        <rect key="frame" x="88.5" y="824" width="471" height="60"/>
+                                        <rect key="frame" x="83.5" y="873" width="481" height="61"/>
                                         <subviews>
-                                            <button opaque="NO" alpha="0.69999999999999996" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CVU-BY-D4a" customClass="CustomButton" customModule="Master_Flight_App" customModuleProvider="target">
-                                                <rect key="frame" x="0.0" y="0.0" width="161" height="60"/>
-                                                <color key="backgroundColor" red="0.35353285746730234" green="0.62099460659898476" blue="0.0046131153195491355" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="40"/>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CVU-BY-D4a" customClass="DesignableButton" customModule="Master_Flight_App" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="0.0" width="161" height="61"/>
+                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <fontDescription key="fontDescription" name="Constantia" family="Constantia" pointSize="40"/>
                                                 <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <state key="normal" title="Calculate">
-                                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <color key="titleColor" red="0.64985883235931396" green="0.24080374836921692" blue="0.21225419640541077" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 </state>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                                        <real key="value" value="2"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                        <real key="value" value="10"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                                        <color key="value" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
                                                 <variation key="widthClass=compact">
                                                     <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                                 </variation>
@@ -1752,16 +1931,27 @@
                                                     <action selector="calculatePower:" destination="bvo-um-NOA" eventType="touchUpInside" id="cDQ-au-7aS"/>
                                                 </connections>
                                             </button>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wVd-RE-jp4" customClass="RoundedButton" customModule="Master_Flight_App" customModuleProvider="target">
-                                                <rect key="frame" x="241" y="0.0" width="230" height="60"/>
-                                                <color key="backgroundColor" red="0.90196079019999997" green="0.90196079019999997" blue="0.90196079019999997" alpha="1" colorSpace="calibratedRGB"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="40"/>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wVd-RE-jp4" customClass="DesignableButton" customModule="Master_Flight_App" customModuleProvider="target">
+                                                <rect key="frame" x="241" y="0.0" width="240" height="61"/>
+                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <fontDescription key="fontDescription" name="Constantia" family="Constantia" pointSize="40"/>
                                                 <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <state key="normal" title="Take Off Brief">
                                                     <color key="titleColor" red="0.50196081400000003" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                 </state>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                                        <real key="value" value="2"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                        <real key="value" value="10"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                                        <color key="value" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
                                                 <variation key="widthClass=compact">
-                                                    <fontDescription key="fontDescription" name="TrebuchetMS" family="Trebuchet MS" pointSize="18"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                                 </variation>
                                                 <connections>
                                                     <segue destination="QK8-Ie-OZu" kind="show" id="YLC-ZL-m1n"/>
@@ -1824,7 +2014,7 @@
         <!--Take Off Brief-->
         <scene sceneID="SWg-aF-unC">
             <objects>
-                <viewController storyboardIdentifier="Take Off Brief" title="Take Off Brief" id="QK8-Ie-OZu" customClass="TakeOffBriefViewController" customModule="Master_Flight_App" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="TakeOffBriefVC" title="Take Off Brief" id="QK8-Ie-OZu" customClass="TakeOffBriefViewController" customModule="Master_Flight_App" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="9DT-8D-Q9N"/>
                         <viewControllerLayoutGuide type="bottom" id="vDx-Ri-vsY"/>
@@ -2419,7 +2609,7 @@
         <!--Flight Time Calculator-->
         <scene sceneID="wyL-Qi-yYb">
             <objects>
-                <viewController title="Flight Time Calculator" id="MOw-pr-uYP" customClass="FltCalcViewController" customModule="Master_Flight_App" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="FlightTimeVC" title="Flight Time Calculator" id="MOw-pr-uYP" customClass="FltCalcViewController" customModule="Master_Flight_App" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="7Xj-Pu-JI7"/>
                         <viewControllerLayoutGuide type="bottom" id="gAo-fC-Dwf"/>
@@ -2652,15 +2842,26 @@
                                         </subviews>
                                         <variation key="widthClass=compact" spacing="30"/>
                                     </stackView>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wtT-F9-3ZC" customClass="CustomButton" customModule="Master_Flight_App" customModuleProvider="target">
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wtT-F9-3ZC" customClass="DesignableButton" customModule="Master_Flight_App" customModuleProvider="target">
                                         <rect key="frame" x="283.5" y="445" width="161" height="60"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="40"/>
                                         <color key="tintColor" red="0.020629477409999999" green="0.57003579550000005" blue="0.90196079019999997" alpha="1" colorSpace="calibratedRGB"/>
                                         <size key="titleShadowOffset" width="0.0" height="2"/>
                                         <state key="normal" title="Calculate">
-                                            <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                            <color key="titleColor" red="0.57919532060000001" green="0.06830818206" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         </state>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                                <real key="value" value="2"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                                <color key="value" cocoaTouchSystemColor="darkTextColor"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                <real key="value" value="10"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
                                         <variation key="widthClass=compact">
                                             <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                         </variation>
@@ -2749,7 +2950,7 @@ Deployed Foreign: </string>
                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" alignment="center" spacing="60" translatesAutoresizingMaskIntoConstraints="NO" id="Z7V-wl-nZV">
                                         <rect key="frame" x="171.5" y="869" width="385" height="60"/>
                                         <subviews>
-                                            <button opaque="NO" alpha="0.75" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1OZ-PL-z6B" customClass="CustomButton" customModule="Master_Flight_App" customModuleProvider="target">
+                                            <button opaque="NO" alpha="0.75" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1OZ-PL-z6B" customClass="DesignableButton" customModule="Master_Flight_App" customModuleProvider="target">
                                                 <rect key="frame" x="0.0" y="0.0" width="85" height="60"/>
                                                 <color key="backgroundColor" red="0.99953407049999998" green="0.98835557699999999" blue="0.47265523669999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="40"/>
@@ -2761,7 +2962,7 @@ Deployed Foreign: </string>
                                                     <action selector="saveEmailView:" destination="Dr0-qe-YOq" eventType="touchUpInside" id="UmH-YD-S4J"/>
                                                 </connections>
                                             </button>
-                                            <button opaque="NO" alpha="0.75" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3L2-H0-bNq" customClass="CustomButton" customModule="Master_Flight_App" customModuleProvider="target">
+                                            <button opaque="NO" alpha="0.75" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3L2-H0-bNq" customClass="DesignableButton" customModule="Master_Flight_App" customModuleProvider="target">
                                                 <rect key="frame" x="145" y="0.0" width="91" height="60"/>
                                                 <color key="backgroundColor" red="0.45009386540000001" green="0.98132258650000004" blue="0.4743030667" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="40"/>
@@ -2773,7 +2974,7 @@ Deployed Foreign: </string>
                                                     <action selector="clearEmailView:" destination="Dr0-qe-YOq" eventType="touchUpInside" id="IlE-3v-sRd"/>
                                                 </connections>
                                             </button>
-                                            <button opaque="NO" alpha="0.69999999999999996" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" adjustsImageSizeForAccessibilityContentSizeCategory="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bPR-8c-L6r" customClass="CustomButton" customModule="Master_Flight_App" customModuleProvider="target">
+                                            <button opaque="NO" alpha="0.69999999999999996" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" adjustsImageSizeForAccessibilityContentSizeCategory="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bPR-8c-L6r" customClass="DesignableButton" customModule="Master_Flight_App" customModuleProvider="target">
                                                 <rect key="frame" x="296" y="0.0" width="89" height="60"/>
                                                 <color key="backgroundColor" red="1" green="0.49327188729999999" blue="0.47399842739999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="40"/>
@@ -2831,89 +3032,6 @@ Deployed Foreign: </string>
             </objects>
             <point key="canvasLocation" x="790" y="1"/>
         </scene>
-        <!--WB Popover-->
-        <scene sceneID="Fxb-q2-h5c">
-            <objects>
-                <viewController storyboardIdentifier="WB Popover" title="WB Popover" id="koH-xl-BUb" customClass="WBPopoverViewController" customModule="Master_Flight_App" customModuleProvider="target" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="8lU-yV-yce"/>
-                        <viewControllerLayoutGuide type="bottom" id="No1-mR-MjW"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="Bvr-cf-KGp">
-                        <rect key="frame" x="0.0" y="0.0" width="400" height="300"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" alignment="center" spacing="40" translatesAutoresizingMaskIntoConstraints="NO" id="eix-xP-n5x">
-                                <rect key="frame" x="106" y="78" width="188" height="144"/>
-                                <subviews>
-                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="NTE-cT-4ko">
-                                        <rect key="frame" x="17" y="0.0" width="154" height="68"/>
-                                        <subviews>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Weight &amp; Balance" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iC0-L4-01f">
-                                                <rect key="frame" x="0.0" y="0.0" width="154" height="24"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
-                                                <nil key="textColor"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="252" verticalCompressionResistancePriority="751" text="Aircraft Type:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VEu-st-7vv">
-                                                <rect key="frame" x="19.5" y="44" width="115" height="24"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
-                                                <nil key="textColor"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
-                                        </subviews>
-                                    </stackView>
-                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="100" translatesAutoresizingMaskIntoConstraints="NO" id="qEy-0b-hDL">
-                                        <rect key="frame" x="0.0" y="108" width="188" height="36"/>
-                                        <subviews>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wcL-s4-Phb" customClass="RoundedButton" customModule="Master_Flight_App" customModuleProvider="target">
-                                                <rect key="frame" x="0.0" y="0.0" width="44" height="36"/>
-                                                <color key="backgroundColor" red="0.98478702789999994" green="1" blue="0.97001290640000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
-                                                <state key="normal" title="LRT">
-                                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                    <color key="titleShadowColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                </state>
-                                                <connections>
-                                                    <segue destination="Jc4-83-gTy" kind="show" id="qKp-Iq-cea"/>
-                                                </connections>
-                                            </button>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="272-c1-khJ" customClass="RoundedButton" customModule="Master_Flight_App" customModuleProvider="target">
-                                                <rect key="frame" x="144" y="0.0" width="44" height="36"/>
-                                                <color key="backgroundColor" red="0.98478702789999994" green="1" blue="0.97001290640000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
-                                                <state key="normal" title="AEW">
-                                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                    <color key="titleShadowColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                </state>
-                                            </button>
-                                        </subviews>
-                                    </stackView>
-                                </subviews>
-                            </stackView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hB1-N8-Fs5">
-                                <rect key="frame" x="177" y="238" width="50" height="36"/>
-                                <color key="backgroundColor" red="0.98478702789999994" green="1" blue="0.97001290640000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
-                                <state key="normal" title="Close">
-                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                </state>
-                            </button>
-                        </subviews>
-                        <color key="backgroundColor" red="0.46202266219999999" green="0.83828371759999998" blue="1" alpha="0.5" colorSpace="custom" customColorSpace="sRGB"/>
-                        <constraints>
-                            <constraint firstItem="hB1-N8-Fs5" firstAttribute="top" secondItem="eix-xP-n5x" secondAttribute="bottom" constant="16" id="93H-JS-JtX"/>
-                            <constraint firstItem="eix-xP-n5x" firstAttribute="centerY" secondItem="Bvr-cf-KGp" secondAttribute="centerY" id="BX5-x9-8ST"/>
-                            <constraint firstItem="eix-xP-n5x" firstAttribute="centerX" secondItem="Bvr-cf-KGp" secondAttribute="centerX" id="WhB-6J-jpY"/>
-                            <constraint firstItem="hB1-N8-Fs5" firstAttribute="leading" secondItem="Bvr-cf-KGp" secondAttribute="leading" constant="177" id="p5y-od-GAn"/>
-                        </constraints>
-                    </view>
-                    <size key="freeformSize" width="400" height="300"/>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="qho-0r-JQv" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="1090" y="-563"/>
-        </scene>
     </scenes>
     <resources>
         <image name="Dumbells2" width="50" height="50"/>
@@ -2929,7 +3047,7 @@ Deployed Foreign: </string>
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="5Ob-ks-8X4"/>
-        <segue reference="iUs-eC-O0r"/>
+        <segue reference="uci-Qf-gOr"/>
         <segue reference="QyB-sv-0U4"/>
     </inferredMetricsTieBreakers>
 </document>

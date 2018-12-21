@@ -61,7 +61,7 @@ class TakeoffDataViewController: UIViewController, UIPickerViewDelegate, UIPicke
     @IBOutlet weak var setPowerLabel: UILabel!
     @IBOutlet weak var TIT_Picker: UIPickerView!
     
-    @IBAction func calculatePower(_ sender: CustomButton) {
+    @IBAction func calculatePower(_ sender: UIButton) {
         //Create Instance Variables:
         var powerCalculation = TOPower()
         var rotateSpeed = CalculateVroSpeed()
