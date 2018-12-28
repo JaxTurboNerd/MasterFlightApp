@@ -10,14 +10,14 @@ import UIKit
 
 class OnstationViewController: UIViewController {
 
-    @IBOutlet weak var TotalFuel: UITextField!
+    @IBOutlet weak var totalFuel: UITextField!
     @IBOutlet weak var onstaFuelFLow: UITextField!
     @IBOutlet weak var returnFuelFlow: UITextField!
-    @IBOutlet weak var DestDistance: UITextField!
-    @IBOutlet weak var GroundSpeed: UITextField!
-    @IBOutlet weak var OnTop: UITextField!
+    @IBOutlet weak var destDistance: UITextField!
+    @IBOutlet weak var groundSpeed: UITextField!
+    @IBOutlet weak var onTop: UITextField!
     
-    @IBOutlet weak var OnStationTime: UILabel!
+    @IBOutlet weak var onStationTime: UILabel!
     @IBOutlet weak var goHomeFuel: UILabel!
     
     
@@ -27,17 +27,17 @@ class OnstationViewController: UIViewController {
         
         //Catch empty fields
         
-        checkTotalFuel(textField: TotalFuel)
+        checkTotalFuel(textField: totalFuel)
         checkOnstaFuelFlow(textField: onstaFuelFLow)
         checkReturnFuelFlow(textField: returnFuelFlow)
-        checkDestDistance(textField: DestDistance)
-        checkGroundSpeed(textField: GroundSpeed)
-        checkOnTop(textField: OnTop)
+        checkDestDistance(textField: destDistance)
+        checkGroundSpeed(textField: groundSpeed)
+        checkOnTop(textField: onTop)
         
         //Calculate fields:
-        OnStationTime.text = "\(OnStationCalculation.calculateOnSta(totalFuel: Double(TotalFuel.text!)!, onStationFuelFlow: Double(onstaFuelFLow.text!)!, returnFuelFlow: Int(returnFuelFlow.text!)!, destDistance: Double(DestDistance.text!)!, groundSpeed: Double(GroundSpeed.text!)!, onTopFuel: Double(OnTop.text!)!).stringOnStationTime) hrs"
+        onStationTime.text = "\(OnStationCalculation.calculateOnSta(totalFuel: Double(totalFuel.text!)!, onStationFuelFlow: Double(onstaFuelFLow.text!)!, returnFuelFlow: Int(returnFuelFlow.text!)!, destDistance: Double(destDistance.text!)!, groundSpeed: Double(groundSpeed.text!)!, onTopFuel: Double(onTop.text!)!).stringOnStationTime) hrs"
         
-        goHomeFuel.text = "\(OnStationCalculation.calculateOnSta(totalFuel: Double(TotalFuel.text!)!, onStationFuelFlow: Double(onstaFuelFLow.text!)!, returnFuelFlow: Int(returnFuelFlow.text!)!, destDistance: Double(DestDistance.text!)!, groundSpeed: Double(GroundSpeed.text!)!, onTopFuel: Double(OnTop.text!)!).stringDepartFuel) lbs"
+        goHomeFuel.text = "\(OnStationCalculation.calculateOnSta(totalFuel: Double(totalFuel.text!)!, onStationFuelFlow: Double(onstaFuelFLow.text!)!, returnFuelFlow: Int(returnFuelFlow.text!)!, destDistance: Double(destDistance.text!)!, groundSpeed: Double(groundSpeed.text!)!, onTopFuel: Double(onTop.text!)!).stringDepartFuel) lbs"
     }
     
     override func viewDidLoad() {
@@ -55,12 +55,12 @@ class OnstationViewController: UIViewController {
         
         toolBar.setItems([flexibleSpace, doneButton], animated: false)
         
-        TotalFuel.inputAccessoryView = toolBar
+        totalFuel.inputAccessoryView = toolBar
         onstaFuelFLow.inputAccessoryView = toolBar
         returnFuelFlow.inputAccessoryView = toolBar
-        DestDistance.inputAccessoryView = toolBar
-        GroundSpeed.inputAccessoryView = toolBar
-        OnTop.inputAccessoryView = toolBar
+        destDistance.inputAccessoryView = toolBar
+        groundSpeed.inputAccessoryView = toolBar
+        onTop.inputAccessoryView = toolBar
         
         //dismiss keyboard by tapping anywhere
         self.view.addGestureRecognizer(UITapGestureRecognizer(target:

@@ -16,23 +16,23 @@ class TakeOffBriefViewController: UIViewController {
     @IBOutlet weak var Vr: UILabel!
     @IBOutlet weak var Vro: UILabel!
     @IBOutlet weak var Vlof: UILabel!
-    @IBOutlet weak var V50Three: UILabel!
-    @IBOutlet weak var V50Four: UILabel!
+    @IBOutlet weak var v50Three: UILabel!
+    @IBOutlet weak var v50Four: UILabel!
     @IBOutlet weak var VroDistance: UILabel!
     @IBOutlet weak var VlofDistance: UILabel!
-    @IBOutlet weak var CG: UILabel!
-    @IBOutlet weak var ZFW: UILabel!
-    @IBOutlet weak var GW: UILabel!
-    @IBOutlet weak var OAT: UILabel!
-    @IBOutlet weak var PA: UILabel!
-    @IBOutlet weak var Runway: UILabel!
-    @IBOutlet weak var WindDirection: UILabel!
-    @IBOutlet weak var WindSpeed: UILabel!
-    @IBOutlet weak var ThreeROC: UILabel!
+    @IBOutlet weak var cg: UILabel!
+    @IBOutlet weak var zfw: UILabel!
+    @IBOutlet weak var grossWeight: UILabel!
+    @IBOutlet weak var outsideAirTemp: UILabel!
+    @IBOutlet weak var pressAltitude: UILabel!
+    @IBOutlet weak var runway: UILabel!
+    @IBOutlet weak var windDirection: UILabel!
+    @IBOutlet weak var windSpeed: UILabel!
+    @IBOutlet weak var threeROC: UILabel!
     
-    @IBOutlet weak var HeadWindLabel: UILabel!
-    @IBOutlet weak var HeadWindComponent: UILabel!
-    @IBOutlet weak var CrossWindComponent: UILabel!
+    @IBOutlet weak var headWindLabel: UILabel!
+    @IBOutlet weak var headWindComponent: UILabel!
+    @IBOutlet weak var crossWindComponent: UILabel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -51,30 +51,30 @@ class TakeOffBriefViewController: UIViewController {
         Vr.text = globalVr + " kts"
         Vro.text = globalVro + " kts"
         Vlof.text = globalVlof + " kts"
-        V50Three.text = globalV50three + " kts"
-        V50Four.text = globalV50four + " kts"
+        v50Three.text = globalV50three + " kts"
+        v50Four.text = globalV50four + " kts"
         VroDistance.text = globalRotateDistance
         VlofDistance.text = globalLOFDistance
-        CG.text = globalCG + "%"
-        ZFW.text = globalZFW + "K lbs"
-        GW.text = globalGW + "K lbs"
-        OAT.text = globalTemp + "℃"
-        PA.text = globalPressureAlt + " ft"
-        Runway.text = globalRunway
-        WindDirection.text = globalWindDirection
-        WindSpeed.text = globalWindSpeed + "kts"
-        ThreeROC.text = global3ROC
+        cg.text = globalCG + "%"
+        zfw.text = globalZFW + "K lbs"
+        grossWeight.text = globalGW + "K lbs"
+        outsideAirTemp.text = globalTemp + "℃"
+        pressAltitude.text = globalPressureAlt + " ft"
+        runway.text = globalRunway
+        windDirection.text = globalWindDirection
+        windSpeed.text = globalWindSpeed + "kts"
+        threeROC.text = global3ROC
         
         if globalHeadWindComponent.isLess(than: 0.0) {
-            HeadWindLabel.textColor = UIColor.red
-            HeadWindLabel.text = "Tailwind Component:"
-            HeadWindComponent.text = "\(String(abs(globalHeadWindComponent))) kts"
+            headWindLabel.textColor = UIColor.red
+            headWindLabel.text = "Tailwind Component:"
+            headWindComponent.text = "\(String(abs(globalHeadWindComponent))) kts"
         }
         else {
-            HeadWindComponent.text = "\(String(globalHeadWindComponent)) kts"
+            headWindComponent.text = "\(String(globalHeadWindComponent)) kts"
         }
         
-        CrossWindComponent.text = "\(String(globalCrossWindComponent)) kts"
+        crossWindComponent.text = "\(String(globalCrossWindComponent)) kts"
         
     }
 

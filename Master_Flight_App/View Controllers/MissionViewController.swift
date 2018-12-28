@@ -11,11 +11,11 @@ import UIKit
 class MissionViewController: UIViewController {
     
     @IBOutlet weak var zeroFuelWeight: UITextField!
-    @IBOutlet weak var TotalFuel: UITextField!
-    @IBOutlet weak var Altitude: UITextField!
+    @IBOutlet weak var totalFuel: UITextField!
+    @IBOutlet weak var altitude: UITextField!
 
-    @IBOutlet weak var MaxRange: UILabel!
-    @IBOutlet weak var LoiterSpeed: UILabel!
+    @IBOutlet weak var maxRange: UILabel!
+    @IBOutlet weak var loiterSpeed: UILabel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -35,8 +35,8 @@ class MissionViewController: UIViewController {
         toolBar.setItems([flexibleSpace, doneButton], animated: false)
         
         zeroFuelWeight.inputAccessoryView = toolBar
-        TotalFuel.inputAccessoryView = toolBar
-        Altitude.inputAccessoryView = toolBar
+        totalFuel.inputAccessoryView = toolBar
+        altitude.inputAccessoryView = toolBar
         
         //dismiss keyboard by tapping anywhere
         self.view.addGestureRecognizer(UITapGestureRecognizer(target:
@@ -58,11 +58,11 @@ class MissionViewController: UIViewController {
 
         //Check input text field values:
         checkZFW(textField: zeroFuelWeight)
-        checkTotalFuel(textField: TotalFuel)
-        checkAltitude(textField: Altitude)
+        checkTotalFuel(textField: totalFuel)
+        checkAltitude(textField: altitude)
         
-        MaxRange.text = "\(missionCalculation.calculateMissionData(zfw: Double(zeroFuelWeight.text!)!, totalFuel: Double(TotalFuel.text!)!, altitude: Double(Altitude.text!)!).stringMaxRange) kts"
-        LoiterSpeed.text = "\(missionCalculation.calculateMissionData(zfw: Double(zeroFuelWeight.text!)!, totalFuel: Double(TotalFuel.text!)!, altitude: Double(Altitude.text!)!).stringLoiterSpeed) kts"
+        maxRange.text = "\(missionCalculation.calculateMissionData(zfw: Double(zeroFuelWeight.text!)!, totalFuel: Double(totalFuel.text!)!, altitude: Double(altitude.text!)!).stringMaxRange) kts"
+        loiterSpeed.text = "\(missionCalculation.calculateMissionData(zfw: Double(zeroFuelWeight.text!)!, totalFuel: Double(totalFuel.text!)!, altitude: Double(altitude.text!)!).stringLoiterSpeed) kts"
 
         //Dismisses keyboard after click on Calculate button
         self.doneClicked()

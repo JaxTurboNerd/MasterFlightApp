@@ -104,14 +104,14 @@ extension MissionViewController {
     func checkTotalFuel(textField: UITextField) -> Void {
         if textField.text?.isEmpty == true {
             emptyAlert(alertTitle: "Fuel total not entered", alertMessage: "Enter fuel")
-            TotalFuel.text = "00.0"
+            totalFuel.text = "00.0"
         }
     }
     
     func checkAltitude(textField: UITextField) -> Void {
         if textField.text?.isEmpty == true {
             emptyAlert(alertTitle: "Altitude not entered", alertMessage: "Enter altitude")
-            Altitude.text = "00.0"
+            altitude.text = "00.0"
         }
 
     }
@@ -124,7 +124,7 @@ extension OnstationViewController {
     func checkTotalFuel(textField: UITextField) -> Void {
         if textField.text?.isEmpty == true {
             emptyAlert(alertTitle: "Fuel Totalizer not entered", alertMessage: "Enter Fuel Totalizer amount")
-            TotalFuel.text = "00.0"
+            totalFuel.text = "00.0"
         }
     }
     
@@ -145,21 +145,21 @@ extension OnstationViewController {
     func checkDestDistance(textField: UITextField) -> Void {
         if textField.text?.isEmpty == true {
             emptyAlert(alertTitle: "Distance not entered", alertMessage: "Enter distance to destination")
-            DestDistance.text = "0000"
+            destDistance.text = "0000"
         }
     }
     
     func checkGroundSpeed(textField: UITextField) -> Void {
         if textField.text?.isEmpty == true {
             emptyAlert(alertTitle: "Ground speed not entered", alertMessage: "Enter ground speed")
-            GroundSpeed.text = "000"
+            groundSpeed.text = "000"
         }
     }
     
     func checkOnTop(textField: UITextField) -> Void {
         if textField.text?.isEmpty == true {
             emptyAlert(alertTitle: "On Top Fuel not entered", alertMessage: "Enter On Top Fuel requirement")
-            OnTop.text = "00.0"
+            onTop.text = "00.0"
         }
     }
 }
