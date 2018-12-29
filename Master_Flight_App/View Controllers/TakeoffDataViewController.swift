@@ -45,16 +45,16 @@ class TakeoffDataViewController: UIViewController, UIPickerViewDelegate, UIPicke
     @IBOutlet weak var runway: UITextField!
     @IBOutlet weak var windDirection: UITextField!
     @IBOutlet weak var windSpeed: UITextField!
-    @IBOutlet weak var OAT: UITextField!
-    @IBOutlet weak var PA: UITextField!
+    @IBOutlet weak var outsideAirTemp: UITextField!
+    @IBOutlet weak var pressureAltitude: UITextField!
     
     @IBOutlet weak var SHP100: UILabel!
     @IBOutlet weak var SHP95: UILabel!
     @IBOutlet weak var Vr: UILabel!
     @IBOutlet weak var Vro: UILabel!
     @IBOutlet weak var Vlof: UILabel!
-    @IBOutlet weak var V50three: UILabel!
-    @IBOutlet weak var V50four: UILabel!
+    @IBOutlet weak var v50three: UILabel!
+    @IBOutlet weak var v50four: UILabel!
     @IBOutlet weak var rotateDistance: UILabel!
     @IBOutlet weak var LOFDistance: UILabel!
     @IBOutlet weak var threeEngineROC: UILabel!
@@ -66,8 +66,8 @@ class TakeoffDataViewController: UIViewController, UIPickerViewDelegate, UIPicke
         var powerCalculation = TOPower()
         var rotateSpeed = CalculateVroSpeed()
         var liftOffSpeed = CalculateLiftOffSpeed()
-        var V50fourSpeed = CalculateV50four()
-        var V50threeSpeed = CalculateV50three()
+        var v50fourSpeed = CalculateV50four()
+        var v50threeSpeed = CalculateV50three()
         var takeoffDistance = CalculateFourEngineAccelDistance()
         var windComponents = WindComponent()
         var threeROC = ThreeROC()
@@ -79,8 +79,8 @@ class TakeoffDataViewController: UIViewController, UIPickerViewDelegate, UIPicke
         checkRunway(textField: runway)
         checkWindDirection(textField: windDirection)
         checkWindSpeed(textField: windSpeed)
-        checkOAT(textField: OAT)
-        checkPA(textField: PA)
+        checkOAT(textField: outsideAirTemp)
+        checkPA(textField: pressureAltitude)
         
         
         //Assign global values:
@@ -90,28 +90,28 @@ class TakeoffDataViewController: UIViewController, UIPickerViewDelegate, UIPicke
         globalRunway = runway.text!
         globalWindDirection = windDirection.text!
         globalWindSpeed = windSpeed.text!
-        globalTemp = OAT.text!
-        globalPressureAlt = PA.text!
+        globalTemp = outsideAirTemp.text!
+        globalPressureAlt = pressureAltitude.text!
         globalVr = Vro.text!
         globalVro = Vro.text!
         globalVlof = Vlof.text!
-        globalV50three = V50three.text!
+        globalV50three = v50three.text!
         globalZFW = zeroFuelWeight.text!
         
         //Assign values to labels from calculations
         
         //SHP:
-        SHP100.text = powerCalculation.calculatePower(selectedPower: selectedTIT!, airTemp: Int(OAT.text!)!, isAntiIceOn: isAntiIceOn, pressureAltitude: Int(PA.text!)!).stringSHP100
+        SHP100.text = powerCalculation.calculatePower(selectedPower: selectedTIT!, airTemp: Int(outsideAirTemp.text!)!, isAntiIceOn: isAntiIceOn, pressureAltitude: Int(pressureAltitude.text!)!).stringSHP100
         globalSHP100 = SHP100.text!
             
-        SHP95.text = powerCalculation.calculatePower(selectedPower: selectedTIT!, airTemp: Int(OAT.text!)!, isAntiIceOn: isAntiIceOn, pressureAltitude: Int(PA.text!)!).stringSHP95
+        SHP95.text = powerCalculation.calculatePower(selectedPower: selectedTIT!, airTemp: Int(outsideAirTemp.text!)!, isAntiIceOn: isAntiIceOn, pressureAltitude: Int(pressureAltitude.text!)!).stringSHP95
         globalSHP95 = SHP95.text!
         
         switch selectedTIT {
         case "1077"?, "1010"?, "950"?:
             setPowerLabel.text = "\(selectedTIT!) TIT"
         case "4600"?, "3500"?:
-            setPowerLabel.text = "\(powerCalculation.calculatePower(selectedPower: selectedTIT!, airTemp: Int(OAT.text!)!, isAntiIceOn: isAntiIceOn, pressureAltitude: Int(PA.text!)!).predictedTIT) TIT"
+            setPowerLabel.text = "\(powerCalculation.calculatePower(selectedPower: selectedTIT!, airTemp: Int(outsideAirTemp.text!)!, isAntiIceOn: isAntiIceOn, pressureAltitude: Int(pressureAltitude.text!)!).predictedTIT) TIT"
         default:
             break
         }
@@ -120,9 +120,9 @@ class TakeoffDataViewController: UIViewController, UIPickerViewDelegate, UIPicke
         //Speeds:
         Vro.text = String(Int(rotateSpeed.rotateSpeed(grossWeight: Double(grossWeight.text!)!, aircraftType: aircraftType)))
         Vlof.text = String(Int(liftOffSpeed.liftOffSpeed(grossWeight: Double(grossWeight.text!)!, aircraftType: aircraftType)))
-        V50three.text = String(Int(V50threeSpeed.V50three(grossWeight: Double(grossWeight.text!)!, aircraftType: aircraftType)))
+        v50three.text = String(Int(v50threeSpeed.V50three(grossWeight: Double(grossWeight.text!)!, aircraftType: aircraftType)))
         Vr.text = Vro.text
-        threeEngineROC.text = String(threeROC.calculate3ROC(GW: Double(grossWeight.text!)!, OAT: Int(OAT.text!)!, PA: Int(PA.text!)!))
+        threeEngineROC.text = String(threeROC.calculate3ROC(GW: Double(grossWeight.text!)!, OAT: Int(outsideAirTemp.text!)!, PA: Int(pressureAltitude.text!)!))
         
         
         //Wind Components:
@@ -131,22 +131,22 @@ class TakeoffDataViewController: UIViewController, UIPickerViewDelegate, UIPicke
         globalCrossWindComponent = windComponents.calculateWinds(runway: Int(runway.text!)!, windDirection: Int(windDirection.text!)!, windVelocity: Int(windSpeed.text!)!).xWind
         
         if aircraftType == "AEW" {
-            V50four.text = "N/A"
+            v50four.text = "N/A"
         }
         else {
-            V50four.text = String(Int(V50fourSpeed.V50four(grossWeight: Double(grossWeight.text!)!, aircraftType: aircraftType)))
+            v50four.text = String(Int(v50fourSpeed.V50four(grossWeight: Double(grossWeight.text!)!, aircraftType: aircraftType)))
         }
-        globalV50four = V50four.text!
+        globalV50four = v50four.text!
         
         //Distances
-        rotateDistance.text = "\(String(Int(takeoffDistance.accelerationDistance(grossWeight: Double(grossWeight.text!)!, SHP: Double(SHP100.text!)!, pressAltitude: Double(PA.text!)!, airTemp: Double(OAT.text!)!, speed: Double(Vro.text!)!)))) ft"
-        LOFDistance.text = "\(String(Int(takeoffDistance.accelerationDistance(grossWeight: Double(grossWeight.text!)!, SHP: Double(SHP100.text!)!, pressAltitude: Double(PA.text!)!, airTemp: Double(OAT.text!)!, speed: Double(Vlof.text!)!)))) ft"
+        rotateDistance.text = "\(String(Int(takeoffDistance.accelerationDistance(grossWeight: Double(grossWeight.text!)!, SHP: Double(SHP100.text!)!, pressAltitude: Double(pressureAltitude.text!)!, airTemp: Double(outsideAirTemp.text!)!, speed: Double(Vro.text!)!)))) ft"
+        LOFDistance.text = "\(String(Int(takeoffDistance.accelerationDistance(grossWeight: Double(grossWeight.text!)!, SHP: Double(SHP100.text!)!, pressAltitude: Double(pressureAltitude.text!)!, airTemp: Double(outsideAirTemp.text!)!, speed: Double(Vlof.text!)!)))) ft"
         
         globalRotateDistance = rotateDistance.text!
         globalLOFDistance = LOFDistance.text!
         
         //Three ROC:
-        global3ROC = "\(String(threeROC.calculate3ROC(GW: Double(grossWeight.text!)!, OAT: Int(OAT.text!)!, PA: Int(PA.text!)!))) fpm"
+        global3ROC = "\(String(threeROC.calculate3ROC(GW: Double(grossWeight.text!)!, OAT: Int(outsideAirTemp.text!)!, PA: Int(pressureAltitude.text!)!))) fpm"
         
         //dismiss keyboard after clicking the calculate button
         self.doneClicked()
@@ -194,9 +194,9 @@ class TakeoffDataViewController: UIViewController, UIPickerViewDelegate, UIPicke
         toolBar.setItems([minusButton, flexibleSpace, doneButton], animated: false)
         
         centerOfGravity.inputAccessoryView = toolBar
-        OAT.inputAccessoryView = toolBar
+        outsideAirTemp.inputAccessoryView = toolBar
         grossWeight.inputAccessoryView = toolBar
-        PA.inputAccessoryView = toolBar
+        pressureAltitude.inputAccessoryView = toolBar
         zeroFuelWeight.inputAccessoryView = toolBar
         runway.inputAccessoryView = toolBar
         windSpeed.inputAccessoryView = toolBar
@@ -213,9 +213,9 @@ class TakeoffDataViewController: UIViewController, UIPickerViewDelegate, UIPicke
     }
     
     @objc func toggleMinus(){
-        if var text = OAT.text, text.isEmpty == false {
+        if var text = outsideAirTemp.text, text.isEmpty == false {
             text = "-\(text)"
-            OAT.text = text
+            outsideAirTemp.text = text
         }
     }
     

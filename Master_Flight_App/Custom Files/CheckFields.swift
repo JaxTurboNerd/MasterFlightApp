@@ -74,14 +74,14 @@ extension TakeoffDataViewController {
     func checkOAT(textField: UITextField) -> Void {
         if textField.text?.isEmpty == true {
             emptyAlert(alertTitle: "OAT Not Entered", alertMessage: "Enter OAT")
-            OAT.text = "0"
+            outsideAirTemp.text = "0"
         }
     }
     
     func checkPA(textField: UITextField) -> Void {
         if textField.text?.isEmpty == true {
             emptyAlert(alertTitle: "PA Not Entered", alertMessage: "Enter OAT")
-            PA.text = "000"
+            pressureAltitude.text = "000"
         }
     }
 }

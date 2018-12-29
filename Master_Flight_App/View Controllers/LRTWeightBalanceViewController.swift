@@ -10,6 +10,9 @@ import UIKit
 
 class LRTWeightBalanceViewController: UIViewController {
 
+    @IBAction func closeWBView(_ sender: Any) {
+        self.dismiss(animated: true, completion: nil)
+    }
     override func viewDidLoad() {
         super.viewDidLoad()
     }
