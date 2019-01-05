@@ -9,12 +9,17 @@
 import UIKit
 
 class LRTWeightBalanceViewController: UIViewController {
-
-    @IBAction func closeWBView(_ sender: Any) {
-        self.dismiss(animated: true, completion: nil)
-    }
+    //Outlets for labels:
+    @IBOutlet weak var pilotWB: AllowedCharsTextField!
+    @IBOutlet weak var copilotWB: UITextField!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
     }
     
+    @IBAction func closeWBView(_ sender: Any) {
+        self.dismiss(animated: true, completion: nil)
+    }
+    
 }
+

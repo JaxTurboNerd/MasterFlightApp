@@ -26,7 +26,6 @@
 		936C0F1721C9D50D0069708C /* DesignableButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 936C0F1621C9D50D0069708C /* DesignableButton.swift */; };
 		936C0F1921C9E3180069708C /* DesignableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 936C0F1821C9E3180069708C /* DesignableView.swift */; };
 		936C87491F5F2C7000ACD0E7 /* OnstationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 936C87481F5F2C7000ACD0E7 /* OnstationViewController.swift */; };
-		93817A7B20603559000A5869 /* GLOReportViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93817A7A20603559000A5869 /* GLOReportViewController.swift */; };
 		93817A7D2060453A000A5869 /* MessageUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 93817A7C2060453A000A5869 /* MessageUI.framework */; };
 		9384EE6921D7C5E30061D971 /* AEWViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9384EE6821D7C5E30061D971 /* AEWViewController.swift */; };
 		93940C54200003F100742D16 /* RunwayDataViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93940C53200003F100742D16 /* RunwayDataViewController.swift */; };
@@ -62,7 +61,6 @@
 		936C0F1621C9D50D0069708C /* DesignableButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DesignableButton.swift; sourceTree = "<group>"; };
 		936C0F1821C9E3180069708C /* DesignableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DesignableView.swift; sourceTree = "<group>"; };
 		936C87481F5F2C7000ACD0E7 /* OnstationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OnstationViewController.swift; sourceTree = "<group>"; };
-		93817A7A20603559000A5869 /* GLOReportViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GLOReportViewController.swift; sourceTree = "<group>"; };
 		93817A7C2060453A000A5869 /* MessageUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MessageUI.framework; path = System/Library/Frameworks/MessageUI.framework; sourceTree = SDKROOT; };
 		9384EE6821D7C5E30061D971 /* AEWViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AEWViewController.swift; sourceTree = "<group>"; };
 		93940C53200003F100742D16 /* RunwayDataViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RunwayDataViewController.swift; sourceTree = "<group>"; };
@@ -189,7 +187,6 @@
 				93940C53200003F100742D16 /* RunwayDataViewController.swift */,
 				FA810BEA1FD0B185002BB188 /* TakeOffBriefViewController.swift */,
 				93678B321F9830BE005DCF5C /* TakeoffDataViewController.swift */,
-				93817A7A20603559000A5869 /* GLOReportViewController.swift */,
 				9368741321C02DA4007EF7F4 /* LRTWeightBalanceViewController.swift */,
 				9384EE6821D7C5E30061D971 /* AEWViewController.swift */,
 				930ACCA221C1FEDF00F1D650 /* WBPopoverViewController.swift */,
@@ -345,7 +342,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				9308E1591F5E22C300CBFDC0 /* MissionModel.swift in Sources */,
-				93817A7B20603559000A5869 /* GLOReportViewController.swift in Sources */,
 				FAF2C2A71FE8AEAA0084ADF5 /* CheckFields.swift in Sources */,
 				936C87491F5F2C7000ACD0E7 /* OnstationViewController.swift in Sources */,
 				9311E1032027B9FC00CE1527 /* StringExtensions.swift in Sources */,
