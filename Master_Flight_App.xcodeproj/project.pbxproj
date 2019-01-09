@@ -29,6 +29,7 @@
 		93817A7D2060453A000A5869 /* MessageUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 93817A7C2060453A000A5869 /* MessageUI.framework */; };
 		9384EE6921D7C5E30061D971 /* AEWViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9384EE6821D7C5E30061D971 /* AEWViewController.swift */; };
 		93940C54200003F100742D16 /* RunwayDataViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93940C53200003F100742D16 /* RunwayDataViewController.swift */; };
+		93A363DF21E1AA9500CBDF13 /* AircraftTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93A363DE21E1AA9500CBDF13 /* AircraftTableViewCell.swift */; };
 		93B8B38F21D8234A00746988 /* DesignableLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93B8B38E21D8234A00746988 /* DesignableLabel.swift */; };
 		93BC168321CC1F5D0002F34C /* Constantia.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 93BC168221CC1EAB0002F34C /* Constantia.ttf */; };
 		93E2F0491F5DB76A00E2BB7F /* MissionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93E2F0481F5DB76A00E2BB7F /* MissionViewController.swift */; };
@@ -64,6 +65,7 @@
 		93817A7C2060453A000A5869 /* MessageUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MessageUI.framework; path = System/Library/Frameworks/MessageUI.framework; sourceTree = SDKROOT; };
 		9384EE6821D7C5E30061D971 /* AEWViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AEWViewController.swift; sourceTree = "<group>"; };
 		93940C53200003F100742D16 /* RunwayDataViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RunwayDataViewController.swift; sourceTree = "<group>"; };
+		93A363DE21E1AA9500CBDF13 /* AircraftTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AircraftTableViewCell.swift; sourceTree = "<group>"; };
 		93B8B38E21D8234A00746988 /* DesignableLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DesignableLabel.swift; sourceTree = "<group>"; };
 		93BC168221CC1EAB0002F34C /* Constantia.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Constantia.ttf; sourceTree = "<group>"; };
 		93E2F0481F5DB76A00E2BB7F /* MissionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MissionViewController.swift; sourceTree = "<group>"; };
@@ -155,6 +157,7 @@
 		93E046F22062E32A001BEDCC /* Custom Files */ = {
 			isa = PBXGroup;
 			children = (
+				93A363DE21E1AA9500CBDF13 /* AircraftTableViewCell.swift */,
 				FAF2C2A61FE8AEAA0084ADF5 /* CheckFields.swift */,
 				9311E1002027B9FC00CE1527 /* SwiftMaskField.swift */,
 				9311E1012027B9FC00CE1527 /* StringExtensions.swift */,
@@ -354,6 +357,7 @@
 				936C0F1721C9D50D0069708C /* DesignableButton.swift in Sources */,
 				FA7060501F5E3A14006FD6A0 /* FlightCalcModel.swift in Sources */,
 				FA6594311FE89EE400F4A300 /* CustomTextFields.swift in Sources */,
+				93A363DF21E1AA9500CBDF13 /* AircraftTableViewCell.swift in Sources */,
 				9384EE6921D7C5E30061D971 /* AEWViewController.swift in Sources */,
 				93183A641F3E818200E7350D /* HomeViewController.swift in Sources */,
 				9322D4E21F6B088C006C9425 /* OnStationModel.swift in Sources */,

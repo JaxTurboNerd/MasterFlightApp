@@ -10,27 +10,31 @@ import UIKit
 
 class WBPopoverViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
     
-    @IBOutlet weak var popoverView: UIView!
     @IBOutlet weak var tableView: UITableView!
     
-    var aircraftNumbers = ["N403SK", "N480SK","N741SK", "N144CS", "N145CS", "N146CS", "N149CS"]
+    var aircraftList = ["N403SK", "N480SK","N741SK", "N144CS", "N145CS", "N146CS", "N149CS"]
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        tableView.dataSource = self
-        tableView.delegate = self
+        self.tableView.dataSource = self
+        self.tableView.delegate = self
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return self.aircraftNumbers.count
+        return self.aircraftList.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
-        cell.textLabel?.text = aircraftNumbers[indexPath.row]
+        let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as! AircraftTableViewCell
+        cell.setup(title: aircraftList[indexPath.row])
         return cell
     }
     
-
-    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let Storyboard = UIStoryboard(name: "Main", bundle: nil)
+        let LRTVC = Storyboard.instantiateViewController(withIdentifier: "LRTWeightBalanceViewController") as! LRTWeightBalanceViewController
+        LRTVC.finalSelectedAircraft = aircraftList[indexPath.row]
+        self.show(LRTVC, sender: self)
+    }    
 }
+

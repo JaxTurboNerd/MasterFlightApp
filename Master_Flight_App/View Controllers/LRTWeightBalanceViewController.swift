@@ -9,17 +9,20 @@
 import UIKit
 
 class LRTWeightBalanceViewController: UIViewController {
+    
+    var finalSelectedAircraft = ""
+    
     //Outlets for labels:
-    @IBOutlet weak var pilotWB: AllowedCharsTextField!
-    @IBOutlet weak var copilotWB: UITextField!
+    @IBOutlet weak var aircraftNumberLabel: UILabel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
+            aircraftNumberLabel.text = finalSelectedAircraft
     }
     
-    @IBAction func closeWBView(_ sender: Any) {
+    //close view controller with "close" button
+    @IBAction func dismissVC(_ sender: DesignableButton) {
         self.dismiss(animated: true, completion: nil)
     }
-    
 }
 
