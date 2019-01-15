@@ -31,10 +31,24 @@ class WBPopoverViewController: UIViewController, UITableViewDataSource, UITableV
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        let Storyboard = UIStoryboard(name: "Main", bundle: nil)
-        let LRTVC = Storyboard.instantiateViewController(withIdentifier: "LRTWeightBalanceViewController") as! LRTWeightBalanceViewController
-        LRTVC.finalSelectedAircraft = aircraftList[indexPath.row]
-        self.show(LRTVC, sender: self)
+        
+        let selectedAircraftCell = indexPath.row
+        //switch to either LRT or AEW W&B view controller:
+        switch selectedAircraftCell {
+        case 0...2:
+            //Instantiate new LRT W&B view controller to pass selected aircraft number to the W&B view controller label:
+            let Storyboard = UIStoryboard(name: "Main", bundle: nil)
+            let LRTVC = Storyboard.instantiateViewController(withIdentifier: "LRTWeightBalanceViewController") as! LRTWeightBalanceViewController
+            LRTVC.finalSelectedAircraft = aircraftList[indexPath.row]
+            self.show(LRTVC, sender: self)
+        case 3...6:
+            let Storyboard = UIStoryboard(name: "Main", bundle: nil)
+            let AEWVC = Storyboard.instantiateViewController(withIdentifier: "AEWWeightBalanceViewController") as! AEWWeightBalanceViewController
+            AEWVC.finalSelectedAircraft = aircraftList[indexPath.row]
+            self.show(AEWVC, sender: self)
+        default:
+            break
+        }
     }    
 }
 

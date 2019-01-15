@@ -22,7 +22,11 @@ class LRTWeightBalanceViewController: UIViewController {
     
     //close view controller with "close" button
     @IBAction func dismissVC(_ sender: DesignableButton) {
+        //Dismiss THIS view controller
         self.dismiss(animated: true, completion: nil)
+        
+        //Dismiss the previous popover view controller when hit the close button
+        self.presentingViewController?.dismiss(animated: true, completion: nil)
     }
 }
 
