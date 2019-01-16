@@ -101,10 +101,10 @@ class TakeoffDataViewController: UIViewController, UIPickerViewDelegate, UIPicke
         //Assign values to labels from calculations
         
         //SHP:
-        SHP100.text = powerCalculation.calculatePower(selectedPower: selectedTIT!, airTemp: Int(outsideAirTemp.text!)!, isAntiIceOn: isAntiIceOn, pressureAltitude: Int(pressureAltitude.text!)!).stringSHP100
+        SHP100.text = powerCalculation.calculatePower(selectedPower: selectedTIT!, airTemp: Int(outsideAirTemp.text!)!, isAntiIceOn: isAntiIceOn, pressureAltitude: Int(pressureAltitude.text!)!).SHP100
         globalSHP100 = SHP100.text!
             
-        SHP95.text = powerCalculation.calculatePower(selectedPower: selectedTIT!, airTemp: Int(outsideAirTemp.text!)!, isAntiIceOn: isAntiIceOn, pressureAltitude: Int(pressureAltitude.text!)!).stringSHP95
+        SHP95.text = powerCalculation.calculatePower(selectedPower: selectedTIT!, airTemp: Int(outsideAirTemp.text!)!, isAntiIceOn: isAntiIceOn, pressureAltitude: Int(pressureAltitude.text!)!).SHP95
         globalSHP95 = SHP95.text!
         
         switch selectedTIT {

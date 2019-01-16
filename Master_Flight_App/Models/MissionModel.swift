@@ -12,17 +12,13 @@ struct MissionData {
     
     var grossWeight:Double = 0.0
     
-    mutating func calculateMissionData(zfw:Double, totalFuel:Double, altitude:Double) ->  (stringMaxRange:String, stringLoiterSpeed:String) {
+    mutating func calculateMissionData(zfw:Double, totalFuel:Double, altitude:Double) ->  (maxRange:String, loiterSpeed:String) {
         grossWeight = zfw + totalFuel
         
         let loiterSpeed = Int(grossWeight + 90.0)
         let maxRange = Int((grossWeight * 0.5) + 205 - altitude)
         
-        //Convert values to string for output to labels
-        let stringMaxRange = String(maxRange)
-        let stringLoiterSpeed = String(loiterSpeed)
-        
-        return(stringMaxRange, stringLoiterSpeed)
+        return(String(maxRange), String(loiterSpeed))
     }
 
 }

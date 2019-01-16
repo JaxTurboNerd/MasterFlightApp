@@ -10,7 +10,7 @@ import Foundation
 
 struct FlightTime {
     
-    func calculateFlightTime(flightTime: Double) -> (stringTime1: String, stringTime2: String, stringTime3: String) {
+    func calculateFlightTime(flightTime: Double) -> (time1: String, time2: String, time3: String) {
         
         //convert flightTime to type Int
         let intFlightTime = Int(flightTime * 10)
@@ -43,12 +43,7 @@ struct FlightTime {
         let doubleTime1 = Double(intTime1)/10
         let doubleTime2 = Double(intTime2)/10
         let doubleTime3 = Double(intTime3)/10
-        
-        //Convert to String to drop trailing zeros
-        let stringTime1 = String(doubleTime1)
-        let stringTime2 = String(doubleTime2)
-        let stringTime3 = String(doubleTime3)
-        
-        return(stringTime1, stringTime2, stringTime3)
+    
+        return(String(doubleTime1), String(doubleTime2), String(doubleTime3))
     }
 }

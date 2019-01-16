@@ -26,7 +26,6 @@ class OnstationViewController: UIViewController {
         let OnStationCalculation = OnStation()
         
         //Catch empty fields
-        
         checkTotalFuel(textField: totalFuel)
         checkOnstaFuelFlow(textField: onstaFuelFLow)
         checkReturnFuelFlow(textField: returnFuelFlow)
@@ -35,9 +34,9 @@ class OnstationViewController: UIViewController {
         checkOnTop(textField: onTop)
         
         //Calculate fields:
-        onStationTime.text = "\(OnStationCalculation.calculateOnSta(totalFuel: Double(totalFuel.text!)!, onStationFuelFlow: Double(onstaFuelFLow.text!)!, returnFuelFlow: Int(returnFuelFlow.text!)!, destDistance: Double(destDistance.text!)!, groundSpeed: Double(groundSpeed.text!)!, onTopFuel: Double(onTop.text!)!).stringOnStationTime) hrs"
+        onStationTime.text = "\(OnStationCalculation.calculateOnSta(totalFuel: Double(totalFuel.text!)!, onStationFuelFlow: Double(onstaFuelFLow.text!)!, returnFuelFlow: Int(returnFuelFlow.text!)!, destDistance: Double(destDistance.text!)!, groundSpeed: Double(groundSpeed.text!)!, onTopFuel: Double(onTop.text!)!).onStationTime) hrs"
         
-        goHomeFuel.text = "\(OnStationCalculation.calculateOnSta(totalFuel: Double(totalFuel.text!)!, onStationFuelFlow: Double(onstaFuelFLow.text!)!, returnFuelFlow: Int(returnFuelFlow.text!)!, destDistance: Double(destDistance.text!)!, groundSpeed: Double(groundSpeed.text!)!, onTopFuel: Double(onTop.text!)!).stringDepartFuel) lbs"
+        goHomeFuel.text = "\(OnStationCalculation.calculateOnSta(totalFuel: Double(totalFuel.text!)!, onStationFuelFlow: Double(onstaFuelFLow.text!)!, returnFuelFlow: Int(returnFuelFlow.text!)!, destDistance: Double(destDistance.text!)!, groundSpeed: Double(groundSpeed.text!)!, onTopFuel: Double(onTop.text!)!).departFuel) lbs"
     }
     
     override func viewDidLoad() {

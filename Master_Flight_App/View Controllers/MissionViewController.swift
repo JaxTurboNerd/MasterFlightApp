@@ -61,8 +61,8 @@ class MissionViewController: UIViewController {
         checkTotalFuel(textField: totalFuel)
         checkAltitude(textField: altitude)
         
-        maxRange.text = "\(missionCalculation.calculateMissionData(zfw: Double(zeroFuelWeight.text!)!, totalFuel: Double(totalFuel.text!)!, altitude: Double(altitude.text!)!).stringMaxRange) kts"
-        loiterSpeed.text = "\(missionCalculation.calculateMissionData(zfw: Double(zeroFuelWeight.text!)!, totalFuel: Double(totalFuel.text!)!, altitude: Double(altitude.text!)!).stringLoiterSpeed) kts"
+        maxRange.text = "\(missionCalculation.calculateMissionData(zfw: Double(zeroFuelWeight.text!)!, totalFuel: Double(totalFuel.text!)!, altitude: Double(altitude.text!)!).maxRange) kts"
+        loiterSpeed.text = "\(missionCalculation.calculateMissionData(zfw: Double(zeroFuelWeight.text!)!, totalFuel: Double(totalFuel.text!)!, altitude: Double(altitude.text!)!).loiterSpeed) kts"
 
         //Dismisses keyboard after click on Calculate button
         self.doneClicked()

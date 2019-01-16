@@ -25,7 +25,7 @@ struct TOPower {
     
     let SHP3500List = [856, 858, 860, 863, 865, 867, 869, 872, 875, 877, 879, 881, 884, 888, 890, 892, 895, 898, 901, 904, 906, 909, 912, 915, 917, 920, 923, 927, 930, 932, 935, 937, 941, 945, 949, 952, 956, 959, 961, 966, 970, 973, 976, 979, 983, 987, 990, 993, 996, 1001, 1006, 1010]
 
-    mutating func calculatePower(selectedPower: String, airTemp: Int, isAntiIceOn: Bool, pressureAltitude: Int) -> (stringSHP100:String, stringSHP95: String, predictedTIT: Int) {
+    mutating func calculatePower(selectedPower: String, airTemp: Int, isAntiIceOn: Bool, pressureAltitude: Int) -> (SHP100:String, SHP95: String, predictedTIT: Int) {
         var pressureCorrection = 0
         var SHP100 = 0
         var SHP95 = 0.0
@@ -75,12 +75,8 @@ struct TOPower {
         default:
             break
         }
-    
-        //Convert final SHP to type String
-        let stringSHP100 = String(SHP100)
-        let stringSHP95 = String(Int(SHP95))
         
-        return (stringSHP100, stringSHP95, predictedTIT)
+        return (String(SHP100), String(SHP95), predictedTIT)
     }
 }
 struct CalculateVroSpeed {

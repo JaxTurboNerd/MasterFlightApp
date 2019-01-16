@@ -11,23 +11,21 @@ import Foundation
 
 struct OnStation {
     
-    func calculateOnSta(totalFuel: Double, onStationFuelFlow: Double, returnFuelFlow: Int, destDistance: Double, groundSpeed: Double, onTopFuel: Double ) -> (stringOnStationTime: String, stringDepartFuel: String) {
+    func calculateOnSta(totalFuel: Double, onStationFuelFlow: Double, returnFuelFlow: Int, destDistance: Double, groundSpeed: Double, onTopFuel: Double ) -> (onStationTime: String, departFuel: String) {
         
+        //Catch zero based division errors:
+         if groundSpeed == 000 || onStationFuelFlow == 0000 {
+           return("Error", "Error")
+         }
+         else {
         
         //code for calculations
         let flyHomeFuel = Int((destDistance/groundSpeed) * Double(returnFuelFlow))
         let onStationFuel = Double(Int(totalFuel * 1000) - (Int(onTopFuel * 1000)) - flyHomeFuel)
         let onStationTime = (round(onStationFuel/onStationFuelFlow * 10)/10)
         let departFuel = flyHomeFuel + Int(onTopFuel * 1000)
-    
-        //Catch zero errors
-        if Double(returnFuelFlow) == 0 {
-            
+
+        return(String(onStationTime), String(departFuel))
         }
-        //convert to type String for labels
-        let stringOnStationTime = String(onStationTime)
-        let stringDepartFuel = String(departFuel)
-        
-        return(stringOnStationTime, stringDepartFuel)
     }
 }

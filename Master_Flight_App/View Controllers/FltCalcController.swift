@@ -10,8 +10,6 @@ import UIKit
 
 class FltCalcViewController: UIViewController {
     
-        //Mark: Properties
-    
     @IBOutlet weak var inputTime: UITextField!
     
     @IBOutlet weak var pic1Label: UILabel!
@@ -49,8 +47,6 @@ class FltCalcViewController: UIViewController {
     @objc func doneClicked() {
     view.endEditing(true)
     }
-
-    //MARK: Actions
     
     @IBAction func calculateTime(_ sender: UIButton) {
         
@@ -62,15 +58,15 @@ class FltCalcViewController: UIViewController {
         let flightCalculation = FlightTime()
         
         //Assign values to outlet labels
-        pic1Label.text = flightCalculation.calculateFlightTime(flightTime: Double(inputTime.text!)!).stringTime1
-        pic2Label.text = flightCalculation.calculateFlightTime(flightTime: Double(inputTime.text!)!).stringTime2
-        pic3Label.text = flightCalculation.calculateFlightTime(flightTime: Double(inputTime.text!)!).stringTime3
-        sic1Label.text = flightCalculation.calculateFlightTime(flightTime: Double(inputTime.text!)!).stringTime2
-        sic2Label.text = flightCalculation.calculateFlightTime(flightTime: Double(inputTime.text!)!).stringTime3
-        sic3Label.text = flightCalculation.calculateFlightTime(flightTime: Double(inputTime.text!)!).stringTime1
-        crew1Label.text = flightCalculation.calculateFlightTime(flightTime: Double(inputTime.text!)!).stringTime3
-        crew2Label.text = flightCalculation.calculateFlightTime(flightTime: Double(inputTime.text!)!).stringTime1
-        crew3Label.text = flightCalculation.calculateFlightTime(flightTime: Double(inputTime.text!)!).stringTime2
+        pic1Label.text = flightCalculation.calculateFlightTime(flightTime: Double(inputTime.text!)!).time1
+        pic2Label.text = flightCalculation.calculateFlightTime(flightTime: Double(inputTime.text!)!).time2
+        pic3Label.text = flightCalculation.calculateFlightTime(flightTime: Double(inputTime.text!)!).time3
+        sic1Label.text = flightCalculation.calculateFlightTime(flightTime: Double(inputTime.text!)!).time2
+        sic2Label.text = flightCalculation.calculateFlightTime(flightTime: Double(inputTime.text!)!).time3
+        sic3Label.text = flightCalculation.calculateFlightTime(flightTime: Double(inputTime.text!)!).time1
+        crew1Label.text = flightCalculation.calculateFlightTime(flightTime: Double(inputTime.text!)!).time3
+        crew2Label.text = flightCalculation.calculateFlightTime(flightTime: Double(inputTime.text!)!).time1
+        crew3Label.text = flightCalculation.calculateFlightTime(flightTime: Double(inputTime.text!)!).time2
         
         //Dismisses keyboard after click on Calculate button
         self.doneClicked()
