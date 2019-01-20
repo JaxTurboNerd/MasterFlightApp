@@ -76,7 +76,7 @@ struct TOPower {
             break
         }
         
-        return (String(SHP100), String(SHP95), predictedTIT)
+        return (String(SHP100), String(Int(SHP95)), predictedTIT)
     }
 }
 struct CalculateVroSpeed {

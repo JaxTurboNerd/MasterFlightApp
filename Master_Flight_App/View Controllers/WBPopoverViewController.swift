@@ -12,6 +12,7 @@ class WBPopoverViewController: UIViewController, UITableViewDataSource, UITableV
     
     @IBOutlet weak var tableView: UITableView!
     
+    //Array of aircraft in inventory
     var aircraftList = ["N403SK", "N480SK","N741SK", "N144CS", "N145CS", "N146CS", "N149CS"]
     
     override func viewDidLoad() {
@@ -29,7 +30,7 @@ class WBPopoverViewController: UIViewController, UITableViewDataSource, UITableV
         cell.setup(title: aircraftList[indexPath.row])
         return cell
     }
-    
+    //function for selecting the aircraft on the popover view.  
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         
         let selectedAircraftCell = indexPath.row
@@ -39,7 +40,7 @@ class WBPopoverViewController: UIViewController, UITableViewDataSource, UITableV
             //Instantiate new LRT W&B view controller to pass selected aircraft number to the W&B view controller label:
             let Storyboard = UIStoryboard(name: "Main", bundle: nil)
             let LRTVC = Storyboard.instantiateViewController(withIdentifier: "LRTWeightBalanceViewController") as! LRTWeightBalanceViewController
-            LRTVC.finalSelectedAircraft = aircraftList[indexPath.row]
+            LRTVC.selectedAircraft = aircraftList[indexPath.row]
             self.show(LRTVC, sender: self)
         case 3...6:
             let Storyboard = UIStoryboard(name: "Main", bundle: nil)
