@@ -649,10 +649,10 @@
                                 </subviews>
                             </stackView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="bottom" spacing="12" translatesAutoresizingMaskIntoConstraints="NO" id="i0G-EX-jZS">
-                                <rect key="frame" x="30" y="189.5" width="295.5" height="743"/>
+                                <rect key="frame" x="30" y="189.5" width="296" height="701"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" spacing="40" translatesAutoresizingMaskIntoConstraints="NO" id="0lc-mR-hya">
-                                        <rect key="frame" x="76" y="0.0" width="219.5" height="29"/>
+                                        <rect key="frame" x="76.5" y="0.0" width="219.5" height="29"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Position:" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ViW-6y-Wib">
                                                 <rect key="frame" x="0.0" y="0.0" width="95" height="29"/>
@@ -669,7 +669,7 @@
                                         </subviews>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" spacing="61" translatesAutoresizingMaskIntoConstraints="NO" id="VsX-sL-Xxe">
-                                        <rect key="frame" x="137.5" y="41" width="158" height="30"/>
+                                        <rect key="frame" x="137.5" y="41" width="158.5" height="30"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Pilot" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="H3H-QK-bSu">
                                                 <rect key="frame" x="0.0" y="0.0" width="38.5" height="30"/>
@@ -677,8 +677,8 @@
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="000" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="F6d-uY-fHm" customClass="AllowedCharsTextField" customModule="Master_Flight_App" customModuleProvider="target">
-                                                <rect key="frame" x="99.5" y="0.0" width="58.5" height="30"/>
+                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="000" borderStyle="roundedRect" placeholder="000" textAlignment="right" clearsOnBeginEditing="YES" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="F6d-uY-fHm" customClass="AllowedCharsTextField" customModule="Master_Flight_App" customModuleProvider="target">
+                                                <rect key="frame" x="99.5" y="0.0" width="59" height="30"/>
                                                 <color key="backgroundColor" red="0.99991279840000002" green="1" blue="0.99988144639999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <nil key="textColor"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
@@ -693,7 +693,7 @@
                                         </subviews>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" spacing="61" translatesAutoresizingMaskIntoConstraints="NO" id="VS6-AO-IUG">
-                                        <rect key="frame" x="103.5" y="83" width="192" height="30"/>
+                                        <rect key="frame" x="103.5" y="83" width="192.5" height="30"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Co-Pilot" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zng-Pc-EVL">
                                                 <rect key="frame" x="0.0" y="0.0" width="72.5" height="30"/>
@@ -701,8 +701,8 @@
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="000" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="rdo-Sp-TeC" customClass="AllowedCharsTextField" customModule="Master_Flight_App" customModuleProvider="target">
-                                                <rect key="frame" x="133.5" y="0.0" width="58.5" height="30"/>
+                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="000" borderStyle="roundedRect" placeholder="000" textAlignment="right" clearsOnBeginEditing="YES" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="rdo-Sp-TeC" customClass="AllowedCharsTextField" customModule="Master_Flight_App" customModuleProvider="target">
+                                                <rect key="frame" x="133.5" y="0.0" width="59" height="30"/>
                                                 <color key="backgroundColor" red="0.99991279840000002" green="1" blue="0.99988144639999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <nil key="textColor"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
@@ -717,7 +717,7 @@
                                         </subviews>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" spacing="61" translatesAutoresizingMaskIntoConstraints="NO" id="rKe-7l-K1n">
-                                        <rect key="frame" x="142.5" y="125" width="153" height="30"/>
+                                        <rect key="frame" x="142.5" y="125" width="153.5" height="30"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="F.E." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7h8-v1-IfI">
                                                 <rect key="frame" x="0.0" y="0.0" width="33.5" height="30"/>
@@ -725,8 +725,8 @@
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="000" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="mp5-nq-f7s" customClass="AllowedCharsTextField" customModule="Master_Flight_App" customModuleProvider="target">
-                                                <rect key="frame" x="94.5" y="0.0" width="58.5" height="30"/>
+                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="000" borderStyle="roundedRect" placeholder="000" textAlignment="right" clearsOnBeginEditing="YES" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="mp5-nq-f7s" customClass="AllowedCharsTextField" customModule="Master_Flight_App" customModuleProvider="target">
+                                                <rect key="frame" x="94.5" y="0.0" width="59" height="30"/>
                                                 <nil key="textColor"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                                 <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
@@ -740,7 +740,7 @@
                                         </subviews>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" spacing="61" translatesAutoresizingMaskIntoConstraints="NO" id="ksX-zR-eKQ">
-                                        <rect key="frame" x="0.0" y="167" width="295.5" height="30"/>
+                                        <rect key="frame" x="0.0" y="167" width="296" height="30"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Flight Station Observer" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="B9j-6y-5P0">
                                                 <rect key="frame" x="0.0" y="0.0" width="176" height="30"/>
@@ -748,8 +748,8 @@
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="000" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ygM-sb-ddv" customClass="AllowedCharsTextField" customModule="Master_Flight_App" customModuleProvider="target">
-                                                <rect key="frame" x="237" y="0.0" width="58.5" height="30"/>
+                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="000" borderStyle="roundedRect" placeholder="000" textAlignment="right" clearsOnBeginEditing="YES" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="ygM-sb-ddv" customClass="AllowedCharsTextField" customModule="Master_Flight_App" customModuleProvider="target">
+                                                <rect key="frame" x="237" y="0.0" width="59" height="30"/>
                                                 <nil key="textColor"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                                 <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
@@ -763,7 +763,7 @@
                                         </subviews>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" spacing="66" translatesAutoresizingMaskIntoConstraints="NO" id="MaN-Pc-rXL">
-                                        <rect key="frame" x="9.5" y="209" width="286" height="30"/>
+                                        <rect key="frame" x="9.5" y="209" width="286.5" height="30"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Port Fwd Observer" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gnC-a0-4Rt">
                                                 <rect key="frame" x="0.0" y="0.0" width="161.5" height="30"/>
@@ -771,8 +771,8 @@
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="000" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="DN9-NC-zev" customClass="AllowedCharsTextField" customModule="Master_Flight_App" customModuleProvider="target">
-                                                <rect key="frame" x="227.5" y="0.0" width="58.5" height="30"/>
+                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="000" borderStyle="roundedRect" placeholder="000" textAlignment="right" clearsOnBeginEditing="YES" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="DN9-NC-zev" customClass="AllowedCharsTextField" customModule="Master_Flight_App" customModuleProvider="target">
+                                                <rect key="frame" x="227.5" y="0.0" width="59" height="30"/>
                                                 <nil key="textColor"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                                 <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
@@ -786,7 +786,7 @@
                                         </subviews>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" spacing="66" translatesAutoresizingMaskIntoConstraints="NO" id="k5t-Nb-ffK">
-                                        <rect key="frame" x="15" y="251" width="280.5" height="30"/>
+                                        <rect key="frame" x="15" y="251" width="281" height="30"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Stb Fwd Observer" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zM4-o7-9bF">
                                                 <rect key="frame" x="0.0" y="0.0" width="156" height="30"/>
@@ -794,8 +794,8 @@
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="000" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="QjC-Cp-63S" customClass="AllowedCharsTextField" customModule="Master_Flight_App" customModuleProvider="target">
-                                                <rect key="frame" x="222" y="0.0" width="58.5" height="30"/>
+                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="000" borderStyle="roundedRect" placeholder="000" textAlignment="right" clearsOnBeginEditing="YES" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="QjC-Cp-63S" customClass="AllowedCharsTextField" customModule="Master_Flight_App" customModuleProvider="target">
+                                                <rect key="frame" x="222" y="0.0" width="59" height="30"/>
                                                 <nil key="textColor"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                                 <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
@@ -809,7 +809,7 @@
                                         </subviews>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" spacing="66" translatesAutoresizingMaskIntoConstraints="NO" id="KIp-Zx-BzL">
-                                        <rect key="frame" x="32" y="293" width="263.5" height="30"/>
+                                        <rect key="frame" x="20" y="293" width="276" height="30"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Fwd Cargo Area" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DOD-qT-hpg">
                                                 <rect key="frame" x="0.0" y="0.0" width="139" height="30"/>
@@ -817,8 +817,8 @@
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="000" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="vfC-AM-1Dj" customClass="AllowedCharsTextField" customModule="Master_Flight_App" customModuleProvider="target">
-                                                <rect key="frame" x="205" y="0.0" width="58.5" height="30"/>
+                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="0000" borderStyle="roundedRect" placeholder="000" textAlignment="right" clearsOnBeginEditing="YES" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="vfC-AM-1Dj" customClass="AllowedCharsTextField" customModule="Master_Flight_App" customModuleProvider="target">
+                                                <rect key="frame" x="205" y="0.0" width="71" height="30"/>
                                                 <nil key="textColor"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                                 <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
@@ -832,7 +832,7 @@
                                         </subviews>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" spacing="65" translatesAutoresizingMaskIntoConstraints="NO" id="Fz6-aQ-T9r">
-                                        <rect key="frame" x="120" y="335" width="175.5" height="30"/>
+                                        <rect key="frame" x="120" y="335" width="176" height="30"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="TFO 1" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LKm-g4-5Fk">
                                                 <rect key="frame" x="0.0" y="0.0" width="52" height="30"/>
@@ -840,8 +840,8 @@
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="000" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="gVu-fb-TqX" customClass="AllowedCharsTextField" customModule="Master_Flight_App" customModuleProvider="target">
-                                                <rect key="frame" x="117" y="0.0" width="58.5" height="30"/>
+                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="000" borderStyle="roundedRect" placeholder="000" textAlignment="right" clearsOnBeginEditing="YES" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="gVu-fb-TqX" customClass="AllowedCharsTextField" customModule="Master_Flight_App" customModuleProvider="target">
+                                                <rect key="frame" x="117" y="0.0" width="59" height="30"/>
                                                 <nil key="textColor"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                                 <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
@@ -855,7 +855,7 @@
                                         </subviews>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" spacing="65" translatesAutoresizingMaskIntoConstraints="NO" id="qvt-LA-VFc">
-                                        <rect key="frame" x="117.5" y="377" width="178" height="30"/>
+                                        <rect key="frame" x="117.5" y="377" width="178.5" height="30"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="TFO 2" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="W0z-Tg-eJW">
                                                 <rect key="frame" x="0.0" y="0.0" width="54.5" height="30"/>
@@ -863,8 +863,8 @@
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="000" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Z32-g0-DcJ" customClass="AllowedCharsTextField" customModule="Master_Flight_App" customModuleProvider="target">
-                                                <rect key="frame" x="119.5" y="0.0" width="58.5" height="30"/>
+                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="000" borderStyle="roundedRect" placeholder="000" textAlignment="right" clearsOnBeginEditing="YES" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="Z32-g0-DcJ" customClass="AllowedCharsTextField" customModule="Master_Flight_App" customModuleProvider="target">
+                                                <rect key="frame" x="119.5" y="0.0" width="59" height="30"/>
                                                 <nil key="textColor"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                                 <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
@@ -878,7 +878,7 @@
                                         </subviews>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" spacing="65" translatesAutoresizingMaskIntoConstraints="NO" id="chy-Eq-dkI">
-                                        <rect key="frame" x="117" y="419" width="178.5" height="30"/>
+                                        <rect key="frame" x="117" y="419" width="179" height="30"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="TFO 3" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Yqp-jz-7Kq">
                                                 <rect key="frame" x="0.0" y="0.0" width="55" height="30"/>
@@ -886,8 +886,8 @@
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="000" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="QTF-jr-sfc" customClass="AllowedCharsTextField" customModule="Master_Flight_App" customModuleProvider="target">
-                                                <rect key="frame" x="120" y="0.0" width="58.5" height="30"/>
+                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="000" borderStyle="roundedRect" placeholder="000" textAlignment="right" clearsOnBeginEditing="YES" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="QTF-jr-sfc" customClass="AllowedCharsTextField" customModule="Master_Flight_App" customModuleProvider="target">
+                                                <rect key="frame" x="120" y="0.0" width="59" height="30"/>
                                                 <nil key="textColor"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                                 <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
@@ -901,7 +901,7 @@
                                         </subviews>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" spacing="65" translatesAutoresizingMaskIntoConstraints="NO" id="0Cl-eg-dQG">
-                                        <rect key="frame" x="117" y="461" width="178.5" height="30"/>
+                                        <rect key="frame" x="117" y="461" width="179" height="30"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="TFO 4" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GOx-r6-b9i">
                                                 <rect key="frame" x="0.0" y="0.0" width="55" height="30"/>
@@ -909,8 +909,8 @@
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="000" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="EbB-Tl-S6m" customClass="AllowedCharsTextField" customModule="Master_Flight_App" customModuleProvider="target">
-                                                <rect key="frame" x="120" y="0.0" width="58.5" height="30"/>
+                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="000" borderStyle="roundedRect" placeholder="000" textAlignment="right" clearsOnBeginEditing="YES" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="EbB-Tl-S6m" customClass="AllowedCharsTextField" customModule="Master_Flight_App" customModuleProvider="target">
+                                                <rect key="frame" x="120" y="0.0" width="59" height="30"/>
                                                 <nil key="textColor"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                                 <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
@@ -924,7 +924,7 @@
                                         </subviews>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" spacing="65" translatesAutoresizingMaskIntoConstraints="NO" id="qZN-vh-Tad">
-                                        <rect key="frame" x="9.5" y="503" width="286" height="30"/>
+                                        <rect key="frame" x="10" y="503" width="286" height="30"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="First Class Seats:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2D3-Wu-nXV">
                                                 <rect key="frame" x="0.0" y="0.0" width="150" height="30"/>
@@ -932,7 +932,7 @@
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="0000" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="mo3-jS-jGv" customClass="AllowedCharsTextField" customModule="Master_Flight_App" customModuleProvider="target">
+                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="0000" borderStyle="roundedRect" placeholder="0000" textAlignment="right" clearsOnBeginEditing="YES" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="mo3-jS-jGv" customClass="AllowedCharsTextField" customModule="Master_Flight_App" customModuleProvider="target">
                                                 <rect key="frame" x="215" y="0.0" width="71" height="30"/>
                                                 <nil key="textColor"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
@@ -946,31 +946,8 @@
                                             </textField>
                                         </subviews>
                                     </stackView>
-                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="65" translatesAutoresizingMaskIntoConstraints="NO" id="Uz0-eT-GpR">
-                                        <rect key="frame" x="91.5" y="545" width="204" height="30"/>
-                                        <subviews>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="XXXXXX" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6j8-Rj-CGU">
-                                                <rect key="frame" x="0.0" y="0.0" width="78.5" height="30"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
-                                                <nil key="textColor"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
-                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="XXX" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="toU-5B-cXo" customClass="AllowedCharsTextField" customModule="Master_Flight_App" customModuleProvider="target">
-                                                <rect key="frame" x="143.5" y="0.0" width="60.5" height="30"/>
-                                                <nil key="textColor"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
-                                                <textInputTraits key="textInputTraits"/>
-                                                <userDefinedRuntimeAttributes>
-                                                    <userDefinedRuntimeAttribute type="string" keyPath="allowedChars" value="0123456789"/>
-                                                    <userDefinedRuntimeAttribute type="number" keyPath="maxLength">
-                                                        <integer key="value" value="4"/>
-                                                    </userDefinedRuntimeAttribute>
-                                                </userDefinedRuntimeAttributes>
-                                            </textField>
-                                        </subviews>
-                                    </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" spacing="58" translatesAutoresizingMaskIntoConstraints="NO" id="eiC-d6-A2T">
-                                        <rect key="frame" x="28.5" y="587" width="267" height="30"/>
+                                        <rect key="frame" x="28.5" y="545" width="267.5" height="30"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Port Aft Observer" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="m6z-Tm-uCw">
                                                 <rect key="frame" x="0.0" y="0.0" width="150.5" height="30"/>
@@ -978,8 +955,8 @@
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="000" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="oVy-V8-Q3r" customClass="AllowedCharsTextField" customModule="Master_Flight_App" customModuleProvider="target">
-                                                <rect key="frame" x="208.5" y="0.0" width="58.5" height="30"/>
+                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="000" borderStyle="roundedRect" placeholder="000" textAlignment="right" clearsOnBeginEditing="YES" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="oVy-V8-Q3r" customClass="AllowedCharsTextField" customModule="Master_Flight_App" customModuleProvider="target">
+                                                <rect key="frame" x="208.5" y="0.0" width="59" height="30"/>
                                                 <nil key="textColor"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                                 <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
@@ -993,7 +970,7 @@
                                         </subviews>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" spacing="58" translatesAutoresizingMaskIntoConstraints="NO" id="AO3-TA-5sx">
-                                        <rect key="frame" x="34" y="629" width="261.5" height="30"/>
+                                        <rect key="frame" x="34" y="587" width="262" height="30"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Stb Aft Observer" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cU1-NO-scd">
                                                 <rect key="frame" x="0.0" y="0.0" width="145" height="30"/>
@@ -1001,8 +978,8 @@
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="000" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="hL2-qt-YyZ" customClass="AllowedCharsTextField" customModule="Master_Flight_App" customModuleProvider="target">
-                                                <rect key="frame" x="203" y="0.0" width="58.5" height="30"/>
+                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="000" borderStyle="roundedRect" placeholder="000" textAlignment="right" clearsOnBeginEditing="YES" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="hL2-qt-YyZ" customClass="AllowedCharsTextField" customModule="Master_Flight_App" customModuleProvider="target">
+                                                <rect key="frame" x="203" y="0.0" width="59" height="30"/>
                                                 <nil key="textColor"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                                 <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
@@ -1016,7 +993,7 @@
                                         </subviews>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" spacing="52" translatesAutoresizingMaskIntoConstraints="NO" id="O6R-Vp-8HD">
-                                        <rect key="frame" x="130.5" y="671" width="165" height="30"/>
+                                        <rect key="frame" x="130.5" y="629" width="165.5" height="30"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Galley" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Bpy-gl-NmF">
                                                 <rect key="frame" x="0.0" y="0.0" width="54.5" height="30"/>
@@ -1024,8 +1001,8 @@
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="000" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Zzw-F3-wcm" customClass="AllowedCharsTextField" customModule="Master_Flight_App" customModuleProvider="target">
-                                                <rect key="frame" x="106.5" y="0.0" width="58.5" height="30"/>
+                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="000" borderStyle="roundedRect" placeholder="000" textAlignment="right" clearsOnBeginEditing="YES" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="Zzw-F3-wcm" customClass="AllowedCharsTextField" customModule="Master_Flight_App" customModuleProvider="target">
+                                                <rect key="frame" x="106.5" y="0.0" width="59" height="30"/>
                                                 <nil key="textColor"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                                 <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
@@ -1039,7 +1016,7 @@
                                         </subviews>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" spacing="58" translatesAutoresizingMaskIntoConstraints="NO" id="zra-jV-ZzE">
-                                        <rect key="frame" x="90" y="713" width="205.5" height="30"/>
+                                        <rect key="frame" x="90" y="671" width="206" height="30"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Bunk Area" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bxe-tr-ZTR">
                                                 <rect key="frame" x="0.0" y="0.0" width="89" height="30"/>
@@ -1047,8 +1024,8 @@
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="000" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="buf-2L-57W" customClass="AllowedCharsTextField" customModule="Master_Flight_App" customModuleProvider="target">
-                                                <rect key="frame" x="147" y="0.0" width="58.5" height="30"/>
+                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="000" borderStyle="roundedRect" placeholder="000" textAlignment="right" clearsOnBeginEditing="YES" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="buf-2L-57W" customClass="AllowedCharsTextField" customModule="Master_Flight_App" customModuleProvider="target">
+                                                <rect key="frame" x="147" y="0.0" width="59" height="30"/>
                                                 <nil key="textColor"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                                 <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
@@ -1064,10 +1041,10 @@
                                 </subviews>
                             </stackView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="bottom" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="Ike-nW-9oS">
-                                <rect key="frame" x="467" y="189.5" width="204.5" height="179"/>
+                                <rect key="frame" x="466.5" y="189.5" width="205" height="179"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" spacing="35" translatesAutoresizingMaskIntoConstraints="NO" id="KzC-nf-q7x">
-                                        <rect key="frame" x="31.5" y="0.0" width="173" height="29"/>
+                                        <rect key="frame" x="32" y="0.0" width="173" height="29"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Fuel:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KV4-JQ-xp4">
                                                 <rect key="frame" x="0.0" y="0.0" width="53.5" height="29"/>
@@ -1084,7 +1061,7 @@
                                         </subviews>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="3c6-bJ-rn1">
-                                        <rect key="frame" x="2.5" y="49" width="202" height="30"/>
+                                        <rect key="frame" x="2.5" y="49" width="202.5" height="30"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tanks 1/4:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="o6D-a2-TWK">
                                                 <rect key="frame" x="0.0" y="0.0" width="88.5" height="30"/>
@@ -1092,8 +1069,8 @@
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="00000" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="I4r-kF-rLi" customClass="AllowedCharsTextField" customModule="Master_Flight_App" customModuleProvider="target">
-                                                <rect key="frame" x="118.5" y="0.0" width="83.5" height="30"/>
+                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="00000" borderStyle="roundedRect" placeholder="00000" textAlignment="right" clearsOnBeginEditing="YES" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="I4r-kF-rLi" customClass="AllowedCharsTextField" customModule="Master_Flight_App" customModuleProvider="target">
+                                                <rect key="frame" x="118.5" y="0.0" width="84" height="30"/>
                                                 <nil key="textColor"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                                 <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
@@ -1107,7 +1084,7 @@
                                         </subviews>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="4qt-y7-wTP">
-                                        <rect key="frame" x="0.0" y="99" width="204.5" height="30"/>
+                                        <rect key="frame" x="0.0" y="99" width="205" height="30"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tanks 2/3:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TgU-PB-rhR">
                                                 <rect key="frame" x="0.0" y="0.0" width="91" height="30"/>
@@ -1115,8 +1092,8 @@
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="00000" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="eem-lM-2Hy" customClass="AllowedCharsTextField" customModule="Master_Flight_App" customModuleProvider="target">
-                                                <rect key="frame" x="121" y="0.0" width="83.5" height="30"/>
+                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="00000" borderStyle="roundedRect" placeholder="00000" textAlignment="right" clearsOnBeginEditing="YES" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="eem-lM-2Hy" customClass="AllowedCharsTextField" customModule="Master_Flight_App" customModuleProvider="target">
+                                                <rect key="frame" x="121" y="0.0" width="84" height="30"/>
                                                 <nil key="textColor"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                                 <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
@@ -1130,7 +1107,7 @@
                                         </subviews>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="Wy3-gS-qfx">
-                                        <rect key="frame" x="25" y="149" width="179.5" height="30"/>
+                                        <rect key="frame" x="28" y="149" width="177" height="30"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tank 5:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Cx8-k9-ihh">
                                                 <rect key="frame" x="0.0" y="0.0" width="63" height="30"/>
@@ -1138,11 +1115,11 @@
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="XXXXX" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="RX0-Ip-TQ2" customClass="AllowedCharsTextField" customModule="Master_Flight_App" customModuleProvider="target">
-                                                <rect key="frame" x="93" y="0.0" width="86.5" height="30"/>
+                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="00000" borderStyle="roundedRect" placeholder="00000" textAlignment="right" clearsOnBeginEditing="YES" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="RX0-Ip-TQ2" customClass="AllowedCharsTextField" customModule="Master_Flight_App" customModuleProvider="target">
+                                                <rect key="frame" x="93" y="0.0" width="84" height="30"/>
                                                 <nil key="textColor"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
-                                                <textInputTraits key="textInputTraits"/>
+                                                <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
                                                 <userDefinedRuntimeAttributes>
                                                     <userDefinedRuntimeAttribute type="string" keyPath="allowedChars" value="0123456789"/>
                                                     <userDefinedRuntimeAttribute type="number" keyPath="maxLength">
@@ -1174,7 +1151,7 @@
                                             </label>
                                         </subviews>
                                     </stackView>
-                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="75" translatesAutoresizingMaskIntoConstraints="NO" id="L5F-SM-1H4">
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" spacing="75" translatesAutoresizingMaskIntoConstraints="NO" id="L5F-SM-1H4">
                                         <rect key="frame" x="136" y="36" width="158.5" height="30"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="B" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3UM-p9-fmE">
@@ -1183,7 +1160,7 @@
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="0000" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Gie-nW-EyR" customClass="AllowedCharsTextField" customModule="Master_Flight_App" customModuleProvider="target">
+                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="0000" borderStyle="roundedRect" placeholder="0000" textAlignment="natural" clearsOnBeginEditing="YES" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="Gie-nW-EyR" customClass="AllowedCharsTextField" customModule="Master_Flight_App" customModuleProvider="target">
                                                 <rect key="frame" x="87.5" y="0.0" width="71" height="30"/>
                                                 <nil key="textColor"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
@@ -1206,7 +1183,7 @@
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="0000" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="fxX-qJ-H6n" customClass="AllowedCharsTextField" customModule="Master_Flight_App" customModuleProvider="target">
+                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="0000" borderStyle="roundedRect" placeholder="0000" textAlignment="natural" clearsOnBeginEditing="YES" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="fxX-qJ-H6n" customClass="AllowedCharsTextField" customModule="Master_Flight_App" customModuleProvider="target">
                                                 <rect key="frame" x="89.5" y="0.0" width="71" height="30"/>
                                                 <nil key="textColor"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
@@ -1229,7 +1206,7 @@
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="0000" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="0lk-Q3-plC" customClass="AllowedCharsTextField" customModule="Master_Flight_App" customModuleProvider="target">
+                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="0000" borderStyle="roundedRect" placeholder="0000" textAlignment="natural" clearsOnBeginEditing="YES" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="0lk-Q3-plC" customClass="AllowedCharsTextField" customModule="Master_Flight_App" customModuleProvider="target">
                                                 <rect key="frame" x="89" y="0.0" width="71" height="30"/>
                                                 <nil key="textColor"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
@@ -1252,7 +1229,7 @@
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="0000" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="SWf-ax-bMj" customClass="AllowedCharsTextField" customModule="Master_Flight_App" customModuleProvider="target">
+                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="0000" borderStyle="roundedRect" placeholder="0000" textAlignment="natural" clearsOnBeginEditing="YES" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="SWf-ax-bMj" customClass="AllowedCharsTextField" customModule="Master_Flight_App" customModuleProvider="target">
                                                 <rect key="frame" x="86.5" y="0.0" width="71" height="30"/>
                                                 <nil key="textColor"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
@@ -1275,7 +1252,7 @@
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="0000" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="USn-gm-VD1" customClass="AllowedCharsTextField" customModule="Master_Flight_App" customModuleProvider="target">
+                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="0000" borderStyle="roundedRect" placeholder="0000" textAlignment="natural" clearsOnBeginEditing="YES" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="USn-gm-VD1" customClass="AllowedCharsTextField" customModule="Master_Flight_App" customModuleProvider="target">
                                                 <rect key="frame" x="86" y="0.0" width="71" height="30"/>
                                                 <nil key="textColor"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
@@ -1298,7 +1275,7 @@
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="0000" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="5dW-T9-22O" customClass="AllowedCharsTextField" customModule="Master_Flight_App" customModuleProvider="target">
+                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="0000" borderStyle="roundedRect" placeholder="0000" textAlignment="natural" clearsOnBeginEditing="YES" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="5dW-T9-22O" customClass="AllowedCharsTextField" customModule="Master_Flight_App" customModuleProvider="target">
                                                 <rect key="frame" x="89.5" y="0.0" width="71" height="30"/>
                                                 <nil key="textColor"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
@@ -1403,7 +1380,7 @@
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="0000" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="bcX-7C-0xt" customClass="AllowedCharsTextField" customModule="Master_Flight_App" customModuleProvider="target">
+                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="0000" borderStyle="roundedRect" placeholder="0000" textAlignment="center" clearsOnBeginEditing="YES" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="bcX-7C-0xt" customClass="AllowedCharsTextField" customModule="Master_Flight_App" customModuleProvider="target">
                                                 <rect key="frame" x="0.0" y="54" width="94.5" height="31"/>
                                                 <nil key="textColor"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
@@ -1430,7 +1407,7 @@
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="0000" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="LTy-BU-ndh" customClass="AllowedCharsTextField" customModule="Master_Flight_App" customModuleProvider="target">
+                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="0000" borderStyle="roundedRect" placeholder="0000" textAlignment="center" clearsOnBeginEditing="YES" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="LTy-BU-ndh" customClass="AllowedCharsTextField" customModule="Master_Flight_App" customModuleProvider="target">
                                                 <rect key="frame" x="0.0" y="55" width="100" height="30"/>
                                                 <nil key="textColor"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
@@ -1584,7 +1561,7 @@
                                 </subviews>
                             </stackView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="bottom" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="vhj-C8-mEw">
-                                <rect key="frame" x="70" y="204.5" width="319" height="704"/>
+                                <rect key="frame" x="70" y="204.5" width="319" height="659"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" spacing="40" translatesAutoresizingMaskIntoConstraints="NO" id="Ger-pg-v61">
                                         <rect key="frame" x="106.5" y="0.0" width="212.5" height="29"/>
@@ -1833,31 +1810,8 @@
                                             </textField>
                                         </subviews>
                                     </stackView>
-                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="61" translatesAutoresizingMaskIntoConstraints="NO" id="l1K-FW-1zX">
-                                        <rect key="frame" x="134" y="494" width="185" height="30"/>
-                                        <subviews>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="XXXXX" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="q2Z-no-tK0">
-                                                <rect key="frame" x="0.0" y="0.0" width="65.5" height="30"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
-                                                <nil key="textColor"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
-                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="000" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Ti1-6c-NkU" customClass="AllowedCharsTextField" customModule="Master_Flight_App" customModuleProvider="target">
-                                                <rect key="frame" x="126.5" y="0.0" width="58.5" height="30"/>
-                                                <nil key="textColor"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
-                                                <textInputTraits key="textInputTraits" keyboardType="phonePad"/>
-                                                <userDefinedRuntimeAttributes>
-                                                    <userDefinedRuntimeAttribute type="string" keyPath="allowedChars" value="0123456789"/>
-                                                    <userDefinedRuntimeAttribute type="number" keyPath="maxLength">
-                                                        <integer key="value" value="3"/>
-                                                    </userDefinedRuntimeAttribute>
-                                                </userDefinedRuntimeAttributes>
-                                            </textField>
-                                        </subviews>
-                                    </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" spacing="61" translatesAutoresizingMaskIntoConstraints="NO" id="ATc-CI-p0u">
-                                        <rect key="frame" x="43.5" y="539" width="275.5" height="30"/>
+                                        <rect key="frame" x="43.5" y="494" width="275.5" height="30"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Port Aft Observer:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="C2M-gH-CXZ">
                                                 <rect key="frame" x="0.0" y="0.0" width="156" height="30"/>
@@ -1880,7 +1834,7 @@
                                         </subviews>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" spacing="61" translatesAutoresizingMaskIntoConstraints="NO" id="Yqs-VZ-p0m">
-                                        <rect key="frame" x="49" y="584" width="270" height="30"/>
+                                        <rect key="frame" x="49" y="539" width="270" height="30"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Stb Aft Observer:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Y5b-au-GFT">
                                                 <rect key="frame" x="0.0" y="0.0" width="150.5" height="30"/>
@@ -1903,7 +1857,7 @@
                                         </subviews>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" spacing="61" translatesAutoresizingMaskIntoConstraints="NO" id="CaI-zU-qAE">
-                                        <rect key="frame" x="139.5" y="629" width="179.5" height="30"/>
+                                        <rect key="frame" x="139.5" y="584" width="179.5" height="30"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Galley:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iqU-yO-Kyc">
                                                 <rect key="frame" x="0.0" y="0.0" width="60" height="30"/>
@@ -1926,7 +1880,7 @@
                                         </subviews>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" spacing="61" translatesAutoresizingMaskIntoConstraints="NO" id="aTp-CQ-PTM">
-                                        <rect key="frame" x="105" y="674" width="214" height="30"/>
+                                        <rect key="frame" x="105" y="629" width="214" height="30"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Bunk Area:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="g5W-6Y-ZE8">
                                                 <rect key="frame" x="0.0" y="0.0" width="94.5" height="30"/>
@@ -4291,7 +4245,7 @@
         <image name="waves" width="38" height="38"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="5Ob-ks-8X4"/>
+        <segue reference="YLC-ZL-m1n"/>
         <segue reference="uci-Qf-gOr"/>
         <segue reference="QyB-sv-0U4"/>
     </inferredMetricsTieBreakers>

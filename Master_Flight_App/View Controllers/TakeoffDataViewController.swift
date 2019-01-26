@@ -61,6 +61,47 @@ class TakeoffDataViewController: UIViewController, UIPickerViewDelegate, UIPicke
     @IBOutlet weak var setPowerLabel: UILabel!
     @IBOutlet weak var TIT_Picker: UIPickerView!
     
+    override func viewDidLoad() {
+        
+        super.viewDidLoad()
+        //Set text fields to values computed in W&B VC:
+        grossWeight.text = globalGW
+        zeroFuelWeight.text = globalZFW
+        
+        //Right align textfields with decimal
+        centerOfGravity.textAlignment = .right
+        zeroFuelWeight.textAlignment = .right
+        grossWeight.textAlignment = .right
+        
+        //Add Done Button to top of keypad
+        let toolBar = UIToolbar()
+        toolBar.sizeToFit()
+        
+        //pushes the done button to the right side of the toolbar
+        let flexibleSpace = UIBarButtonItem(barButtonSystemItem: UIBarButtonItem.SystemItem.flexibleSpace, target: nil, action: nil)
+        
+        //adds done button to a toolbar above the keypad
+        let doneButton = UIBarButtonItem(barButtonSystemItem: UIBarButtonItem.SystemItem.done, target: self, action: #selector(self.doneClicked))
+        
+        let minusButton = UIBarButtonItem(title: "—",style: .plain, target: self, action: #selector(toggleMinus))
+        
+        toolBar.setItems([minusButton, flexibleSpace, doneButton], animated: false)
+        
+        centerOfGravity.inputAccessoryView = toolBar
+        outsideAirTemp.inputAccessoryView = toolBar
+        grossWeight.inputAccessoryView = toolBar
+        pressureAltitude.inputAccessoryView = toolBar
+        zeroFuelWeight.inputAccessoryView = toolBar
+        runway.inputAccessoryView = toolBar
+        windSpeed.inputAccessoryView = toolBar
+        windDirection.inputAccessoryView = toolBar
+        
+        //dismiss keyboard by tapping anywhere
+        self.view.addGestureRecognizer(UITapGestureRecognizer(target:
+            self.view, action: #selector(UIView.endEditing(_:))))
+    }
+    
+    //Calculate Button Actions:
     @IBAction func calculatePower(_ sender: UIButton) {
         //Create Instance Variables:
         var powerCalculation = TOPower()
@@ -82,11 +123,9 @@ class TakeoffDataViewController: UIViewController, UIPickerViewDelegate, UIPicke
         checkOAT(textField: outsideAirTemp)
         checkPA(textField: pressureAltitude)
         
-        
+        //Possibly move this down?
         //Assign global values:
         globalCG = centerOfGravity.text!
-        globalZFW = zeroFuelWeight.text!
-        globalGW = grossWeight.text!
         globalRunway = runway.text!
         globalWindDirection = windDirection.text!
         globalWindSpeed = windSpeed.text!
@@ -115,7 +154,6 @@ class TakeoffDataViewController: UIViewController, UIPickerViewDelegate, UIPicke
         default:
             break
         }
-        
         
         //Speeds:
         Vro.text = String(Int(rotateSpeed.rotateSpeed(grossWeight: Double(grossWeight.text!)!, aircraftType: aircraftType)))
@@ -169,43 +207,6 @@ class TakeoffDataViewController: UIViewController, UIPickerViewDelegate, UIPicke
         }
     }
     
-    //TIT Pickerview Data:
-    let TIT_PickerData = ["1077", "1010", "950", "4600", "3500"]
-    override func viewDidLoad() {
-    
-        super.viewDidLoad()
-        //Right align textfields with decimal
-        centerOfGravity.textAlignment = .right
-        zeroFuelWeight.textAlignment = .right
-        grossWeight.textAlignment = .right
-        
-        //Add Done Button to top of keypad
-        let toolBar = UIToolbar()
-        toolBar.sizeToFit()
-        
-        //pushes the done button to the right side of the toolbar
-        let flexibleSpace = UIBarButtonItem(barButtonSystemItem: UIBarButtonItem.SystemItem.flexibleSpace, target: nil, action: nil)
-        
-        //adds done button to a toolbar above the keypad
-        let doneButton = UIBarButtonItem(barButtonSystemItem: UIBarButtonItem.SystemItem.done, target: self, action: #selector(self.doneClicked))
-        
-        let minusButton = UIBarButtonItem(title: "—",style: .plain, target: self, action: #selector(toggleMinus))
-        
-        toolBar.setItems([minusButton, flexibleSpace, doneButton], animated: false)
-        
-        centerOfGravity.inputAccessoryView = toolBar
-        outsideAirTemp.inputAccessoryView = toolBar
-        grossWeight.inputAccessoryView = toolBar
-        pressureAltitude.inputAccessoryView = toolBar
-        zeroFuelWeight.inputAccessoryView = toolBar
-        runway.inputAccessoryView = toolBar
-        windSpeed.inputAccessoryView = toolBar
-        windDirection.inputAccessoryView = toolBar
-        
-        //dismiss keyboard by tapping anywhere
-        self.view.addGestureRecognizer(UITapGestureRecognizer(target:
-            self.view, action: #selector(UIView.endEditing(_:))))
-    }
     
     //dismisses keyboard by touching done button on keyboard
     @objc func doneClicked() {
@@ -217,11 +218,6 @@ class TakeoffDataViewController: UIViewController, UIPickerViewDelegate, UIPicke
             text = "-\(text)"
             outsideAirTemp.text = text
         }
-    }
-    
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
     }
     
     //MARK: Data Sources
@@ -236,7 +232,8 @@ class TakeoffDataViewController: UIViewController, UIPickerViewDelegate, UIPicke
         return 40 //Do NOT change this number.
     }
     
-    //MARK: Delegates
+    //TIT Pickerview Data:
+    let TIT_PickerData = ["1077", "1010", "950", "4600", "3500"]
     
     func pickerView(_ pickerView: UIPickerView, viewForRow row: Int, forComponent component: Int, reusing view: UIView?) -> UIView {
         var pickerLabel: UILabel? = (view as? UILabel)
