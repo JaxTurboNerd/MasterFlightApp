@@ -45,7 +45,7 @@ class TakeOffBriefViewController: UIViewController {
         default:
             break
         }
-        //TIT.text = selectedTIT
+        //Set label data:
         SHP100.text = globalSHP100
         SHP95.text = globalSHP95
         Vr.text = globalVr + " kts"
@@ -76,9 +76,5 @@ class TakeOffBriefViewController: UIViewController {
         
         crossWindComponent.text = "\(String(globalCrossWindComponent)) kts"
         
-    }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
     }
 }

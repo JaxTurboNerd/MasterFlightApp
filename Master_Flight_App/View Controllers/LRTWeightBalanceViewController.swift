@@ -128,6 +128,7 @@ class LRTWeightBalanceViewController: UIViewController {
         //Check for textfield nil values (can't add a nil value):
         //Create array of textfields to loop through and check all textfields for nil:
         textFields = [pilotWeight, coPilotWeight, feWeight, fsoWeight, portFwdObserverWeight, stbFwdObserverWeight, fwdCargoWeight, tfo1Weight, tfo2Weight, tfo3Weight, tfo4Weight, firstClassWeight, portAftObserverWeight, stbAftObserverWeight, galleyWeight, bunkWeight, tanks1and4Weight, tanks2and3Weight, tank5Weight, cargoBWeight, cargoCWeight, cargoDWeight, cargoEWeight, cargoFWeight, cargoGWeight, bombBayWeight, aftFirstClassWeight]
+        
         for field in textFields {
             if field.text?.isEmpty == true {
                 field.textColor = UIColor.orange
@@ -167,13 +168,15 @@ class LRTWeightBalanceViewController: UIViewController {
         
     }
     
+    @IBAction func saveButton(_ sender: DesignableButton) {
+    }
     
     //close view controller with "close" button
     @IBAction func dismissVC(_ sender: DesignableButton) {
         //Dismiss THIS view controller
         self.dismiss(animated: true, completion: nil)
         
-        //Dismiss the previous popover view controller when hit the close button
+        //Dismiss the previous popover view controller when tap the close button
         self.presentingViewController?.dismiss(animated: true, completion: nil)
     }
 }

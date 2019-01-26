@@ -13,7 +13,7 @@ extension TakeoffDataViewController {
     func checkCG(textField: UITextField) -> Void {
         if textField.text?.isEmpty == true {
             emptyAlert(alertTitle: "CG Not Entered", alertMessage: "Enter CG")
-            centerOfGravity.text = "000"
+            centerOfGravity.text = "00.0"
         }
     }
     
