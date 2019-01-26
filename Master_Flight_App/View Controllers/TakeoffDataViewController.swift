@@ -67,6 +67,7 @@ class TakeoffDataViewController: UIViewController, UIPickerViewDelegate, UIPicke
         //Set text fields to values computed in W&B VC:
         grossWeight.text = globalGW
         zeroFuelWeight.text = globalZFW
+        centerOfGravity.text = globalCG
         
         //Right align textfields with decimal
         centerOfGravity.textAlignment = .right
@@ -125,7 +126,6 @@ class TakeoffDataViewController: UIViewController, UIPickerViewDelegate, UIPicke
         
         //Possibly move this down?
         //Assign global values:
-        globalCG = centerOfGravity.text!
         globalRunway = runway.text!
         globalWindDirection = windDirection.text!
         globalWindSpeed = windSpeed.text!

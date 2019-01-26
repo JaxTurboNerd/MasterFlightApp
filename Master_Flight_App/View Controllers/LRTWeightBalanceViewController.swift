@@ -149,9 +149,13 @@ class LRTWeightBalanceViewController: UIViewController {
         //Calculate total aircraft moment:
         let totalMoment = weightBalance.calculateMoment(pilotWeight: Double(pilotWeight.text!)!, coPilotWeight: Double(coPilotWeight.text!)!, feWeight: Double(feWeight.text!)!, fsoWeight: Double(fsoWeight.text!)!, portFwdObs: Double(portFwdObserverWeight.text!)!,stbFwdObs: Double(stbFwdObserverWeight.text!)!, tfo1Weight: Double(tfo1Weight.text!)!, tfo2Weight: Double(tfo2Weight.text!)!, tfo3Weight: Double(tfo3Weight.text!)!, tfo4Weight: Double(tfo4Weight.text!)!, firstClassWeight: Double(firstClassWeight.text!)!, portAftObsWeight: Double(portAftObserverWeight.text!)!, stbAftObsWeight: Double(stbAftObserverWeight.text!)!, galleyWeight: Double(galleyWeight.text!)!, bunkWeight: Double(bunkWeight.text!)!, aftFirstClassWeight: Double(aftFirstClassWeight.text!)!, cargoBWeight: Double(cargoBWeight.text!)!, cargoCWeight: Double(cargoCWeight.text!)!, cargoDWeight: Double(cargoDWeight.text!)!, cargoEWeight: Double(cargoEWeight.text!)!, cargoFWeight: Double(cargoFWeight.text!)!, cargoGWeight: Double(cargoGWeight.text!)!, tank14Weight: Double(tanks1and4Weight.text!)!, tank23Weight: Double(tanks2and3Weight.text!)!, tank5Weight: Double(tank5Weight.text!)!, bombBayWeight: Double(bombBayWeight.text!)!, aircraftMoment: aircraftMoment)
         
+        //Calculate aircraft Center of Gravity:
+        let centerOfGravity = weightBalance.calculateCenterOfGravity(totalMoment: totalMoment, grossWeight: Double(grossWeight))
+        
         //Assign values to VC labels:
         ZFWLabel.text = String(zeroFuelWeight)
         grossWeightLabel.text = String(grossWeight)
+        cgLabel.text = String(centerOfGravity)
         
         //Global variables:
         let roundedGW = ((Double(grossWeightLabel.text!)!/100).rounded())/10
@@ -159,6 +163,7 @@ class LRTWeightBalanceViewController: UIViewController {
         
         let roundedZFW = ((Double(ZFWLabel.text!)!/100).rounded())/10
         globalZFW = String(roundedZFW)
+        globalCG = String(centerOfGravity)
         
     }
     

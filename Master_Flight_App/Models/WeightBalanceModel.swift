@@ -46,14 +46,26 @@ struct LRTWeightBalance {
     
     func calculateMoment(pilotWeight: Double, coPilotWeight: Double, feWeight: Double, fsoWeight: Double, portFwdObs: Double, stbFwdObs: Double, tfo1Weight: Double, tfo2Weight: Double, tfo3Weight: Double, tfo4Weight: Double, firstClassWeight: Double, portAftObsWeight: Double, stbAftObsWeight: Double, galleyWeight: Double, bunkWeight:Double, aftFirstClassWeight: Double, cargoBWeight: Double, cargoCWeight: Double, cargoDWeight: Double, cargoEWeight: Double, cargoFWeight: Double, cargoGWeight: Double, tank14Weight: Double, tank23Weight: Double, tank5Weight: Double, bombBayWeight: Double, aircraftMoment: Double) -> Double {
         //Need to get bunk ARM (possibly same as cargo G?
-        let totalMoment = (pilotWeight * 222.0) + (coPilotWeight * 222.0) + (feWeight * 227.0) + (fsoWeight * 256.0) + (tfo1Weight * 572.0) + (tfo2Weight * 572.0) + (tfo3Weight * 572.0) + (tfo4Weight * 572) + (firstClassWeight * 768.0) + (portAftObsWeight * 889.0) + (stbAftObsWeight * 889.0) + (galleyWeight * 950.0) + (aftFirstClassWeight * 816.0) + (cargoBWeight * 227.0) + (cargoCWeight * 333) + (cargoDWeight * 565) + (cargoEWeight * 768) + (cargoFWeight * 889) + (cargoGWeight * 1021) + (tank14Weight * 606.2) + (tank23Weight * 624.5) + (tank5Weight * 594.5) + (bombBayWeight * 400.0) + aircraftMoment
+        let totalMoment = (pilotWeight * 222.0) + (coPilotWeight * 222.0) + (feWeight * 227.0) + (fsoWeight * 256.0) + (tfo1Weight * 572.0) + (tfo2Weight * 572.0) + (tfo3Weight * 572.0) + (tfo4Weight * 572) + (firstClassWeight * 768.0) + (portAftObsWeight * 889.0) + (stbAftObsWeight * 889.0) + (galleyWeight * 950.0) + (aftFirstClassWeight * 816.0) + (cargoBWeight * 227.0) + (cargoCWeight * 333) + (cargoDWeight * 565) + (cargoEWeight * 768) + (cargoFWeight * 889) + (cargoGWeight * 1021) + (tank14Weight * 606.2) + (tank23Weight * 624.5) + (tank5Weight * 594.5) + (bombBayWeight * 400.0) + (aircraftMoment * 1000)
+        //may need to multiply aircraftMoment * 1000?
         return totalMoment
     }
-    /*
-    func calculateCenterOfGravity() -> (zeroFuelWeight: String, grossWeight: String, centerOfGravity: String) {
+    
+    func calculateCenterOfGravity(totalMoment: Double, grossWeight: Double) -> Double {
+        //Mac numbers:
+        let leadingEdgeMAC = 545.9
+        //let trailingEdgeMAC = 714.6
+        let MAC = 168.7
         
+        //Calculate CG in Datum:
+        let datumCG = totalMoment/grossWeight
+        
+        //Calculate CG:
+        let centerOfGravity = ((((datumCG - leadingEdgeMAC)/MAC) * 1000).rounded())/10
+        
+        return centerOfGravity
     }
- */
+ 
 }
 
 /*
