@@ -57,7 +57,7 @@ class TakeOffBriefViewController: UIViewController {
         VlofDistance.text = globalLOFDistance
         cg.text = globalCG + "%"
         zfw.text = globalZFW + "K lbs"
-        grossWeight.text = globalGW + "K lbs"
+        grossWeight.text = globalRoundedGrossWeight + "K lbs"
         outsideAirTemp.text = globalTemp + "℃"
         pressAltitude.text = globalPressureAlt + " ft"
         runway.text = globalRunway

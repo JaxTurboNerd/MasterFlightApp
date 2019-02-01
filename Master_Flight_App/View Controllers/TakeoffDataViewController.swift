@@ -9,10 +9,9 @@ import UIKit
 
 // Define Global variables
 var isAntiIceOn: Bool = false
-var globalZFW: String = ""
+//var globalZFW: String = ""
 var selectedTIT:String?
-var globalCG: String = ""
-var globalGW: String = ""
+//var globalCG: String = ""
 var globalRunway: String = ""
 var globalWindDirection: String = ""
 var globalWindSpeed: String = ""
@@ -65,8 +64,8 @@ class TakeoffDataViewController: UIViewController, UIPickerViewDelegate, UIPicke
         
         super.viewDidLoad()
         //Set text fields to values computed in W&B VC:
-        grossWeight.text = globalGW
-        zeroFuelWeight.text = globalZFW
+        grossWeight.text = globalRoundedGrossWeight
+        zeroFuelWeight.text = globalRoundedZFW
         centerOfGravity.text = globalCG
         
         //Right align textfields with decimal

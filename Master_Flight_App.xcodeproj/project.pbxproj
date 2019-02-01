@@ -18,6 +18,7 @@
 		93183A6B1F3E818200E7350D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 93183A6A1F3E818200E7350D /* Assets.xcassets */; };
 		93183A6E1F3E818200E7350D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 93183A6C1F3E818200E7350D /* LaunchScreen.storyboard */; };
 		9322D4E21F6B088C006C9425 /* OnStationModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9322D4E11F6B088C006C9425 /* OnStationModel.swift */; };
+		933C352121FD20610072B080 /* LRTSavedWBViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 933C352021FD20610072B080 /* LRTSavedWBViewController.swift */; };
 		933F5F6D21E6E761005ED060 /* AEWWeightBalanceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 933F5F6C21E6E761005ED060 /* AEWWeightBalanceViewController.swift */; };
 		934195E21F8296FB00C1B046 /* AlertFunction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 934195E11F8296FB00C1B046 /* AlertFunction.swift */; };
 		93678B331F9830BE005DCF5C /* TakeoffDataViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93678B321F9830BE005DCF5C /* TakeoffDataViewController.swift */; };
@@ -52,6 +53,7 @@
 		93183A6D1F3E818200E7350D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		93183A6F1F3E818200E7350D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9322D4E11F6B088C006C9425 /* OnStationModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OnStationModel.swift; sourceTree = "<group>"; };
+		933C352021FD20610072B080 /* LRTSavedWBViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LRTSavedWBViewController.swift; sourceTree = "<group>"; };
 		933F5F6C21E6E761005ED060 /* AEWWeightBalanceViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AEWWeightBalanceViewController.swift; sourceTree = "<group>"; };
 		934195E11F8296FB00C1B046 /* AlertFunction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertFunction.swift; sourceTree = "<group>"; };
 		93678B321F9830BE005DCF5C /* TakeoffDataViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TakeoffDataViewController.swift; sourceTree = "<group>"; };
@@ -104,6 +106,7 @@
 			children = (
 				93183A611F3E818200E7350D /* AppDelegate.swift */,
 				93183A671F3E818200E7350D /* Main.storyboard */,
+				93183A6C1F3E818200E7350D /* LaunchScreen.storyboard */,
 				93FF84712002BE8300D2AA75 /* Models */,
 				93FF84722002BEA400D2AA75 /* View Controllers */,
 				93E046F22062E32A001BEDCC /* Custom Files */,
@@ -112,7 +115,6 @@
 				D81B339904522AA0C3E9FB09 /* Pods */,
 				93A571751FF9B0F7004AD795 /* Frameworks */,
 				93183A6A1F3E818200E7350D /* Assets.xcassets */,
-				93183A6C1F3E818200E7350D /* LaunchScreen.storyboard */,
 				93183A6F1F3E818200E7350D /* Info.plist */,
 			);
 			path = Master_Flight_App;
@@ -182,6 +184,7 @@
 				FA810BEA1FD0B185002BB188 /* TakeOffBriefViewController.swift */,
 				93678B321F9830BE005DCF5C /* TakeoffDataViewController.swift */,
 				9368741321C02DA4007EF7F4 /* LRTWeightBalanceViewController.swift */,
+				933C352021FD20610072B080 /* LRTSavedWBViewController.swift */,
 				930ACCA221C1FEDF00F1D650 /* WBPopoverViewController.swift */,
 			);
 			path = "View Controllers";
@@ -313,6 +316,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				9308E1591F5E22C300CBFDC0 /* MissionModel.swift in Sources */,
+				933C352121FD20610072B080 /* LRTSavedWBViewController.swift in Sources */,
 				933F5F6D21E6E761005ED060 /* AEWWeightBalanceViewController.swift in Sources */,
 				FAF2C2A71FE8AEAA0084ADF5 /* CheckFields.swift in Sources */,
 				936C87491F5F2C7000ACD0E7 /* OnstationViewController.swift in Sources */,
