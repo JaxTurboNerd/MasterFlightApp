@@ -10,10 +10,21 @@
 
 import UIKit
 
-public class SwiftMaskField: UITextField {
+public class SwiftMaskField: UITextField, UITextFieldDelegate {
     
     private var _mask: String!
+   
+    //set delegate for keyboard resign first responder when tap done button:
+    required init?(coder aDecoder: NSCoder) {
+        super.init(coder: aDecoder)
+        delegate = self
+    }
     
+    //Keyboard DONE button will dismiss the keyboard:
+    public func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        textField.resignFirstResponder()
+        return true
+    }
     
     @IBInspectable public var maskString: String {
         
@@ -33,7 +44,7 @@ public class SwiftMaskField: UITextField {
         var textWithMask:String = ""
         var i:Int = 0
         var text:String = textField.text!
-        
+    
         if (text.isEmpty){
             return
         }

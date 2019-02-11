@@ -49,6 +49,11 @@ class MaxLengthTextField: UITextField, UITextFieldDelegate {
         return text.count <= maxLength
     }
     
+    //Keyboard DONE button will dismiss the keyboard:
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        textField.resignFirstResponder()
+        return true
+    }
 }
 
 class AllowedCharsTextField: MaxLengthTextField {
@@ -65,7 +70,6 @@ class AllowedCharsTextField: MaxLengthTextField {
         return super.allowedIntoTextField(text: text) &&
             text.containsOnlyCharactersIn(matchCharacters: allowedChars)
     }
-    
 }
 
 private extension String {

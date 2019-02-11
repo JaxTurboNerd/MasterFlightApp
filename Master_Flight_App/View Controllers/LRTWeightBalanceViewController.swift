@@ -44,7 +44,7 @@ var globalCargoGweight = ""
 var globalBombBayWeight = ""
 var globalAftFirstClassWeight = ""
 
-class LRTWeightBalanceViewController: UIViewController, UITextFieldDelegate {
+class LRTWeightBalanceViewController: UIViewController {
     
     var selectedAircraft = ""
     var basicWeight = 0.0
@@ -103,14 +103,6 @@ class LRTWeightBalanceViewController: UIViewController, UITextFieldDelegate {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        //Set textfield delegate so Done button resigns first responder:
-        //loops through all textfields and assigns each(self) as delegate
-        textFields = [pilotWeight, coPilotWeight, feWeight, fsoWeight, portFwdObserverWeight, stbFwdObserverWeight, fwdCargoWeight, tfo1Weight, tfo2Weight, tfo3Weight, tfo4Weight, firstClassWeight, portAftObserverWeight, stbAftObserverWeight, galleyWeight, bunkWeight, tanks1and4Weight, tanks2and3Weight, tank5Weight, cargoBWeight, cargoCWeight, cargoDWeight, cargoEWeight, cargoFWeight, cargoGWeight, bombBayWeight, aftFirstClassWeight]
-        
-        for field in textFields {
-            field.delegate = self
-        }
         
         //set the aircraft tail number label to the selected aircraft from the pop over:
         //selectedAircraft passed from WBPopoverViewController
@@ -171,11 +163,6 @@ class LRTWeightBalanceViewController: UIViewController, UITextFieldDelegate {
         self.view.addGestureRecognizer(UITapGestureRecognizer(target:
             self.view, action: #selector(UIView.endEditing(_:))))
         
-    }
-    //Keyboard DONE button will dismiss the keyboard:
-    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
-        textField.resignFirstResponder()
-        return true
     }
     
     @IBAction func calculateWeightBalance(_ sender: DesignableButton) {

@@ -41,7 +41,7 @@ class LRTSavedWBViewController: UIViewController {
     @IBOutlet weak var savedCargoFWeight: UILabel!
     @IBOutlet weak var savedCargoGWeight: UILabel!
     @IBOutlet weak var savedBombBayWeight: UILabel!
-    @IBOutlet weak var savedAftFirstClass: AllowedCharsTextField!
+    @IBOutlet weak var savedAftFirstClassWeight: UILabel!
     
     
     override func viewDidLoad() {
@@ -76,5 +76,7 @@ class LRTSavedWBViewController: UIViewController {
         savedCargoEWeight.text = globalCargoEweight
         savedCargoFWeight.text = globalCargoFweight
         savedCargoGWeight.text = globalCargoGweight
+        savedBombBayWeight.text = globalBombBayWeight
+        savedAftFirstClassWeight.text = globalAftFirstClassWeight
     }
 }
