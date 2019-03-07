@@ -18,7 +18,6 @@ class MaxLengthTextField: UITextField, UITextFieldDelegate {
         self.layer.cornerRadius = 5.0
         self.layer.borderColor = UIColor.gray.cgColor
         self.layer.borderWidth = 2.0
-        //self.textColor = UIColor.red
     }
     
     @IBInspectable var maxLength: Int {

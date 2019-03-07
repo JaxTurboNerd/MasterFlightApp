@@ -33,10 +33,14 @@ var globalHeadWindComponent: Double = 0.0
 
 //View Controller Class:
 class TakeoffDataViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSource {
-
+    //variables for data passed from W&B View Controller;
+    var passedCG = ""
+    var passedGrossWeight = ""
+    var passedZFW = ""
+    
     var aircraftType = "LRT"
+    
     //var textfields = [UITextField]()
-
     @IBOutlet weak var centerOfGravity: UITextField!
     @IBOutlet weak var zeroFuelWeight: UITextField!
     @IBOutlet weak var grossWeight: UITextField!
@@ -62,44 +66,23 @@ class TakeoffDataViewController: UIViewController, UIPickerViewDelegate, UIPicke
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        //Loop through textfields to set each as delegate for the keyboard Done button:
-        //textfields = [centerOfGravity, zeroFuelWeight, grossWeight,runway, windDirection, windSpeed, outsideAirTemp, pressureAltitude]
+        //Navigation Bar customization:
+//        navigationController?.navigationBar.setBackgroundImage(UIImage(), for: .default)
+//        navigationController?.navigationBar.shadowImage = UIImage()
         
-//        for field in textfields {
-//            field.delegate = self
-//        }
+//        //Observe Notification Center information:
+        NotificationCenter.default.addObserver(forName: .computeWeightBalance, object: self, queue: OperationQueue.main) { (notification) in
+            let weightBalanceVC = notification.object as! LRTWeightBalanceViewController
+            self.centerOfGravity.text  = weightBalanceVC.passedCG
+            self.zeroFuelWeight.text = weightBalanceVC.passedRoundedZFW
+            self.grossWeight.text = weightBalanceVC.passedRoundedGrossWeight
+        }
         
-        //Set text fields to values computed in W&B VC:
-        grossWeight.text = globalRoundedGrossWeight
-        zeroFuelWeight.text = globalRoundedZFW
-        centerOfGravity.text = globalCG
         
         //Right align textfields with decimal
         centerOfGravity.textAlignment = .right
         zeroFuelWeight.textAlignment = .right
         grossWeight.textAlignment = .right
-        
-        /*
-        //Add Done Button to top of keypad
-        let toolBar = UIToolbar()
-        toolBar.sizeToFit()
-        
-        //pushes the done button to the right side of the toolbar
-        let flexibleSpace = UIBarButtonItem(barButtonSystemItem: UIBarButtonItem.SystemItem.flexibleSpace, target: nil, action: nil)
-        
-        let minusButton = UIBarButtonItem(title: "—",style: .plain, target: self, action: #selector(toggleMinus))
-        
-        toolBar.setItems([flexibleSpace, minusButton], animated: false)
-        
-        //centerOfGravity.inputAccessoryView = toolBar
-        //outsideAirTemp.inputAccessoryView = toolBar
-        //grossWeight.inputAccessoryView = toolBar
-        //pressureAltitude.inputAccessoryView = toolBar
-        //zeroFuelWeight.inputAccessoryView = toolBar
-        //runway.inputAccessoryView = toolBar
-        //windSpeed.inputAccessoryView = toolBar
-        //windDirection.inputAccessoryView = toolBar
-        */
         
         //dismiss keyboard by tapping anywhere
         self.view.addGestureRecognizer(UITapGestureRecognizer(target:
@@ -128,7 +111,6 @@ class TakeoffDataViewController: UIViewController, UIPickerViewDelegate, UIPicke
         checkOAT(textField: outsideAirTemp)
         checkPA(textField: pressureAltitude)
         
-        //Possibly move this down?
         //Assign global values:
         globalRunway = runway.text!
         globalWindDirection = windDirection.text!
@@ -139,7 +121,7 @@ class TakeoffDataViewController: UIViewController, UIPickerViewDelegate, UIPicke
         globalVro = Vro.text!
         globalVlof = Vlof.text!
         globalV50three = v50three.text!
-        globalZFW = zeroFuelWeight.text!
+        //globalZFW = zeroFuelWeight.text!
         
         //Assign values to labels from calculations
         

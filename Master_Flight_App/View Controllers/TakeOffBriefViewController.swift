@@ -10,6 +10,13 @@ import UIKit
 
 class TakeOffBriefViewController: UIViewController {
     
+    //variables for passed data from other VC's:
+    
+    var passedCG = ""
+    var passedZFW = ""
+    var passedRoundedGW = ""
+    
+    
     @IBOutlet weak var TIT: UILabel!
     @IBOutlet weak var SHP100: UILabel!
     @IBOutlet weak var SHP95: UILabel!
@@ -55,9 +62,9 @@ class TakeOffBriefViewController: UIViewController {
         v50Four.text = globalV50four + " kts"
         VroDistance.text = globalRotateDistance
         VlofDistance.text = globalLOFDistance
-        cg.text = globalCG + "%"
-        zfw.text = globalZFW + "K lbs"
-        grossWeight.text = globalRoundedGrossWeight + "K lbs"
+        cg.text = passedCG + "%"
+        zfw.text = passedZFW + "K lbs"
+        grossWeight.text = passedRoundedGW + "K lbs"
         outsideAirTemp.text = globalTemp + "℃"
         pressAltitude.text = globalPressureAlt + " ft"
         runway.text = globalRunway

@@ -10,73 +10,108 @@ import UIKit
 
 class LRTSavedWBViewController: UIViewController {
     
-    @IBOutlet weak var savedSelectedAircraft: UILabel!
-    @IBOutlet weak var savedBasicWeight: UILabel!
-    @IBOutlet weak var savedZFW: UILabel!
-    @IBOutlet weak var savedGrossWeight: UILabel!
-    @IBOutlet weak var savedCenterOfGravity: UILabel!
-    @IBOutlet weak var savedPilotWeight: UILabel!
-    @IBOutlet weak var savedCopilotWeight: UILabel!
-    @IBOutlet weak var savedFEWeight: UILabel!
-    @IBOutlet weak var savedFSOWeight: UILabel!
-    @IBOutlet weak var savedPortFwdObsWeight: UILabel!
-    @IBOutlet weak var savedStbFwdObsWeigh: UILabel!
-    @IBOutlet weak var savedFwdCargoWeight: UILabel!
-    @IBOutlet weak var savedTFO1Weight: UILabel!
-    @IBOutlet weak var savedTFO2Weight: UILabel!
-    @IBOutlet weak var savedTFO3Weight: UILabel!
-    @IBOutlet weak var savedTFO4Weight: UILabel!
-    @IBOutlet weak var savedFirstClassWeight: UILabel!
-    @IBOutlet weak var savedPortAftObsWeight: UILabel!
-    @IBOutlet weak var savedStbAftObsWeight: UILabel!
-    @IBOutlet weak var savedGalleyWeight: UILabel!
-    @IBOutlet weak var savedBunkWeight: UILabel!
-    @IBOutlet weak var savedFuel1and4Weight: UILabel!
-    @IBOutlet weak var savedFuel2and3Weight: UILabel!
-    @IBOutlet weak var savedTank5Weight: UILabel!
-    @IBOutlet weak var savedCargoBWeight: UILabel!
-    @IBOutlet weak var savedCargoCWeight: UILabel!
-    @IBOutlet weak var savedCargoDWeight: UILabel!
-    @IBOutlet weak var savedCargoEWeight: UILabel!
-    @IBOutlet weak var savedCargoFWeight: UILabel!
-    @IBOutlet weak var savedCargoGWeight: UILabel!
-    @IBOutlet weak var savedBombBayWeight: UILabel!
-    @IBOutlet weak var savedAftFirstClassWeight: UILabel!
+    @IBOutlet weak var selectedAircraft: UILabel!
+    @IBOutlet weak var basicWeight: UILabel!
+    @IBOutlet weak var ZFW: UILabel!
+    @IBOutlet weak var grossWeight: UILabel!
+    @IBOutlet weak var centerOfGravity: UILabel!
+    @IBOutlet weak var pilotWeight: UILabel!
+    @IBOutlet weak var copilotWeight: UILabel!
+    @IBOutlet weak var fEWeight: UILabel!
+    @IBOutlet weak var fSOWeight: UILabel!
+    @IBOutlet weak var portFwdObsWeight: UILabel!
+    @IBOutlet weak var stbFwdObsWeight: UILabel!
+    @IBOutlet weak var fwdCargoWeight: UILabel!
+    @IBOutlet weak var tFO1Weight: UILabel!
+    @IBOutlet weak var tFO2Weight: UILabel!
+    @IBOutlet weak var tFO3Weight: UILabel!
+    @IBOutlet weak var tFO4Weight: UILabel!
+    @IBOutlet weak var firstClassWeight: UILabel!
+    @IBOutlet weak var portAftObsWeight: UILabel!
+    @IBOutlet weak var stbAftObsWeight: UILabel!
+    @IBOutlet weak var tank1Weight: UILabel!
+    @IBOutlet weak var tank2Weight: UILabel!
+    @IBOutlet weak var tank3Weight: UILabel!
+    @IBOutlet weak var tank4Weight: UILabel!
+    @IBOutlet weak var tank5Weight: UILabel!
+    @IBOutlet weak var cargoBWeight: UILabel!
+    @IBOutlet weak var cargoCWeight: UILabel!
+    @IBOutlet weak var cargoDWeight: UILabel!
+    @IBOutlet weak var cargoEWeight: UILabel!
+    @IBOutlet weak var cargoFWeight: UILabel!
+    @IBOutlet weak var cargoGWeight: UILabel!
+    @IBOutlet weak var bombBayWeight: UILabel!
+    @IBOutlet weak var aftFirstClassWeight: UILabel!
     
+    //Initialize variables for data passed from the LRT VC when SAVE button is pressed:
+    var finalSelectedAircraft = ""
+    var finalZFW = ""
+    var finalRoundedZFW = ""
+    var finalGW = ""
+    var finalRoundedGrossWeight = ""
+    var finalBasicWeight = ""
+    var finalCG = ""
+    var finalPilotWeight = ""
+    var finalCoPilotWeight = ""
+    var finalFEWeight = ""
+    var finalFSOWeight = ""
+    var finalPortFwdObsWeight = ""
+    var finalStbFwdObsWeight = ""
+    var finalFwdCargoWeight = ""
+    var finalTfo1weight = ""
+    var finalTfo2weight = ""
+    var finalTfo3weight = ""
+    var finalTfo4Weight = ""
+    var finalFirstClassWeight = ""
+    var finalAftFirstClassWeight = ""
+    var finalPortAftObsWeight = ""
+    var finalStbAftObsWeight = ""
+    var finalTank1Weight = ""
+    var finalTank2Weight = ""
+    var finalTank3Weight = ""
+    var finalTank4Weight = ""
+    var finaltank5Weight = ""
+    var finalCargoBweight = ""
+    var finalCargoCweight = ""
+    var finalCargoDweight = ""
+    var finalCargoEweight = ""
+    var finalCargoFweight = ""
+    var finalCargoGweight = ""
+    var finalBombBayWeight = ""
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        savedSelectedAircraft.text = globalSelectedAircraft
-        savedBasicWeight.text = globalBasicWeight
-        savedZFW.text = globalZFW
-        savedGrossWeight.text = globalGW
-        savedCenterOfGravity.text = globalCG
-        savedPilotWeight.text = globalPilotWeight
-        savedCopilotWeight.text = globalCoPilotWeight
-        savedFEWeight.text = globalFEWeight
-        savedFSOWeight.text =  globalFSOWeight
-        savedPortFwdObsWeight.text = globalPortFwdObsWeight
-        savedStbFwdObsWeigh.text = globalStbFwdObsWeight
-        savedFwdCargoWeight.text = globalFwdCargoWeight
-        savedTFO1Weight.text = globalTfo1weight
-        savedTFO2Weight.text = globalTfo2weight
-        savedTFO3Weight.text = globalTfo3weight
-        savedTFO4Weight.text = globalTfo4Weight
-        savedPortAftObsWeight.text = globalPortAftObsWeight
-        savedStbAftObsWeight.text = globalStbAftObsWeight
-        savedGalleyWeight.text = globalGalleyWeight
-        savedBunkWeight.text = globalBunkWeight
-        savedFuel1and4Weight.text = globalTank1and4weight
-        savedFuel2and3Weight.text = globalTank2and3weight
-        savedTank5Weight.text = globaltank5Weight
-        savedCargoBWeight.text = globalCargoBweight
-        savedCargoCWeight.text = globalCargoCweight
-        savedCargoDWeight.text = globalCargoDweight
-        savedCargoEWeight.text = globalCargoEweight
-        savedCargoFWeight.text = globalCargoFweight
-        savedCargoGWeight.text = globalCargoGweight
-        savedBombBayWeight.text = globalBombBayWeight
-        savedAftFirstClassWeight.text = globalAftFirstClassWeight
+        selectedAircraft.text = finalSelectedAircraft
+        ZFW.text = finalRoundedZFW
+        basicWeight.text = finalBasicWeight
+        grossWeight.text = finalGW
+        centerOfGravity.text = finalCG
+        pilotWeight.text = finalPilotWeight
+        copilotWeight.text = finalCoPilotWeight
+        fEWeight.text = finalFEWeight
+        fSOWeight.text = finalFSOWeight
+        portFwdObsWeight.text = finalPortFwdObsWeight
+        stbFwdObsWeight.text = finalStbFwdObsWeight
+        tFO1Weight.text = finalTfo1weight
+        tFO2Weight.text = finalTfo1weight
+        tFO3Weight.text = finalTfo3weight
+        tFO4Weight.text = finalTfo4Weight
+        firstClassWeight.text = finalFirstClassWeight
+        aftFirstClassWeight.text = finalAftFirstClassWeight
+        portAftObsWeight.text = finalPortAftObsWeight
+        stbAftObsWeight.text = finalStbAftObsWeight
+        tank1Weight.text = finalTank1Weight
+        tank2Weight.text = finalTank2Weight
+        tank3Weight.text = finalTank3Weight
+        tank4Weight.text = finalTank4Weight
+        tank5Weight.text = finaltank5Weight
+        cargoBWeight.text = finalCargoBweight
+        cargoCWeight.text = finalCargoCweight
+        cargoDWeight.text = finalCargoDweight
+        cargoEWeight.text = finalCargoEweight
+        cargoFWeight.text = finalCargoFweight
+        cargoGWeight.text = finalCargoGweight
+        bombBayWeight.text = finalBombBayWeight
     }
 }

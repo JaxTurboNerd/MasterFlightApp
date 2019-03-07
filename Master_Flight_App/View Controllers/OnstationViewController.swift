@@ -41,25 +41,6 @@ class OnstationViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        //Add Done Button to top of keypad
-        let toolBar = UIToolbar()
-        toolBar.sizeToFit()
-        
-        //pushes the done button to the right side of the toolbar
-        let flexibleSpace = UIBarButtonItem(barButtonSystemItem: UIBarButtonItem.SystemItem.flexibleSpace, target: nil, action: nil)
-        
-        //adds done button to a toolbar above the keypad
-        let doneButton = UIBarButtonItem(barButtonSystemItem: UIBarButtonItem.SystemItem.done, target: self, action: #selector(self.doneClicked))
-        
-        toolBar.setItems([flexibleSpace, doneButton], animated: false)
-        
-        totalFuel.inputAccessoryView = toolBar
-        onstaFuelFLow.inputAccessoryView = toolBar
-        returnFuelFlow.inputAccessoryView = toolBar
-        destDistance.inputAccessoryView = toolBar
-        groundSpeed.inputAccessoryView = toolBar
-        onTop.inputAccessoryView = toolBar
         
         //dismiss keyboard by tapping anywhere
         self.view.addGestureRecognizer(UITapGestureRecognizer(target:
@@ -74,5 +55,4 @@ class OnstationViewController: UIViewController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-    
 }
