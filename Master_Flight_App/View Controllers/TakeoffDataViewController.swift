@@ -7,36 +7,8 @@
 //
 import UIKit
 
-// Define Global variables
-var isAntiIceOn: Bool = false
-var selectedTIT:String?
-var globalRunway: String = ""
-var globalWindDirection: String = ""
-var globalWindSpeed: String = ""
-var globalTemp: String = ""
-var globalPressureAlt: String = ""
-var globalSHP100: String = ""
-var globalSHP95: String = ""
-var globalVr: String = ""
-var globalVro: String = ""
-var globalVlof: String = ""
-var globalV50three: String = ""
-var globalV50four: String = ""
-var globalRotateDistance: String = ""
-var globalLOFDistance: String = ""
-var globalAircraftType: String = "LRT"
-var global3ROC: String = ""
-
-//Wind Component global variables:
-var globalCrossWindComponent: Double = 0.0
-var globalHeadWindComponent: Double = 0.0
-
 //View Controller Class:
 class TakeoffDataViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSource {
-    //variables for data passed from W&B View Controller;
-    var passedCG = ""
-    var passedGrossWeight = ""
-    var passedZFW = ""
     
     var aircraftType = "LRT"
     
@@ -49,7 +21,6 @@ class TakeoffDataViewController: UIViewController, UIPickerViewDelegate, UIPicke
     @IBOutlet weak var windSpeed: UITextField!
     @IBOutlet weak var outsideAirTemp: UITextField!
     @IBOutlet weak var pressureAltitude: UITextField!
-    
     @IBOutlet weak var SHP100: UILabel!
     @IBOutlet weak var SHP95: UILabel!
     @IBOutlet weak var Vr: UILabel!
@@ -66,18 +37,14 @@ class TakeoffDataViewController: UIViewController, UIPickerViewDelegate, UIPicke
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        //Navigation Bar customization:
-//        navigationController?.navigationBar.setBackgroundImage(UIImage(), for: .default)
-//        navigationController?.navigationBar.shadowImage = UIImage()
+        //Navigation Bar customization (clear background):
+        navigationController?.navigationBar.setBackgroundImage(UIImage(), for: .default)
+        navigationController?.navigationBar.shadowImage = UIImage()
         
-//        //Observe Notification Center information:
-        NotificationCenter.default.addObserver(forName: .computeWeightBalance, object: self, queue: OperationQueue.main) { (notification) in
-            let weightBalanceVC = notification.object as! LRTWeightBalanceViewController
-            self.centerOfGravity.text  = weightBalanceVC.passedCG
-            self.zeroFuelWeight.text = weightBalanceVC.passedRoundedZFW
-            self.grossWeight.text = weightBalanceVC.passedRoundedGrossWeight
-        }
-        
+        //Assign values to CG,ZFW and GW from Weight & Balance VC:
+        centerOfGravity.text = globalCenterOfGravity
+        zeroFuelWeight.text = globalZeroFuelWeight
+        grossWeight.text = globalGrossWeight
         
         //Right align textfields with decimal
         centerOfGravity.textAlignment = .right
@@ -121,7 +88,7 @@ class TakeoffDataViewController: UIViewController, UIPickerViewDelegate, UIPicke
         globalVro = Vro.text!
         globalVlof = Vlof.text!
         globalV50three = v50three.text!
-        //globalZFW = zeroFuelWeight.text!
+        globalZeroFuelWeight = zeroFuelWeight.text!
         
         //Assign values to labels from calculations
         

@@ -1420,7 +1420,6 @@
                                                                                     </userDefinedRuntimeAttribute>
                                                                                 </userDefinedRuntimeAttributes>
                                                                                 <connections>
-                                                                                    <action selector="saveLRTWB:" destination="Jc4-83-gTy" eventType="touchUpInside" id="f0M-3B-v1D"/>
                                                                                     <segue destination="JRO-Un-YE5" kind="show" identifier="SavedLRTWBViewController" id="xxg-G8-Am0"/>
                                                                                 </connections>
                                                                             </button>
@@ -2456,7 +2455,7 @@
                                             </button>
                                         </barButtonItem>
                                         <barButtonItem key="rightBarButtonItem" id="VmI-ag-kzN">
-                                            <button key="customView" opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="LxW-kP-7mR" customClass="DesignableButton" customModule="Master_Flight_App" customModuleProvider="target">
+                                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="LxW-kP-7mR" customClass="DesignableButton" customModule="Master_Flight_App" customModuleProvider="target">
                                                 <rect key="frame" x="578" y="8.5" width="170" height="33"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 <fontDescription key="fontDescription" name="Constantia" family="Constantia" pointSize="17"/>
@@ -3336,7 +3335,7 @@
                                 <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
                             </imageView>
                             <stackView opaque="NO" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" axis="vertical" distribution="equalSpacing" alignment="center" spacing="40" translatesAutoresizingMaskIntoConstraints="NO" id="YQ2-tc-tpU">
-                                <rect key="frame" x="60" y="60" width="648" height="934"/>
+                                <rect key="frame" x="60" y="60" width="648" height="884"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" alignment="top" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="Mh9-BZ-D6s">
                                         <rect key="frame" x="16" y="0.0" width="616.5" height="237"/>
@@ -3582,7 +3581,7 @@
                                         <variation key="widthClass=compact" spacing="-1"/>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" alignment="top" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="ppE-jS-drr">
-                                        <rect key="frame" x="7" y="289.5" width="634" height="358"/>
+                                        <rect key="frame" x="7" y="277" width="634" height="346"/>
                                         <subviews>
                                             <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" alignment="center" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="0lN-bZ-UjJ">
                                                 <rect key="frame" x="0.0" y="0.0" width="382" height="338"/>
@@ -3801,7 +3800,7 @@
                                                 <variation key="widthClass=compact" spacing="10"/>
                                             </stackView>
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" alignment="center" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="qKa-wk-5s0">
-                                                <rect key="frame" x="402" y="0.0" width="232" height="358"/>
+                                                <rect key="frame" x="402" y="0.0" width="232" height="346"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Power Setting:" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iOC-Be-WQX">
                                                         <rect key="frame" x="7" y="0.0" width="218" height="42"/>
@@ -3862,10 +3861,10 @@
                                                         <variation key="widthClass=compact" spacing="8"/>
                                                     </stackView>
                                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" alignment="center" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="pPd-JN-H6N">
-                                                        <rect key="frame" x="17" y="266" width="198" height="92"/>
+                                                        <rect key="frame" x="17" y="266" width="198" height="80"/>
                                                         <subviews>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Aircraft Type:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="frW-Wv-cZb">
-                                                                <rect key="frame" x="0.0" y="0.0" width="198" height="42"/>
+                                                                <rect key="frame" x="0.0" y="0.0" width="198" height="30"/>
                                                                 <fontDescription key="fontDescription" type="system" pointSize="35"/>
                                                                 <nil key="textColor"/>
                                                                 <nil key="highlightedColor"/>
@@ -3874,7 +3873,7 @@
                                                                 </variation>
                                                             </label>
                                                             <segmentedControl opaque="NO" alpha="0.90000000000000002" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="Q22-Rp-BvL">
-                                                                <rect key="frame" x="54" y="57" width="90" height="36"/>
+                                                                <rect key="frame" x="54" y="45" width="90" height="36"/>
                                                                 <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                                                 <constraints>
                                                                     <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="90" id="9iK-hZ-TZq"/>
@@ -3906,7 +3905,7 @@
                                         <variation key="widthClass=compact" spacing="4"/>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" alignment="center" spacing="40" translatesAutoresizingMaskIntoConstraints="NO" id="yjV-Pb-Yon">
-                                        <rect key="frame" x="93" y="700.5" width="462" height="116"/>
+                                        <rect key="frame" x="93" y="663" width="462" height="116"/>
                                         <subviews>
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" alignment="bottom" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="9wE-3H-JaX">
                                                 <rect key="frame" x="0.0" y="0.0" width="323" height="116"/>
@@ -3975,7 +3974,7 @@
                                         <variation key="widthClass=compact" spacing="19"/>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" alignment="center" spacing="80" translatesAutoresizingMaskIntoConstraints="NO" id="9Zc-IJ-vVU">
-                                        <rect key="frame" x="79" y="869" width="490" height="65"/>
+                                        <rect key="frame" x="79" y="819" width="490" height="65"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CVU-BY-D4a" customClass="DesignableButton" customModule="Master_Flight_App" customModuleProvider="target">
                                                 <rect key="frame" x="0.0" y="0.0" width="170" height="65"/>
@@ -5015,6 +5014,7 @@
         <image name="waves" width="38" height="38"/>
     </resources>
     <inferredMetricsTieBreakers>
+        <segue reference="Gqg-cx-j1b"/>
         <segue reference="q01-Jz-I9j"/>
         <segue reference="BqC-Gh-PSp"/>
         <segue reference="xxg-G8-Am0"/>

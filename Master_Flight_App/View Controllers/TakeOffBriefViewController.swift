@@ -12,9 +12,9 @@ class TakeOffBriefViewController: UIViewController {
     
     //variables for passed data from other VC's:
     
-    var passedCG = ""
-    var passedZFW = ""
-    var passedRoundedGW = ""
+//    var passedCG = ""
+//    var passedZFW = ""
+//    var passedRoundedGW = ""
     
     
     @IBOutlet weak var TIT: UILabel!
@@ -62,9 +62,9 @@ class TakeOffBriefViewController: UIViewController {
         v50Four.text = globalV50four + " kts"
         VroDistance.text = globalRotateDistance
         VlofDistance.text = globalLOFDistance
-        cg.text = passedCG + "%"
-        zfw.text = passedZFW + "K lbs"
-        grossWeight.text = passedRoundedGW + "K lbs"
+        cg.text = globalCenterOfGravity + "%"
+        zfw.text = globalZeroFuelWeight + "K lbs"
+        grossWeight.text = globalGrossWeight + "K lbs"
         outsideAirTemp.text = globalTemp + "℃"
         pressAltitude.text = globalPressureAlt + " ft"
         runway.text = globalRunway

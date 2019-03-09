@@ -23,6 +23,7 @@
 		933C352121FD20610072B080 /* LRTSavedWBViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 933C352021FD20610072B080 /* LRTSavedWBViewController.swift */; };
 		933F5F6D21E6E761005ED060 /* AEWWeightBalanceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 933F5F6C21E6E761005ED060 /* AEWWeightBalanceViewController.swift */; };
 		934195E21F8296FB00C1B046 /* AlertFunction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 934195E11F8296FB00C1B046 /* AlertFunction.swift */; };
+		9346DE6C2232CD0300438083 /* GlobaVariables.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9346DE6B2232CD0300438083 /* GlobaVariables.swift */; };
 		93678B331F9830BE005DCF5C /* TakeoffDataViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93678B321F9830BE005DCF5C /* TakeoffDataViewController.swift */; };
 		93678B551F983F42005DCF5C /* TakeoffDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93678B541F983F42005DCF5C /* TakeoffDataModel.swift */; };
 		9368741421C02DA4007EF7F4 /* LRTWeightBalanceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9368741321C02DA4007EF7F4 /* LRTWeightBalanceViewController.swift */; };
@@ -33,6 +34,7 @@
 		93B8B38F21D8234A00746988 /* DesignableLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93B8B38E21D8234A00746988 /* DesignableLabel.swift */; };
 		93BC168321CC1F5D0002F34C /* Constantia.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 93BC168221CC1EAB0002F34C /* Constantia.ttf */; };
 		93E2F0491F5DB76A00E2BB7F /* MissionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93E2F0481F5DB76A00E2BB7F /* MissionViewController.swift */; };
+		D88336CE8B1BBE6E69EE8A5E /* Pods_Master_Flight_App.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 88200BB54E4D45D97553A22F /* Pods_Master_Flight_App.framework */; };
 		FA6594311FE89EE400F4A300 /* CustomTextFields.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA6594301FE89EE400F4A300 /* CustomTextFields.swift */; };
 		FA7060501F5E3A14006FD6A0 /* FlightCalcModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA70604F1F5E3A14006FD6A0 /* FlightCalcModel.swift */; };
 		FA7060521F5E3A20006FD6A0 /* FltCalcController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA7060511F5E3A20006FD6A0 /* FltCalcController.swift */; };
@@ -41,6 +43,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		88200BB54E4D45D97553A22F /* Pods_Master_Flight_App.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Master_Flight_App.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9308E1581F5E22C300CBFDC0 /* MissionModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MissionModel.swift; sourceTree = "<group>"; };
 		930ACCA021C1D6A300F1D650 /* WeightBalanceModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeightBalanceModel.swift; sourceTree = "<group>"; };
 		930ACCA221C1FEDF00F1D650 /* WBPopoverViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WBPopoverViewController.swift; sourceTree = "<group>"; };
@@ -59,6 +62,7 @@
 		933C352021FD20610072B080 /* LRTSavedWBViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LRTSavedWBViewController.swift; sourceTree = "<group>"; };
 		933F5F6C21E6E761005ED060 /* AEWWeightBalanceViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AEWWeightBalanceViewController.swift; sourceTree = "<group>"; };
 		934195E11F8296FB00C1B046 /* AlertFunction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertFunction.swift; sourceTree = "<group>"; };
+		9346DE6B2232CD0300438083 /* GlobaVariables.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GlobaVariables.swift; sourceTree = "<group>"; };
 		93678B321F9830BE005DCF5C /* TakeoffDataViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TakeoffDataViewController.swift; sourceTree = "<group>"; };
 		93678B541F983F42005DCF5C /* TakeoffDataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TakeoffDataModel.swift; sourceTree = "<group>"; };
 		9368741321C02DA4007EF7F4 /* LRTWeightBalanceViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LRTWeightBalanceViewController.swift; sourceTree = "<group>"; };
@@ -69,6 +73,8 @@
 		93B8B38E21D8234A00746988 /* DesignableLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DesignableLabel.swift; sourceTree = "<group>"; };
 		93BC168221CC1EAB0002F34C /* Constantia.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Constantia.ttf; sourceTree = "<group>"; };
 		93E2F0481F5DB76A00E2BB7F /* MissionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MissionViewController.swift; sourceTree = "<group>"; };
+		BD3A02732A14725A7B55A697 /* Pods-Master_Flight_App.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Master_Flight_App.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Master_Flight_App/Pods-Master_Flight_App.debug.xcconfig"; sourceTree = "<group>"; };
+		F655FD422E372E9B21102684 /* Pods-Master_Flight_App.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Master_Flight_App.release.xcconfig"; path = "Pods/Target Support Files/Pods-Master_Flight_App/Pods-Master_Flight_App.release.xcconfig"; sourceTree = "<group>"; };
 		FA6594301FE89EE400F4A300 /* CustomTextFields.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomTextFields.swift; sourceTree = "<group>"; };
 		FA70604F1F5E3A14006FD6A0 /* FlightCalcModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FlightCalcModel.swift; sourceTree = "<group>"; };
 		FA7060511F5E3A20006FD6A0 /* FltCalcController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FltCalcController.swift; sourceTree = "<group>"; };
@@ -81,16 +87,28 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D88336CE8B1BBE6E69EE8A5E /* Pods_Master_Flight_App.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0DA9E0FC1166204B94663ABD /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				BD3A02732A14725A7B55A697 /* Pods-Master_Flight_App.debug.xcconfig */,
+				F655FD422E372E9B21102684 /* Pods-Master_Flight_App.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		93183A551F3E818200E7350D = {
 			isa = PBXGroup;
 			children = (
 				93183A601F3E818200E7350D /* Master_Flight_App */,
+				0DA9E0FC1166204B94663ABD /* Pods */,
+				C6D97432B660CF6B3805D360 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -151,6 +169,7 @@
 		93E046F22062E32A001BEDCC /* Custom Files */ = {
 			isa = PBXGroup;
 			children = (
+				9346DE6B2232CD0300438083 /* GlobaVariables.swift */,
 				932F240D222B389500CAD7CA /* PassedData.swift */,
 				932F240B222706B300CAD7CA /* NotificationNameExtension.swift */,
 				93A363DE21E1AA9500CBDF13 /* AircraftTableViewCell.swift */,
@@ -193,6 +212,14 @@
 			path = "View Controllers";
 			sourceTree = "<group>";
 		};
+		C6D97432B660CF6B3805D360 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				88200BB54E4D45D97553A22F /* Pods_Master_Flight_App.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		D81B339904522AA0C3E9FB09 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
@@ -208,11 +235,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 93183A721F3E818200E7350D /* Build configuration list for PBXNativeTarget "Master_Flight_App" */;
 			buildPhases = (
+				226B34405ADA100E44554BFF /* [CP] Check Pods Manifest.lock */,
 				93183A5A1F3E818200E7350D /* Sources */,
 				93183A5B1F3E818200E7350D /* Frameworks */,
 				93183A5C1F3E818200E7350D /* Resources */,
 				86A58C6F32EE49F745CB8721 /* [CP] Embed Pods Frameworks */,
-				B46CE78581F0B32D3D799CAE /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -279,36 +306,40 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		226B34405ADA100E44554BFF /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Master_Flight_App-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
 		86A58C6F32EE49F745CB8721 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-Master_Flight_App/Pods-Master_Flight_App-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/IQKeyboardManagerSwift/IQKeyboardManagerSwift.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/IQKeyboardManagerSwift.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "
-";
-			showEnvVarsInLog = 0;
-		};
-		B46CE78581F0B32D3D799CAE /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Copy Pods Resources";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "
-";
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Master_Flight_App/Pods-Master_Flight_App-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -319,6 +350,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				9308E1591F5E22C300CBFDC0 /* MissionModel.swift in Sources */,
+				9346DE6C2232CD0300438083 /* GlobaVariables.swift in Sources */,
 				933C352121FD20610072B080 /* LRTSavedWBViewController.swift in Sources */,
 				933F5F6D21E6E761005ED060 /* AEWWeightBalanceViewController.swift in Sources */,
 				FAF2C2A71FE8AEAA0084ADF5 /* CheckFields.swift in Sources */,
@@ -483,6 +515,7 @@
 		};
 		93183A731F3E818200E7350D /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = BD3A02732A14725A7B55A697 /* Pods-Master_Flight_App.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = YKY42GMVFE;
@@ -497,6 +530,7 @@
 		};
 		93183A741F3E818200E7350D /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = F655FD422E372E9B21102684 /* Pods-Master_Flight_App.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = YKY42GMVFE;

@@ -8,6 +8,8 @@
 
 import UIKit
 
+//Global Variables:
+
 class LRTWeightBalanceViewController: UIViewController {
     
     var selectedAircraft = ""
@@ -16,42 +18,6 @@ class LRTWeightBalanceViewController: UIViewController {
     var aircraftIndex = 0.0
     var aircraftArm = 0.0
     var textFields = [AllowedCharsTextField]()
-    
-    //class variables to pass to other view controllers:
-    var passedSelectedAircraft = ""
-    var passedBasicWeight = ""
-    var passedGW = ""
-    var passedRoundedGrossWeight = ""
-    var passedZFW = ""
-    var passedRoundedZFW = ""
-    var passedCG = ""
-    var passedPilotWeight = ""
-    var passedCoPilotWeight = ""
-    var passedFEWeight = ""
-    var passedFSOWeight = ""
-    var passedPortFwdObsWeight = ""
-    var passedStbFwdObsWeight = ""
-    var passedFwdCargoWeight = ""
-    var passedTfo1weight = ""
-    var passedTfo2weight = ""
-    var passedTfo3weight = ""
-    var passedTfo4Weight = ""
-    var passedFirstClassWeight = ""
-    var passedPortAftObsWeight = ""
-    var passedStbAftObsWeight = ""
-    var passedTank1Weight = ""
-    var passedTank2Weight = ""
-    var passedTank3Weight = ""
-    var passedTank4Weight = ""
-    var passedtank5Weight = ""
-    var passedCargoBweight = ""
-    var passedCargoCweight = ""
-    var passedCargoDweight = ""
-    var passedCargoEweight = ""
-    var passedCargoFweight = ""
-    var passedCargoGweight = ""
-    var passedBombBayWeight = ""
-    var passedAftFirstClassWeight = ""
     
     //Outlets for labels:
     @IBOutlet weak var aircraftNumberLabel: UILabel!
@@ -105,7 +71,6 @@ class LRTWeightBalanceViewController: UIViewController {
         //set the aircraft tail number label to the selected aircraft from the pop over:
         //selectedAircraft passed from WBPopoverViewController
         aircraftNumberLabel.text = selectedAircraft
-        passedSelectedAircraft = selectedAircraft
         
         //Switch statement to assign W&B info for the selected aircraft:
         switch selectedAircraft {
@@ -154,7 +119,7 @@ class LRTWeightBalanceViewController: UIViewController {
         default:
             break
         }
-        //Assign Basic Weight label vaule so it appears when the screen loads:
+        //Assign Basic Weight label value so it appears when the screen loads:
         basicWeightLabel.text = String(Int(basicWeight))
         
         //dismiss keyboard by tapping anywhere
@@ -197,47 +162,45 @@ class LRTWeightBalanceViewController: UIViewController {
         grossWeightLabel.text = String(grossWeight)
         cgLabel.text = String(centerOfGravity)
         
-        //Data to pass to other vc's:
-        let roundedGW = ((Double(grossWeightLabel.text!)!/100).rounded())/10
-        let roundedZFW = ((Double(ZFWLabel.text!)!/100).rounded())/10
-        passedSelectedAircraft = selectedAircraft//check this..selectedAircraft passed from Popover VC?
-        passedZFW = String(zeroFuelWeight)
-        passedRoundedZFW = String(roundedZFW)
-        passedGW = String(grossWeight)
-        passedRoundedGrossWeight = String(roundedGW)
-        passedBasicWeight = String(basicWeight)
-        passedCG = String(centerOfGravity)
-        passedPilotWeight = pilotWeight.text!
-        passedCoPilotWeight = coPilotWeight.text!
-        passedFEWeight = feWeight.text!
-        passedFSOWeight = fsoWeight.text!
-        passedPortFwdObsWeight = portFwdObserverWeight.text!
-        passedStbFwdObsWeight = stbFwdObserverWeight.text!
-        passedFwdCargoWeight = fwdCargoWeight.text!
-        passedTfo1weight = tfo1Weight.text!
-        passedTfo2weight = tfo2Weight.text!
-        passedTfo3weight = tfo3Weight.text!
-        passedTfo4Weight = tfo4Weight.text!
-        passedFirstClassWeight = firstClassWeight.text!
-        passedAftFirstClassWeight = aftFirstClassWeight.text!
-        passedPortAftObsWeight = portAftObserverWeight.text!
-        passedStbAftObsWeight = stbAftObserverWeight.text!
-        passedTank1Weight = tank1Weight.text!
-        passedTank2Weight = tank2Weight.text!
-        passedTank3Weight = tank3Weight.text!
-        passedTank4Weight = tank4Weight.text!
-        passedtank5Weight = tank5Weight.text!
-        passedCargoBweight = cargoBWeight.text!
-        passedCargoCweight = cargoCWeight.text!
-        passedCargoDweight = cargoDWeight.text!
-        passedCargoEweight = cargoEWeight.text!
-        passedCargoFweight = cargoFWeight.text!
-        passedCargoGweight = cargoGWeight.text!
-        passedBombBayWeight = bombBayWeight.text!
-        passedAftFirstClassWeight = aftFirstClassWeight.text!
+        //Push values to global variables:
+        globalCenterOfGravity = String(centerOfGravity)
         
-        //Notification Center Info:
-        NotificationCenter.default.post(name: .computeWeightBalance, object: self)
+        let roundedZFW = (round(Double(zeroFuelWeight)/100))/10
+        globalZeroFuelWeight = String(roundedZFW)
+        
+        let roundedGW = (round(Double(grossWeight)/100))/10
+        globalGrossWeight = String(roundedGW)
+        
+        //Assign values to global variables:
+        globalSelectedAircraft = selectedAircraft
+        globalBasicWeight = String(basicWeight)
+        globalPilotWeight = pilotWeight.text!
+        globalCoPilotWeight = coPilotWeight.text!
+        globalFEWeight = feWeight.text!
+        globalFlightStationObsWeight = fsoWeight.text!
+        globalPortFwdObsWeight = portFwdObserverWeight.text!
+        globalStbFwdObsWeight = stbFwdObserverWeight.text!
+        globalFwdCargoWeight = fwdCargoWeight.text!
+        globalTFO1Weight = tfo1Weight.text!
+        globalTFO2Weight = tfo2Weight.text!
+        globalTFO3Weight = tfo3Weight.text!
+        globalTFO4Weight = tfo4Weight.text!
+        globalFirstClassWeight = firstClassWeight.text!
+        globalAftFirstClassWeight = aftFirstClassWeight.text!
+        globalPortAftObsWeight = portAftObserverWeight.text!
+        globalStbAftObsWeight = stbAftObserverWeight.text!
+        globalCargoBWeight = cargoBWeight.text!
+        globalCargoCWeight = cargoCWeight.text!
+        globalCargoDWeight = cargoDWeight.text!
+        globalCargoEWeight = cargoEWeight.text!
+        globalCargoFWeight = cargoFWeight.text!
+        globalCargoGWeight = cargoGWeight.text!
+        globalBombBayWeight = bombBayWeight.text!
+        globalTank1Weight = tank1Weight.text!
+        globalTank2Weight = tank2Weight.text!
+        globalTank3Weight = tank3Weight.text!
+        globalTank4Weight = tank4Weight.text!
+        globalTank5Weight = tank5Weight.text!
     }
     
     //close view controller with "close" button
@@ -248,46 +211,5 @@ class LRTWeightBalanceViewController: UIViewController {
         //Dismiss the previous popover view controller when tap the close button
         self.presentingViewController?.dismiss(animated: true, completion: nil)
     }
-    
-    @IBAction func saveLRTWB(_ sender: DesignableButton) {
-        performSegue(withIdentifier: "SavedLRTWBViewController", sender: self)
-    }
-    //passed data to other view controllers:
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        let savedWBVC = segue.destination as! LRTSavedWBViewController
-        savedWBVC.finalSelectedAircraft = self.passedSelectedAircraft
-        savedWBVC.finalBasicWeight = self.passedBasicWeight
-        savedWBVC.finalGW = self.passedGW
-        savedWBVC.finalZFW = self.passedZFW
-        savedWBVC.finalCG = self.passedCG
-        savedWBVC.finalPilotWeight = self.passedPilotWeight
-        savedWBVC.finalCoPilotWeight = self.passedCoPilotWeight
-        savedWBVC.finalFEWeight = self.passedFEWeight
-        savedWBVC.finalFSOWeight = self.passedFSOWeight
-        savedWBVC.finalPortFwdObsWeight = self.passedPortFwdObsWeight
-        savedWBVC.finalStbFwdObsWeight = self.passedStbFwdObsWeight
-        savedWBVC.finalFwdCargoWeight = self.passedFwdCargoWeight
-        savedWBVC.finalTfo1weight = self.passedTfo1weight
-        savedWBVC.finalTfo2weight = self.passedTfo2weight
-        savedWBVC.finalTfo3weight = self.passedTfo3weight
-        savedWBVC.finalTfo4Weight = self.passedTfo4Weight
-        savedWBVC.finalFirstClassWeight = self.passedFirstClassWeight
-        savedWBVC.finalAftFirstClassWeight = self.passedAftFirstClassWeight
-        savedWBVC.finalPortAftObsWeight = self.passedPortAftObsWeight
-        savedWBVC.finalStbAftObsWeight = self.passedStbAftObsWeight
-        savedWBVC.finalBombBayWeight = self.passedBombBayWeight
-        savedWBVC.finalTank1Weight = self.passedTank1Weight
-        savedWBVC.finalTank2Weight = self.passedTank2Weight
-        savedWBVC.finalTank3Weight = self.passedTank3Weight
-        savedWBVC.finalTank4Weight = self.passedTank4Weight
-        savedWBVC.finaltank5Weight = self.passedtank5Weight
-        savedWBVC.finalCargoBweight = self.passedCargoBweight
-        savedWBVC.finalCargoCweight = self.passedCargoCweight
-        savedWBVC.finalCargoDweight = self.passedCargoDweight
-        savedWBVC.finalCargoEweight = self.passedCargoEweight
-        savedWBVC.finalCargoFweight = self.passedCargoFweight
-        savedWBVC.finalCargoGweight = self.passedCargoGweight
-    }
-    
 }
 
